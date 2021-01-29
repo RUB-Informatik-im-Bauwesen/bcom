@@ -23,7 +23,7 @@
       rdf:type foaf:Person ;
       foaf:name "Philipp Hagedorn" ;
     ] ;
-  dc:description "The Building Concrete Monitoring Ontology (BCOM) is defined for cupturing information of concrete work, concrete curing and testing of concrete properties." ;
+  dc:description "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties." ;
   dc:title "Building Concrete Monitoring Ontology (BCOM)" ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports vcard: ;
@@ -38,7 +38,7 @@ bcom:ClassOfMonitoring
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:label "Class Of concrete monitoring"@en ;
-  rdfs:label "Überwachungsklasse des Betons"@de ;
+  rdfs:comment "Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete"@en ;
   rdfs:range [
       rdf:type rdfs:Datatype ;
       owl:oneOf (
@@ -56,7 +56,7 @@ bcom:ConcreteCuring
 .
 bcom:ConcreteWork
   rdf:type owl:Class ;
-  rdfs:comment "Current concreting area of the constructoin"@en ;
+  rdfs:comment "This class provides the necessary information of current concreting of the constructoin"@en ;
   rdfs:label "Concrete work"@en ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -68,125 +68,141 @@ bcom:ConformityOfCompressiveStrength
 .
 bcom:FreshConcretePropertySet
   rdf:type owl:Class ;
-  rdfs:comment "Object representing a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency."@en ;
+  rdfs:comment "This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency."@en ;
   rdfs:label "Fresh conrete property set"@en ;
   rdfs:subClassOf owl:Thing ;
 .
 bcom:SamplingDate
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
+rdfs:comment "Date of sampling with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:label "Date of sampling"@en ;
   rdfs:range xsd:date ;
 .
 bcom:TestSample
   rdf:type owl:Class ;
-  rdfs:comment "This object contain the information of test sample for conformity test of concrete compressive strength"@en ;
- rdfs:label "Test sample"@en ;
+  rdfs:comment "This class provides the information of test sample for conformity test of concrete compressive strength"@en ;
+  rdfs:label "Test sample"@en ;
   rdfs:subClassOf owl:Thing ;
 .
 bcom:TestingDate
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
   rdfs:label "Date of testing"@en ;
+  rdfs:comment "Date of testing with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:range xsd:date ;
 .
 bcom:airTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Air temperature during concreting or test on fresh concrete in Celsius"@en ;
+  rdfs:label "Air temperature"@en ;
+  rdfs:comment "Air temperature during concreting or test on fresh concrete in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:beginDate
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteCuring ;
-  rdfs:label "Begin date of concrete curing with format Year-Month-Day in XXXX-XX-XX"@en ;
+  rdfs:label "Begin date of concrete curing"@en ;
+  rdfs:comment "Begin date of concrete curing with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:range xsd:date ;
 .
 bcom:beginTimeOfPaving
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
-  rdfs:label "Start time of concreting"@en ;
+  rdfs:label "Begin time of paving"@en ;
+  rdfs:comment "Begin time of paving with format hour-minute-second in hh-mm-ss"@en ;
   rdfs:range xsd:time ;
 .
 bcom:concreteTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "Fresh concrete Temperature during testing of property in Celsius"@en ;
+  rdfs:label "Fresh concrete temperature"@en ;
+  rdfs:comment "Fresh concrete temperature during testing of property in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:conversionFactor
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Conversion factor of compressive strength testing"@en ;
+  rdfs:label "Conversion factor"@en ;
+  rdfs:comment "Conversion factor of compressive strength testing"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:dateOfConcreting
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:label "Date of concreting"@en ;
+  rdfs:comment "Date of concreting with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:range xsd:date ;
 .
 bcom:dateOfStripping
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:label "Date of stripping"@en ;
+  rdfs:comment "Date of stripping with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:range xsd:date ;
 .
 bcom:dateofConfTest
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Date of Conformity Test"@en ;
+  rdfs:label "Date of conformity test"@en ;
+  rdfs:comment "Date of conformity test with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:range xsd:date ;
 .
 bcom:dulkDensity
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "Dulk density of fresh concrete"@en ;
+  rdfs:label "Dulk density"@en ;
+  rdfs:comment "Dulk density of fresh concrete in kg/m3"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:endDate
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteCuring ;
-  rdfs:label "End date of concrete curing with format Year-Month-Day in XXXX-XX-XX"@en ;
+  rdfs:label "End date of concrete curing"@en ;
+  rdfs:comment "End date of concrete curing with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:range xsd:date ;
 .
 bcom:endTimeOfPaving
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:label "End time of paving"@en ;
+  rdfs:comment "End time of paving with format hour-minute-second in hh-mm-ss"@en ;
   rdfs:range xsd:time ;
 .
 bcom:evaluationOfTest
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Evaluation of the mean value of the test in N/mm2"@en ;
+  rdfs:label "Evaluation of the mean value"@en ;
+  rdfs:comment "Evaluation of the mean value of the test in N/mm2"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:freshConcreteTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
-  rdfs:label "Fresh concrete temperature before concreting in Celsius"@en ;
+  rdfs:label "Fresh concrete temperature before concreting"@en ;
+  rdfs:comment "Fresh concrete temperature before concreting in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:hasConcreteSupplier
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:label "has Concrete Supplier"@en ;
-  rdfs:range vcard:Organization ;
+  rdfs:range <http://www.w3.org/2006/vcard/ns#Organization> ;
 .
 bcom:hasCuring
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:ConcreteWork ;
-  rdfs:label "hasCuring"@en ;
-  rdfs:range bcom:ConcreteCuring ;
+  rdfs:label "has Curing"@en ;
+rdfs:range bcom:ConcreteCuring ;
 .
 bcom:hasDeliveryNote
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
   rdfs:domain bcom:FreshConcretePropertySet ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "has Delivery Note as Documents in Container"@en ;
+  rdfs:label "Delivery note"@en ;
+  rdfs:comment "Delivery note of mixed-ready concrete"@en ;
   rdfs:range xsd:anyURI ;
 .
 bcom:hasFreshConcreteProperty
@@ -199,15 +215,15 @@ bcom:hasPerformTestOrg
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
   rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "has PerformTest Organisation"@en ;
-  rdfs:range vcard:Organization ;
+  rdfs:label "has Perform Test Organisation"@en ;
+  rdfs:range <http://www.w3.org/2006/vcard/ns#Organization> ;
 .
 bcom:hasPerformTestPerson
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
   rdfs:domain bcom:FreshConcretePropertySet ;
   rdfs:label "has Perform Test Person"@en ;
-  rdfs:range vcard:Individual ;
+  rdfs:range <http://www.w3.org/2006/vcard/ns#Individual> ;
 .
 bcom:hasTest
   rdf:type owl:ObjectProperty ;
@@ -218,7 +234,8 @@ bcom:hasTest
 bcom:hasTestReport
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "hasTestReport as Documents in Container"@en ;
+  rdfs:label "Test report"@en ;
+  rdfs:comment "Report of conformity test of compressive strength"@en ;
   rdfs:range xsd:anyURI ;
 .
 bcom:hasTestSample
@@ -232,103 +249,120 @@ bcom:hasTestSample
 bcom:height
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Height of the test sample as cube in mm"@en ;
+  rdfs:label "Height of sample"@en ;
+  rdfs:comment "Height of a test sample as cube in mm"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:length
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Length of test sample for cube in mm"@en ;
+  rdfs:label "Length of sample"@en ;
+  rdfs:comment "Length of a test sample for cube in mm"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:maturityOfConcrete
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "Maturity of concrete in minute"@en ;
+  rdfs:label "Maturity of concrete"@en ;
+  rdfs:comment "Maturity of concrete in minute"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:maxAirTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteCuring ;
-  rdfs:label "Maximum temperature during post-treatment in Celsius"@en ;
+  rdfs:label "Max temperature"@en ;
+  rdfs:comment "Maximum temperature during post-treatment in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:methodOfAftertreatment
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteCuring ;
-  rdfs:label "Description of the method of concrete curing"@en ;
+  rdfs:label "Method of concrete curing"@en ;
+  rdfs:comment "Description of the method for concrete curing"@en ;
   rdfs:range xsd:string ;
 .
 bcom:minAirTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteCuring ;
-  rdfs:label "Minimum temperature during post-treatment in Celsius"@en ;
+  rdfs:label "Min temperature"@en ;
+  rdfs:comment "Minimum temperature during post-treatment in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:objectTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Temperature of test sample in Celsius"@en ;
+  rdfs:label "Temperature of sample"@en ;
+  rdfs:comment "Temperature of a test sample in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:quantityOfConcrete
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConcreteWork ;
-  rdfs:label "Concrete placement of quanity in cubature m3"@en ;
+  rdfs:label "Quantity of concrete"@en ;
+  rdfs:comment "Quantity of the concrete placement in cubature m3"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:rateOfFlowTableTest
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "Rate of flow table test in mm"@en ;
+  rdfs:label "Rate of flow table test"@en ;
+  rdfs:comment "Rate of flow table test according to DIN EN 12350-5 in mm"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:sampleID
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Name or ID of the test sample"@en ;
+  rdfs:label "Sample ID"@en ;
+  rdfs:comment "Name or ID of the test sample"@en ;
   rdfs:range xsd:string ;
 .
 bcom:storageCondition
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Description of storage condition"@en ;
+  rdfs:label "Storage condition"@en ;
+  rdfs:comment "Description of storage condition"@en ;
   rdfs:range xsd:string ;
 .
 bcom:storageDuration
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Duration of storage in day"@en ;
+  rdfs:label "Storage duration"@en ;
+  rdfs:comment "Duration of storage in day"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:storageHumidity
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Humidity of storage condition in %"@en ;
+  rdfs:label "Storage humidity"@en ;
+  rdfs:comment "Humidity of storage condition in %"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:storageTemperature
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Storage temperature in Celsius"@en ;
+  rdfs:label "Storage temperature"@en ;
+  rdfs:comment "Storage temperature in Celsius"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:testCharacteristic
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "The property to be tested"@en ;
+  rdfs:label "Tested property"@en ;
+  rdfs:comment "The property has to be tested"@en ;
   rdfs:range xsd:string ;
 .
 bcom:testStandards
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Norm or standard of the test method"@en ;
+  rdfs:label "Test standard"@en ;
+  rdfs:comment "Norm or standard of the test method"@en ;
   rdfs:range xsd:string ;
 .
 bcom:timeOfSampling
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:FreshConcretePropertySet ;
   rdfs:label "Time of sampling"@en ;
+  rdfs:comment "Time of sampling with format year-month-day in yyyy-mm-ddThh-mm-ss"@en ;
   rdfs:range xsd:dateTime ;
 .
 bcom:typeOfTest
@@ -337,7 +371,8 @@ bcom:typeOfTest
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
   rdfs:domain bcom:FreshConcretePropertySet ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Type of Test"@en ;
+  rdfs:label "Type of test"@en ;
+  rdfs:comment "Type of test as self-inspection or third-party monitoring"@en ;
   rdfs:range [
       rdf:type rdfs:Datatype ;
       owl:oneOf (
@@ -349,42 +384,49 @@ bcom:typeOfTest
 bcom:valueOfBreakingLoad
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Value of breaking load in N"@en ;
+  rdfs:label "Value of breaking load"@en ;
+  rdfs:comment "Value of breaking load in N"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:valueOfDensity
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Density of the sample in kg/m3"@en ;
+  rdfs:label "Density of sample"@en ;
+  rdfs:comment "Density of a sample in kg/m3"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:valueOfFinalResult
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"@en ;
+  rdfs:label "Result of compressive strength"@en ;
+  rdfs:comment "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:valueOfInterimResult
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:label "Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2"@en ;
-  rdfs:range xsd:decimal ;
+  rdfs:label "Intermediate result of compressive strength"@en ;
+  rdfs:comment "Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2"@en ;
+rdfs:range xsd:decimal ;
 .
 bcom:voidsRatio
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "Voids ratio of fresh concrete in V-%"@en ;
+  rdfs:label "Voids ratio"@en ;
+  rdfs:comment "Voids ratio of fresh concrete in V-%"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:weigth
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Weigth of test sample in kg"@en ;
+  rdfs:label "Weigth of sample"@en ;
+  rdfs:comment "Weigth of a test sample in kg"@en ;
   rdfs:range xsd:decimal ;
 .
 bcom:widthOrDia
   rdf:type owl:DatatypeProperty ;
   rdfs:domain bcom:TestSample ;
-  rdfs:label "Width or diameter of the test sample as cube in mm"@en ;
+  rdfs:label "Width or diameter of sample"@en ;
+  rdfs:comment "Width of a test sample as cube or diameter of a test sample as cylinder in mm"@en ;
   rdfs:range xsd:decimal ;
 .
