@@ -10,19 +10,20 @@
   a owl:Ontology ;
   dc:creator [
     a foaf:Person ;
-    foaf:name "Liu Liu"
+    foaf:name "Liu Liu, Ruhr-University Bochum"
   ], [
     a foaf:Person ;
-    foaf:name "Philipp Hagedorn"
+    foaf:name "Philipp Hagedorn, Ruhr-University Bochum"
   ] ;
-  dc:description "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties." ;
-  dc:title "Building Concrete Monitoring Ontology (BCOM)" ;
-  owl:imports dc11:, vcard:, foaf: ;
-  owl:versionInfo "Created with TopBraid Composer" .
 
-<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Agent_1>
-  a dc:Agent ;
-  rdfs:label "Philipp Hagedorn"@en .
+  dc:license "https://creativecommons.org/licenses/by/4.0/";
+  dc:created  "2021-01-20"^^xsd:date;
+  dc:description "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties."@en ;
+  dc:title "Building Concrete Monitoring Ontology (BCOM)"@en ;
+  owl:imports dc11:, vcard:, foaf: ;
+  owl:versionIRI "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring"@en
+  owl:versionInfo "0.2"@en .
+
 
 <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring>
   a owl:DatatypeProperty ;
