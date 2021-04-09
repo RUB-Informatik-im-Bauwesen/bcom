@@ -184,7 +184,7 @@
     <script type="application/ld+json">
       [
   {
-    "@id": "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring",
+    "@id": "https://w3id.org/bcom",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
@@ -217,7 +217,7 @@
     <h2 style="display:none;">Metadata</h2>
     <dl>
         <dt>IRI</dt>
-        <dd><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring</code></dd>
+        <dd><code>https://w3id.org/bcom</code></dd>
         <dt>Creator(s)</dt>
         <dd>
             
@@ -237,6 +237,7 @@
         <dd><a href="BuildingConcreteMonitoring.ttl">RDF (turtle)</a></dd>
         <dd><a href="BuildingConcreteMonitoring.rdf">RDF (RDF/XML)</a></dd>
         <dd><a href="BuildingConcreteMonitoring.jsonld">RDF (JSONLD)</a></dd>
+        <dd><a href="BuildingConcreteMonitoring.nt">RDF (N-Triples)</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
@@ -277,7 +278,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</code></td>
+                <td><code>https://w3id.org/bcom#ConcreteCuring</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -294,18 +295,18 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Methodofconcretecuring">bcom:MethodOfAftertreatment</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#CuringhasConcreteWork">bcom:HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Mintemperature">bcom:MinAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Maxtemperature">bcom:MaxAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Begindateofconcretecuring">bcom:BeginDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Enddateofconcretecuring">bcom:EndDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasCuring">bcom:HasCuring</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -315,7 +316,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</code></td>
+                <td><code>https://w3id.org/bcom#ConcreteDelivery</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -332,17 +333,17 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Endtimeofpaving">bcom:EndTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Begintimeofpaving">bcom:BeginTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#HasSupplier">bcom:HasSupplier</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Deliverynote">bcom:DeliveryNote</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Deliversconcretefor">bcom:DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasConcreteSupplier">bcom:HasDelivery</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -352,7 +353,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</code></td>
+                <td><code>https://w3id.org/bcom#ConcretePlacement</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -369,21 +370,21 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasCuring">bcom:HasCuring</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Dateofconcreting">bcom:DateOfConcreting</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Freshconcretetemperaturebeforeconcreting">bcom:FreshConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasConcreteSupplier">bcom:HasDelivery</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Quantityofconcrete">bcom:QuantityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#ClassOfconcretemonitoring">bcom:ClassOfMonitoring</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Dateofstripping">bcom:DateOfStripping</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Deliversconcretefor">bcom:DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#CuringhasConcreteWork">bcom:HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesConcreteto">bcom:SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -393,7 +394,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</code></td>
+                <td><code>https://w3id.org/bcom#ConformityOfCompressiveStrength</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -404,26 +405,26 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Intermediateresultofcompressivestrength">bcom:InterimCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Teststandard">bcom:NormativeReference</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Valueofbreakingload">bcom:TestedBreakingLoad</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Testedproperty">bcom:TestCharacteristic</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Conversionfactor">bcom:ConversionFactor</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Densityofsample">bcom:TestedDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Resultofcompressivestrength">bcom:FinalCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Evaluationofthemeanvalue">bcom:EvaluationOfTest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTestOfCompressiveStrength">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -433,7 +434,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</code></td>
+                <td><code>https://w3id.org/bcom#FreshConcreteProperties</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -444,17 +445,17 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Rateofflowtabletest">bcom:RateOfFlowTableTest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Voidsratio">bcom:VoidsRatio</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Maturityofconcrete">bcom:MaturityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Bulkdensity">bcom:BulkDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Freshconcretetemperature">bcom:ConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -464,7 +465,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</code></td>
+                <td><code>https://w3id.org/bcom#Storage</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -481,17 +482,17 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Storagehumidity">bcom:Humidity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Storagecondition">bcom:Condition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Storagetemperature">bcom:Temperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#StoresSample">bcom:StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Storageduration">bcom:Duration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#HasStorage">bcom:HasStorage</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -501,7 +502,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</code></td>
+                <td><code>https://w3id.org/bcom#Test</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -518,26 +519,26 @@
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Freshconcretepropertytesting">bcom:FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Dateoftesting">bcom:TestDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasTestOfCompressiveStrength">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Timeoftesting">bcom:TestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Testreport">bcom:TestReport</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasPerformTestPerson">bcom:HasTestPerson</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasPerformTestOrganisation">bcom:HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTestSubjects">bcom:HasTestSubjects</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -547,7 +548,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</code></td>
+                <td><code>https://w3id.org/bcom#TestSample</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -564,21 +565,21 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Lengthofsample">bcom:Length</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#HasStorage">bcom:HasStorage</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Heightofsample">bcom:Height</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#SampleID">bcom:SampleID</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Weigthofsample">bcom:Weigth</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Widthordiameterofsample">bcom:WidthOrDia</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Dateofsampling">bcom:SamplingDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Temperatureofsample">bcom:ObjectTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#StoresSample">bcom:StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -599,31 +600,31 @@
         <li><a href="#hasTestSample">has Test Sample</a></li>
         <li><a href="#hasTestSubjects">has Test Subjects</a></li>
         <li><a href="#StoresSample">StoresSample</a></li>
-        <li><a href="#SuppliesConcreteTo">Supplies Concrete To</a></li>
+        <li><a href="#suppliesConcreteto">supplies Concrete to</a></li>
     </ul>
     <div class="entity property" id="Deliversconcretefor">
         <h3>Delivers concrete for<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor</code></td>
+                <td><code>https://w3id.org/bcom#DeliversConcreteFor</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#hasConcreteSupplier">bcom:HasDelivery</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretedelivery">bcom:ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -633,24 +634,24 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement</code></td>
+                <td><code>https://w3id.org/bcom#HasConcretePlacement</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#hasCuring">bcom:HasCuring</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -660,24 +661,24 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring</code></td>
+                <td><code>https://w3id.org/bcom#HasCuring</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#CuringhasConcreteWork">bcom:HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -687,24 +688,24 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery</code></td>
+                <td><code>https://w3id.org/bcom#HasDelivery</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#suppliesConcreteto">bcom:SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretedelivery">bcom:ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -714,24 +715,24 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage</code></td>
+                <td><code>https://w3id.org/bcom#HasStorage</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#StoresSample">bcom:StoresSample</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Storageofatestsample">bcom:Storage</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -741,18 +742,18 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier</code></td>
+                <td><code>https://w3id.org/bcom#HasSupplier</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#suppliesConcreteto">bcom:SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretedelivery">bcom:ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -768,18 +769,18 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest</code></td>
+                <td><code>https://w3id.org/bcom#HasTest</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -789,18 +790,18 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation</code></td>
+                <td><code>https://w3id.org/bcom#HasTestOrganisation</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#hasTestSubjects">bcom:HasTestSubjects</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -816,12 +817,12 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson</code></td>
+                <td><code>https://w3id.org/bcom#HasTestPerson</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -837,18 +838,18 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample</code></td>
+                <td><code>https://w3id.org/bcom#HasTestSample</code></td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -858,12 +859,12 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects</code></td>
+                <td><code>https://w3id.org/bcom#HasTestSubjects</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#hasPerformTestOrganisation">bcom:HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -875,7 +876,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -885,39 +886,39 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample</code></td>
+                <td><code>https://w3id.org/bcom#StoresSample</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#HasStorage">bcom:HasStorage</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Storageofatestsample">bcom:Storage</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="SuppliesConcreteTo">
-        <h3>Supplies Concrete To<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="suppliesConcreteto">
+        <h3>supplies Concrete to<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo</code></td>
+                <td><code>https://w3id.org/bcom#SuppliesConcreteTo</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#HasSupplier">bcom:HasSupplier</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -929,7 +930,7 @@
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -987,7 +988,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#AirTemperature</code></td>
+                <td><code>https://w3id.org/bcom#AirTemperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -998,7 +999,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    (<a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>)
+                    (<a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup> or <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>)
                 </td>
             </tr>
             <tr>
@@ -1014,7 +1015,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate</code></td>
+                <td><code>https://w3id.org/bcom#BeginDate</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1025,7 +1026,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1041,7 +1042,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement</code></td>
+                <td><code>https://w3id.org/bcom#BeginTimeOfPlacement</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1052,7 +1053,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretedelivery">bcom:ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1068,7 +1069,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity</code></td>
+                <td><code>https://w3id.org/bcom#BulkDensity</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1079,7 +1080,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Freshconcretepropertytesting">bcom:FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1095,7 +1096,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring</code></td>
+                <td><code>https://w3id.org/bcom#ClassOfMonitoring</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1106,7 +1107,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1116,7 +1117,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature</code></td>
+                <td><code>https://w3id.org/bcom#ConcreteTemperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1127,7 +1128,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Freshconcretepropertytesting">bcom:FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1143,7 +1144,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition</code></td>
+                <td><code>https://w3id.org/bcom#Condition</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1154,7 +1155,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Storageofatestsample">bcom:Storage</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1170,7 +1171,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor</code></td>
+                <td><code>https://w3id.org/bcom#ConversionFactor</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1181,7 +1182,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1197,7 +1198,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting</code></td>
+                <td><code>https://w3id.org/bcom#DateOfConcreting</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1208,7 +1209,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1224,7 +1225,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping</code></td>
+                <td><code>https://w3id.org/bcom#DateOfStripping</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1235,7 +1236,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1251,7 +1252,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote</code></td>
+                <td><code>https://w3id.org/bcom#DeliveryNote</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1262,7 +1263,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretedelivery">bcom:ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1278,7 +1279,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration</code></td>
+                <td><code>https://w3id.org/bcom#Duration</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1289,7 +1290,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Storageofatestsample">bcom:Storage</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1305,7 +1306,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate</code></td>
+                <td><code>https://w3id.org/bcom#EndDate</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1316,7 +1317,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1332,7 +1333,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement</code></td>
+                <td><code>https://w3id.org/bcom#EndTimeOfPlacement</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1343,7 +1344,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretedelivery">bcom:ConcreteDelivery</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1359,7 +1360,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest</code></td>
+                <td><code>https://w3id.org/bcom#EvaluationOfTest</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1370,7 +1371,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1386,7 +1387,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength</code></td>
+                <td><code>https://w3id.org/bcom#FinalCompressiveStrength</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1397,7 +1398,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1413,7 +1414,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature</code></td>
+                <td><code>https://w3id.org/bcom#FreshConcreteTemperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1424,7 +1425,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1440,7 +1441,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height</code></td>
+                <td><code>https://w3id.org/bcom#Height</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1451,7 +1452,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1467,7 +1468,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity</code></td>
+                <td><code>https://w3id.org/bcom#Humidity</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1478,7 +1479,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Storageofatestsample">bcom:Storage</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1494,7 +1495,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength</code></td>
+                <td><code>https://w3id.org/bcom#InterimCompressiveStrength</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1505,7 +1506,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1521,7 +1522,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length</code></td>
+                <td><code>https://w3id.org/bcom#Length</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1532,7 +1533,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1548,7 +1549,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete</code></td>
+                <td><code>https://w3id.org/bcom#MaturityOfConcrete</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1559,7 +1560,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Freshconcretepropertytesting">bcom:FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1575,7 +1576,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature</code></td>
+                <td><code>https://w3id.org/bcom#MaxAirTemperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1586,7 +1587,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1602,7 +1603,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment</code></td>
+                <td><code>https://w3id.org/bcom#MethodOfAftertreatment</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1613,7 +1614,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1629,7 +1630,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature</code></td>
+                <td><code>https://w3id.org/bcom#MinAirTemperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1640,7 +1641,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concretecuring">bcom:ConcreteCuring</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1656,7 +1657,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference</code></td>
+                <td><code>https://w3id.org/bcom#NormativeReference</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1667,7 +1668,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1683,7 +1684,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature</code></td>
+                <td><code>https://w3id.org/bcom#ObjectTemperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1694,7 +1695,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1710,7 +1711,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete</code></td>
+                <td><code>https://w3id.org/bcom#QuantityOfConcrete</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1721,7 +1722,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1737,7 +1738,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest</code></td>
+                <td><code>https://w3id.org/bcom#RateOfFlowTableTest</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1748,7 +1749,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Freshconcretepropertytesting">bcom:FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1764,7 +1765,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID</code></td>
+                <td><code>https://w3id.org/bcom#SampleID</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1775,7 +1776,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1791,7 +1792,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate</code></td>
+                <td><code>https://w3id.org/bcom#SamplingDate</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1802,7 +1803,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1818,7 +1819,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature</code></td>
+                <td><code>https://w3id.org/bcom#Temperature</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1829,7 +1830,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Storageofatestsample">bcom:Storage</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1845,7 +1846,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic</code></td>
+                <td><code>https://w3id.org/bcom#TestCharacteristic</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1856,7 +1857,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1872,7 +1873,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate</code></td>
+                <td><code>https://w3id.org/bcom#TestDate</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1883,7 +1884,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1899,7 +1900,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport</code></td>
+                <td><code>https://w3id.org/bcom#TestReport</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1910,7 +1911,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1926,7 +1927,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime</code></td>
+                <td><code>https://w3id.org/bcom#TestTime</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1937,7 +1938,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1953,7 +1954,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestType</code></td>
+                <td><code>https://w3id.org/bcom#TestType</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1964,7 +1965,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    (<a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test</a><sup class="sup-c" title="class">c</sup>)
+                    (<a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup> or <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>)
                 </td>
             </tr>
         </table>
@@ -1974,7 +1975,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad</code></td>
+                <td><code>https://w3id.org/bcom#TestedBreakingLoad</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1985,7 +1986,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -2001,7 +2002,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity</code></td>
+                <td><code>https://w3id.org/bcom#TestedDensity</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2012,7 +2013,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -2028,7 +2029,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio</code></td>
+                <td><code>https://w3id.org/bcom#VoidsRatio</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2039,7 +2040,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Freshconcretepropertytesting">bcom:FreshConcreteProperties</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -2055,7 +2056,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth</code></td>
+                <td><code>https://w3id.org/bcom#Weigth</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2066,7 +2067,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -2082,7 +2083,7 @@
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia</code></td>
+                <td><code>https://w3id.org/bcom#WidthOrDia</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2093,7 +2094,7 @@
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample">http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -2117,9 +2118,9 @@
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
         <dt><em>default (:)</em></dt>
-        <dd><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring/</code></dd>
+        <dd><code>https://w3id.org/bcom#</code></dd>
         <dt>bcom</dt>
-        <dd><code>http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring/</code></dd>
+        <dd><code>https://w3id.org/bcom#</code></dd>
         <dt>dc</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
         <dt>foaf</dt>

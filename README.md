@@ -4,7 +4,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 
 ## Metadata
 * **IRI**
-  * `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring`
+  * `https://w3id.org/bcom`
 * **Creators(s)**
   * Liu Liu, Ruhr-University Bochum
   * Philipp Hagedorn, Ruhr-University Bochum
@@ -18,6 +18,9 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
   * [https://github.com/RUB-Informatik-im-Bauwesen/bcom](https://github.com/RUB-Informatik-im-Bauwesen/bcom)
 * **Ontology RDF**
   * RDF ([BuildingConcreteMonitoring.ttl](turtle))
+  * RDF ([BuildingConcreteMonitoring.jsonld](jsonld))
+  * RDF ([BuildingConcreteMonitoring.nt](n-triples))
+  * RDF ([BuildingConcreteMonitoring.rdf](rdf/xml))
 ### Description
 <p>The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties.</p>
 
@@ -44,67 +47,67 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 ### Concrete curing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring`
+IRI | `https://w3id.org/bcom#ConcreteCuring`
 Description | <p>This class provides the necessary information of concrete curing after concreting</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement) (op)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring) (op)<br />
+In domain of |[bcom:MethodOfAftertreatment](Methodofconcretecuring) (dp)<br />[bcom:EndDate](Enddateofconcretecuring) (dp)<br />[bcom:MaxAirTemperature](Maxtemperature) (dp)<br />[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:BeginDate](Begindateofconcretecuring) (dp)<br />[bcom:MinAirTemperature](Mintemperature) (dp)<br />
+In range of |[bcom:HasCuring](hasCuring) (op)<br />
 ### Concrete delivery
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery`
+IRI | `https://w3id.org/bcom#ConcreteDelivery`
 Description | <p>This class provides information about the delivery of concrete</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor) (op)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery) (op)<br />
+In domain of |[bcom:EndTimeOfPlacement](Endtimeofpaving) (dp)<br />[bcom:BeginTimeOfPlacement](Begintimeofpaving) (dp)<br />[bcom:DeliveryNote](Deliverynote) (dp)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />[bcom:HasSupplier](HasSupplier) (op)<br />
+In range of |[bcom:HasDelivery](hasConcreteSupplier) (op)<br />
 ### Concrete placement
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement`
+IRI | `https://w3id.org/bcom#ConcretePlacement`
 Description | <p>This class provides the necessary information of current concreting of the construction</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery) (op)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement) (op)<br />
+In domain of |[bcom:HasCuring](hasCuring) (op)<br />[bcom:DateOfConcreting](Dateofconcreting) (dp)<br />[bcom:DateOfStripping](Dateofstripping) (dp)<br />[bcom:QuantityOfConcrete](Quantityofconcrete) (dp)<br />[bcom:HasDelivery](hasConcreteSupplier) (op)<br />[bcom:FreshConcreteTemperature](Freshconcretetemperaturebeforeconcreting) (dp)<br />[bcom:ClassOfMonitoring](ClassOfconcretemonitoring) (dp)<br />
+In range of |[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:SuppliesConcreteTo](suppliesConcreteto) (op)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />
 ### Conformity testing of compressive strength
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength`
+IRI | `https://w3id.org/bcom#ConformityOfCompressiveStrength`
 Description | <p>This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength.</p>
-Super-classes |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity) (dp)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest) (op)<br />
+Super-classes |[bcom:Test](Test) (c)<br />
+In domain of |[bcom:TestedBreakingLoad](Valueofbreakingload) (dp)<br />[bcom:InterimCompressiveStrength](Intermediateresultofcompressivestrength) (dp)<br />[bcom:TestedDensity](Densityofsample) (dp)<br />[bcom:TestCharacteristic](Testedproperty) (dp)<br />[bcom:EvaluationOfTest](Evaluationofthemeanvalue) (dp)<br />[bcom:ConversionFactor](Conversionfactor) (dp)<br />[bcom:NormativeReference](Teststandard) (dp)<br />[bcom:FinalCompressiveStrength](Resultofcompressivestrength) (dp)<br />
+In range of |[bcom:HasTest](hasTestOfCompressiveStrength) (op)<br />
 ### Fresh concrete property testing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties`
+IRI | `https://w3id.org/bcom#FreshConcreteProperties`
 Description | <p>This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency.</p>
-Super-classes |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature) (dp)<br />
+Super-classes |[bcom:Test](Test) (c)<br />
+In domain of |[bcom:ConcreteTemperature](Freshconcretetemperature) (dp)<br />[bcom:BulkDensity](Bulkdensity) (dp)<br />[bcom:VoidsRatio](Voidsratio) (dp)<br />[bcom:RateOfFlowTableTest](Rateofflowtabletest) (dp)<br />[bcom:MaturityOfConcrete](Maturityofconcrete) (dp)<br />
 ### Storage of a test sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage`
+IRI | `https://w3id.org/bcom#Storage`
 Description | <p>This class represents the storage conditions of a test sample</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample) (op)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage) (op)<br />
+In domain of |[bcom:Temperature](Storagetemperature) (dp)<br />[bcom:Humidity](Storagehumidity) (dp)<br />[bcom:Condition](Storagecondition) (dp)<br />[bcom:Duration](Storageduration) (dp)<br />[bcom:StoresSample](StoresSample) (op)<br />
+In range of |[bcom:HasStorage](HasStorage) (op)<br />
 ### Test
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test`
+IRI | `https://w3id.org/bcom#Test`
 Description | <p>Represents the super-class for different types of tests for placed concrete</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Sub-classes |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties) (c)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport) (dp)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects) (op)<br />
+Sub-classes |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
+In domain of |[bcom:TestTime](Timeoftesting) (dp)<br />[bcom:HasTestSample](hasTestSample) (op)<br />[bcom:HasTestPerson](hasPerformTestPerson) (op)<br />[bcom:HasTest](hasTestOfCompressiveStrength) (op)<br />[bcom:TestReport](Testreport) (dp)<br />[bcom:HasTestOrganisation](hasPerformTestOrganisation) (op)<br />[bcom:TestDate](Dateoftesting) (dp)<br />
+In range of |[bcom:HasTestSubjects](hasTestSubjects) (op)<br />
 ### Test sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample`
+IRI | `https://w3id.org/bcom#TestSample`
 Description | <p>This class provides the information of test sample for conformity test of concrete compressive strength</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia) (dp)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length) (dp)<br />
-In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample) (op)<br />[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample) (op)<br />
+In domain of |[bcom:Weigth](Weigthofsample) (dp)<br />[bcom:WidthOrDia](Widthordiameterofsample) (dp)<br />[bcom:Length](Lengthofsample) (dp)<br />[bcom:HasStorage](HasStorage) (op)<br />[bcom:Height](Heightofsample) (dp)<br />[bcom:ObjectTemperature](Temperatureofsample) (dp)<br />[bcom:SamplingDate](Dateofsampling) (dp)<br />[bcom:SampleID](SampleID) (dp)<br />
+In range of |[bcom:StoresSample](StoresSample) (op)<br />[bcom:HasTestSample](hasTestSample) (op)<br />
 
 ## Object Properties
 [Delivers concrete for](#Deliversconcretefor),
@@ -124,93 +127,93 @@ In range of |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasT
 ### Delivers concrete for
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+IRI | `https://w3id.org/bcom#DeliversConcreteFor`
+Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
+Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 [](CuringhasConcreteWork)
 ### Curing has Concrete Work
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+IRI | `https://w3id.org/bcom#HasConcretePlacement`
+Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
+Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 [](hasCuring)
 ### has Curing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
+IRI | `https://w3id.org/bcom#HasCuring`
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
+Range(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 [](hasConcreteSupplier)
 ### has Concrete Supplier
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery) (c)<br />
+IRI | `https://w3id.org/bcom#HasDelivery`
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
+Range(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 [](HasStorage)
 ### HasStorage
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage) (c)<br />
+IRI | `https://w3id.org/bcom#HasStorage`
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
+Range(s) |[bcom:Storage](Storageofatestsample) (c)<br />
 [](HasSupplier)
 ### has Concrete Supplier
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery) (c)<br />
+IRI | `https://w3id.org/bcom#HasSupplier`
+Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
 [](hasTestOfCompressiveStrength)
 ### has Test Of Compressive Strength
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+IRI | `https://w3id.org/bcom#HasTest`
+Domain(s) |[bcom:Test](Test) (c)<br />
+Range(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 [](hasPerformTestOrganisation)
 ### has Perform Test Organisation
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
+IRI | `https://w3id.org/bcom#HasTestOrganisation`
+Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
 [](hasPerformTestPerson)
 ### has Perform Test Person
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
+IRI | `https://w3id.org/bcom#HasTestPerson`
+Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[vcard:Individual](http://www.w3.org/2006/vcard/ns#Individual) (c)<br />
 [](hasTestSample)
 ### has Test Sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+IRI | `https://w3id.org/bcom#HasTestSample`
+Domain(s) |[bcom:Test](Test) (c)<br />
+Range(s) |[bcom:TestSample](Testsample) (c)<br />
 [](hasTestSubjects)
 ### has Test Subjects
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects`
+IRI | `https://w3id.org/bcom#HasTestSubjects`
 Domain(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
+Range(s) |[bcom:Test](Test) (c)<br />
 [](StoresSample)
 ### StoresSample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample`
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+IRI | `https://w3id.org/bcom#StoresSample`
+Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
+Range(s) |[bcom:TestSample](Testsample) (c)<br />
 [](suppliesConcreteto)
 ### supplies Concrete to
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo`
+IRI | `https://w3id.org/bcom#SuppliesConcreteTo`
 Domain(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
-Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 
 ## Datatype Properties
 [Air temperature](#Airtemperature),
@@ -259,343 +262,343 @@ Range(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Concret
 ### Air temperature
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#AirTemperature`
+IRI | `https://w3id.org/bcom#AirTemperature`
 Description | Air temperature during concreting or test on fresh concrete in Celsius
-Domain(s) |([http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c) or [http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c))<br />
+Domain(s) |([bcom:ConcretePlacement](Concreteplacement) (c) or [bcom:TestSample](Testsample) (c))<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Begindateofconcretecuring)
 ### Begin date of concrete curing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate`
+IRI | `https://w3id.org/bcom#BeginDate`
 Description | Begin date of concrete curing with format year-month-day in yyyy-mm-dd
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
+Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
 [](Begintimeofpaving)
 ### Begin time of paving
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement`
+IRI | `https://w3id.org/bcom#BeginTimeOfPlacement`
 Description | Begin time of paving with format hour-minute-second in hh-mm-ss
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery) (c)<br />
+Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[xsd:time](http://www.w3.org/2001/XMLSchema#time) (c)<br />
 [](Bulkdensity)
 ### Bulk density
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity`
+IRI | `https://w3id.org/bcom#BulkDensity`
 Description | Bulk density of fresh concrete in kg/m3
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties) (c)<br />
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](ClassOfconcretemonitoring)
 ### Class Of concrete monitoring
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring`
+IRI | `https://w3id.org/bcom#ClassOfMonitoring`
 Description | Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 [](Freshconcretetemperature)
 ### Fresh concrete temperature
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature`
+IRI | `https://w3id.org/bcom#ConcreteTemperature`
 Description | Fresh concrete temperature during testing of property in Celsius
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties) (c)<br />
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Storagecondition)
 ### Storage condition
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition`
+IRI | `https://w3id.org/bcom#Condition`
 Description | Description of storage condition
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage) (c)<br />
+Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](Conversionfactor)
 ### Conversion factor
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor`
+IRI | `https://w3id.org/bcom#ConversionFactor`
 Description | Conversion factor of compressive strength testing
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Dateofconcreting)
 ### Date of concreting
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting`
+IRI | `https://w3id.org/bcom#DateOfConcreting`
 Description | Date of concreting with format year-month-day in yyyy-mm-dd
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
 [](Dateofstripping)
 ### Date of stripping
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping`
+IRI | `https://w3id.org/bcom#DateOfStripping`
 Description | Date of stripping with format year-month-day in yyyy-mm-dd
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
 [](Deliverynote)
 ### Delivery note
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote`
+IRI | `https://w3id.org/bcom#DeliveryNote`
 Description | Delivery note of mixed-ready concrete
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery) (c)<br />
+Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) (c)<br />
 [](Storageduration)
 ### Storage duration
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration`
+IRI | `https://w3id.org/bcom#Duration`
 Description | Duration of storage in day
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage) (c)<br />
+Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Enddateofconcretecuring)
 ### End date of concrete curing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate`
+IRI | `https://w3id.org/bcom#EndDate`
 Description | End date of concrete curing with format year-month-day in yyyy-mm-dd
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
+Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
 [](Endtimeofpaving)
 ### End time of paving
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement`
+IRI | `https://w3id.org/bcom#EndTimeOfPlacement`
 Description | End time of paving with format hour-minute-second in hh-mm-ss
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery) (c)<br />
+Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[xsd:time](http://www.w3.org/2001/XMLSchema#time) (c)<br />
 [](Evaluationofthemeanvalue)
 ### Evaluation of the mean value
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest`
+IRI | `https://w3id.org/bcom#EvaluationOfTest`
 Description | Evaluation of the mean value of the test in N/mm2
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Resultofcompressivestrength)
 ### Result of compressive strength
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength`
+IRI | `https://w3id.org/bcom#FinalCompressiveStrength`
 Description | Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Freshconcretetemperaturebeforeconcreting)
 ### Fresh concrete temperature before concreting
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature`
+IRI | `https://w3id.org/bcom#FreshConcreteTemperature`
 Description | Fresh concrete temperature before concreting in Celsius
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Heightofsample)
 ### Height of sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height`
+IRI | `https://w3id.org/bcom#Height`
 Description | Height of a test sample as cube in mm
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Storagehumidity)
 ### Storage humidity
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity`
+IRI | `https://w3id.org/bcom#Humidity`
 Description | Humidity of storage condition in %
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage) (c)<br />
+Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Intermediateresultofcompressivestrength)
 ### Intermediate result of compressive strength
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength`
+IRI | `https://w3id.org/bcom#InterimCompressiveStrength`
 Description | Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Lengthofsample)
 ### Length of sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length`
+IRI | `https://w3id.org/bcom#Length`
 Description | Length of a test sample for cube in mm
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Maturityofconcrete)
 ### Maturity of concrete
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete`
+IRI | `https://w3id.org/bcom#MaturityOfConcrete`
 Description | Maturity of concrete in minute
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties) (c)<br />
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Maxtemperature)
 ### Max temperature
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature`
+IRI | `https://w3id.org/bcom#MaxAirTemperature`
 Description | Maximum temperature during post-treatment in Celsius
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
+Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Methodofconcretecuring)
 ### Method of concrete curing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment`
+IRI | `https://w3id.org/bcom#MethodOfAftertreatment`
 Description | Description of the method for concrete curing
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
+Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](Mintemperature)
 ### Min temperature
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature`
+IRI | `https://w3id.org/bcom#MinAirTemperature`
 Description | Minimum temperature during post-treatment in Celsius
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring) (c)<br />
+Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Teststandard)
 ### Test standard
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference`
+IRI | `https://w3id.org/bcom#NormativeReference`
 Description | Norm or standard of the test method
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](Temperatureofsample)
 ### Temperature of sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature`
+IRI | `https://w3id.org/bcom#ObjectTemperature`
 Description | Temperature of a test sample in Celsius
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Quantityofconcrete)
 ### Quantity of concrete
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete`
+IRI | `https://w3id.org/bcom#QuantityOfConcrete`
 Description | Quantity of the concrete placement in cubature m3
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c)<br />
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Rateofflowtabletest)
 ### Rate of flow table test
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest`
+IRI | `https://w3id.org/bcom#RateOfFlowTableTest`
 Description | Rate of flow table test according to DIN EN 12350-5 in mm
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties) (c)<br />
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](SampleID)
 ### Sample ID
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID`
+IRI | `https://w3id.org/bcom#SampleID`
 Description | Name or ID of the test sample
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](Dateofsampling)
 ### Date of sampling
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate`
+IRI | `https://w3id.org/bcom#SamplingDate`
 Description | Date of sampling with format year-month-day in yyyy-mm-dd
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
 [](Storagetemperature)
 ### Storage temperature
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature`
+IRI | `https://w3id.org/bcom#Temperature`
 Description | Storage temperature in Celsius
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage) (c)<br />
+Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Testedproperty)
 ### Tested property
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic`
+IRI | `https://w3id.org/bcom#TestCharacteristic`
 Description | The property has to be tested
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](Dateoftesting)
 ### Date of testing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate`
+IRI | `https://w3id.org/bcom#TestDate`
 Description | Date of testing with format year-month-day in yyyy-mm-dd
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
+Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
 [](Testreport)
 ### Test report
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport`
+IRI | `https://w3id.org/bcom#TestReport`
 Description | Report of conformity test of compressive strength
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
+Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) (c)<br />
 [](Timeoftesting)
 ### Time of testing
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime`
+IRI | `https://w3id.org/bcom#TestTime`
 Description | Time of testing with format year-month-day in yyyy-mm-ddThh-mm-ss
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c)<br />
+Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) (c)<br />
 [](Typeoftest)
 ### Type of test
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestType`
+IRI | `https://w3id.org/bcom#TestType`
 Description | Type of test as self-inspection or third-party monitoring
-Domain(s) |([http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement) (c) or [http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test) (c))<br />
+Domain(s) |([bcom:ConcretePlacement](Concreteplacement) (c) or [bcom:Test](Test) (c))<br />
 [](Valueofbreakingload)
 ### Value of breaking load
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad`
+IRI | `https://w3id.org/bcom#TestedBreakingLoad`
 Description | Value of breaking load in N
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Densityofsample)
 ### Density of sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity`
+IRI | `https://w3id.org/bcom#TestedDensity`
 Description | Density of a sample in kg/m3
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength) (c)<br />
+Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Voidsratio)
 ### Voids ratio
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio`
+IRI | `https://w3id.org/bcom#VoidsRatio`
 Description | Voids ratio of fresh concrete in V-%
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties) (c)<br />
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Weigthofsample)
 ### Weigth of sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth`
+IRI | `https://w3id.org/bcom#Weigth`
 Description | Weigth of a test sample in kg
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 [](Widthordiameterofsample)
 ### Width or diameter of sample
 Property | Value
 --- | ---
-IRI | `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia`
+IRI | `https://w3id.org/bcom#WidthOrDia`
 Description | Width of a test sample as cube or diameter of a test sample as cylinder in mm
-Domain(s) |[http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample](http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample) (c)<br />
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 
 ## Named Individuals
 ## Namespaces
 * **default (:)**
-  * `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring/`
+  * `https://w3id.org/bcom#`
 * **bcom**
-  * `http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring/`
+  * `https://w3id.org/bcom#`
 * **dc**
   * `http://purl.org/dc/terms/`
 * **foaf**

@@ -1,14 +1,14 @@
 {
   "@graph" : [ {
-    "@id" : "_:b11",
+    "@id" : "_:b10",
+    "@type" : "foaf:Person",
+    "name" : "Liu Liu, Ruhr-University Bochum"
+  }, {
+    "@id" : "_:b12",
     "@type" : "owl:Class",
     "unionOf" : {
-      "@list" : [ "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement", "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample" ]
+      "@list" : [ "bcom:ConcretePlacement", "bcom:TestSample" ]
     }
-  }, {
-    "@id" : "_:b13",
-    "@type" : "foaf:Person",
-    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
   }, {
     "@id" : "_:b14",
     "@type" : "foaf:Person",
@@ -21,12 +21,14 @@
     "@id" : "_:b16",
     "@type" : "owl:Class",
     "unionOf" : {
-      "@list" : [ "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement", "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test" ]
+      "@list" : [ "bcom:ConcretePlacement", "bcom:Test" ]
     }
   }, {
-    "@id" : "_:b3",
-    "@type" : "foaf:Person",
-    "name" : "Liu Liu, Ruhr-University Bochum"
+    "@id" : "_:b6",
+    "@type" : "rdfs:Datatype",
+    "owl:oneOf" : {
+      "@list" : [ "Class 1", "Class 2", "Class 3" ]
+    }
   }, {
     "@id" : "_:b7",
     "@type" : "rdfs:Datatype",
@@ -35,15 +37,13 @@
     }
   }, {
     "@id" : "_:b8",
-    "@type" : "rdfs:Datatype",
-    "owl:oneOf" : {
-      "@list" : [ "Class 1", "Class 2", "Class 3" ]
-    }
+    "@type" : "foaf:Person",
+    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring",
+    "@id" : "https://w3id.org/bcom",
     "@type" : "owl:Ontology",
     "created" : "2021-01-20",
-    "creator" : [ "_:b13", "_:b3" ],
+    "creator" : [ "_:b8", "_:b10" ],
     "description" : {
       "@language" : "en",
       "@value" : "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties."
@@ -54,81 +54,78 @@
       "@language" : "en",
       "@value" : "Building Concrete Monitoring Ontology (BCOM)"
     },
-    "versionIRI" : {
-      "@language" : "en",
-      "@value" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring"
-    },
+    "versionIRI" : "https://w3id.org/bcom",
     "versionInfo" : {
       "@language" : "en",
       "@value" : "0.2"
     }
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#AirTemperature",
+    "@id" : "bcom:AirTemperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Air temperature during concreting or test on fresh concrete in Celsius"
     },
-    "domain" : "_:b11",
+    "domain" : "_:b12",
     "label" : {
       "@language" : "en",
       "@value" : "Air temperature"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate",
+    "@id" : "bcom:BeginDate",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Begin date of concrete curing with format year-month-day in yyyy-mm-dd"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "domain" : "bcom:ConcreteCuring",
     "label" : {
       "@language" : "en",
       "@value" : "Begin date of concrete curing"
     },
     "range" : "xsd:date"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPlacement",
+    "@id" : "bcom:BeginTimeOfPlacement",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Begin time of paving with format hour-minute-second in hh-mm-ss"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
+    "domain" : "bcom:ConcreteDelivery",
     "label" : {
       "@language" : "en",
       "@value" : "Begin time of paving"
     },
     "range" : "xsd:time"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BulkDensity",
+    "@id" : "bcom:BulkDensity",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Bulk density of fresh concrete in kg/m3"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties",
+    "domain" : "bcom:FreshConcreteProperties",
     "label" : {
       "@language" : "en",
       "@value" : "Bulk density"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring",
+    "@id" : "bcom:ClassOfMonitoring",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "Class Of concrete monitoring"
     },
-    "range" : "_:b8"
+    "range" : "_:b6"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "@id" : "bcom:ConcreteCuring",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -140,7 +137,7 @@
     },
     "subClassOf" : "owl:Thing"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
+    "@id" : "bcom:ConcreteDelivery",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -152,7 +149,7 @@
     },
     "subClassOf" : "owl:Thing"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "@id" : "bcom:ConcretePlacement",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -164,33 +161,33 @@
     },
     "subClassOf" : "owl:Thing"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature",
+    "@id" : "bcom:ConcreteTemperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Fresh concrete temperature during testing of property in Celsius"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties",
+    "domain" : "bcom:FreshConcreteProperties",
     "label" : {
       "@language" : "en",
       "@value" : "Fresh concrete temperature"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Condition",
+    "@id" : "bcom:Condition",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Description of storage condition"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
+    "domain" : "bcom:Storage",
     "label" : {
       "@language" : "en",
       "@value" : "Storage condition"
     },
     "range" : "xsd:string"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "@id" : "bcom:ConformityOfCompressiveStrength",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -200,137 +197,137 @@
       "@language" : "en",
       "@value" : "Conformity testing of compressive strength"
     },
-    "subClassOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test"
+    "subClassOf" : "bcom:Test"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor",
+    "@id" : "bcom:ConversionFactor",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Conversion factor of compressive strength testing"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Conversion factor"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting",
+    "@id" : "bcom:DateOfConcreting",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Date of concreting with format year-month-day in yyyy-mm-dd"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "Date of concreting"
     },
     "range" : "xsd:date"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping",
+    "@id" : "bcom:DateOfStripping",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Date of stripping with format year-month-day in yyyy-mm-dd"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "Date of stripping"
     },
     "range" : "xsd:date"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliversConcreteFor",
+    "@id" : "bcom:DeliversConcreteFor",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
+    "domain" : "bcom:ConcreteDelivery",
     "label" : {
       "@language" : "en",
       "@value" : "Delivers concrete for"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "range" : "bcom:ConcretePlacement",
     "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery"
+    "inverseOf" : "bcom:HasDelivery"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DeliveryNote",
+    "@id" : "bcom:DeliveryNote",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Delivery note of mixed-ready concrete"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
+    "domain" : "bcom:ConcreteDelivery",
     "label" : {
       "@language" : "en",
       "@value" : "Delivery note"
     },
     "range" : "xsd:anyURI"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Duration",
+    "@id" : "bcom:Duration",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Duration of storage in day"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
+    "domain" : "bcom:Storage",
     "label" : {
       "@language" : "en",
       "@value" : "Storage duration"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate",
+    "@id" : "bcom:EndDate",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "End date of concrete curing with format year-month-day in yyyy-mm-dd"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "domain" : "bcom:ConcreteCuring",
     "label" : {
       "@language" : "en",
       "@value" : "End date of concrete curing"
     },
     "range" : "xsd:date"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPlacement",
+    "@id" : "bcom:EndTimeOfPlacement",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "End time of paving with format hour-minute-second in hh-mm-ss"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
+    "domain" : "bcom:ConcreteDelivery",
     "label" : {
       "@language" : "en",
       "@value" : "End time of paving"
     },
     "range" : "xsd:time"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest",
+    "@id" : "bcom:EvaluationOfTest",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Evaluation of the mean value of the test in N/mm2"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Evaluation of the mean value"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FinalCompressiveStrength",
+    "@id" : "bcom:FinalCompressiveStrength",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Result of compressive strength"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties",
+    "@id" : "bcom:FreshConcreteProperties",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -340,299 +337,299 @@
       "@language" : "en",
       "@value" : "Fresh concrete property testing"
     },
-    "subClassOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test"
+    "subClassOf" : "bcom:Test"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature",
+    "@id" : "bcom:FreshConcreteTemperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Fresh concrete temperature before concreting in Celsius"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "Fresh concrete temperature before concreting"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement",
+    "@id" : "bcom:HasConcretePlacement",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "domain" : "bcom:ConcreteCuring",
     "label" : {
       "@language" : "en",
       "@value" : "Curing has Concrete Work"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "range" : "bcom:ConcretePlacement",
     "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring"
+    "inverseOf" : "bcom:HasCuring"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring",
+    "@id" : "bcom:HasCuring",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "has Curing"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcretePlacement"
+    "range" : "bcom:ConcreteCuring",
+    "inverseOf" : "bcom:HasConcretePlacement"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDelivery",
+    "@id" : "bcom:HasDelivery",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "has Concrete Supplier"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo"
+    "range" : "bcom:ConcreteDelivery",
+    "inverseOf" : "bcom:SuppliesConcreteTo"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage",
+    "@id" : "bcom:HasStorage",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample"
+    "domain" : "bcom:TestSample",
+    "range" : "bcom:Storage",
+    "inverseOf" : "bcom:StoresSample"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier",
+    "@id" : "bcom:HasSupplier",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteDelivery",
+    "domain" : "bcom:ConcreteDelivery",
     "label" : {
       "@language" : "en",
       "@value" : "has Concrete Supplier"
     },
     "range" : "vcard:Organization",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo"
+    "inverseOf" : "bcom:SuppliesConcreteTo"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest",
+    "@id" : "bcom:HasTest",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "has Test Of Compressive Strength"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength"
+    "range" : "bcom:ConformityOfCompressiveStrength"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation",
+    "@id" : "bcom:HasTestOrganisation",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "has Perform Test Organisation"
     },
     "range" : "vcard:Organization",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects"
+    "inverseOf" : "bcom:HasTestSubjects"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestPerson",
+    "@id" : "bcom:HasTestPerson",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "has Perform Test Person"
     },
     "range" : "vcard:Individual"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample",
+    "@id" : "bcom:HasTestSample",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "has Test Sample"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample"
+    "range" : "bcom:TestSample"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects",
+    "@id" : "bcom:HasTestSubjects",
     "@type" : "owl:ObjectProperty",
     "domain" : "vcard:Organization",
     "label" : {
       "@language" : "en",
       "@value" : "has Test Subjects"
     },
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "range" : "bcom:Test",
     "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestOrganisation"
+    "inverseOf" : "bcom:HasTestOrganisation"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height",
+    "@id" : "bcom:Height",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Height of a test sample as cube in mm"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Height of sample"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Humidity",
+    "@id" : "bcom:Humidity",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Humidity of storage condition in %"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
+    "domain" : "bcom:Storage",
     "label" : {
       "@language" : "en",
       "@value" : "Storage humidity"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#InterimCompressiveStrength",
+    "@id" : "bcom:InterimCompressiveStrength",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Intermediate result of compressive strength"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length",
+    "@id" : "bcom:Length",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Length of a test sample for cube in mm"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Length of sample"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete",
+    "@id" : "bcom:MaturityOfConcrete",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Maturity of concrete in minute"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties",
+    "domain" : "bcom:FreshConcreteProperties",
     "label" : {
       "@language" : "en",
       "@value" : "Maturity of concrete"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature",
+    "@id" : "bcom:MaxAirTemperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Maximum temperature during post-treatment in Celsius"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "domain" : "bcom:ConcreteCuring",
     "label" : {
       "@language" : "en",
       "@value" : "Max temperature"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment",
+    "@id" : "bcom:MethodOfAftertreatment",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Description of the method for concrete curing"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "domain" : "bcom:ConcreteCuring",
     "label" : {
       "@language" : "en",
       "@value" : "Method of concrete curing"
     },
     "range" : "xsd:string"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature",
+    "@id" : "bcom:MinAirTemperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Minimum temperature during post-treatment in Celsius"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring",
+    "domain" : "bcom:ConcreteCuring",
     "label" : {
       "@language" : "en",
       "@value" : "Min temperature"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#NormativeReference",
+    "@id" : "bcom:NormativeReference",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Norm or standard of the test method"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Test standard"
     },
     "range" : "xsd:string"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature",
+    "@id" : "bcom:ObjectTemperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Temperature of a test sample in Celsius"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Temperature of sample"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete",
+    "@id" : "bcom:QuantityOfConcrete",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Quantity of the concrete placement in cubature m3"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
       "@value" : "Quantity of concrete"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest",
+    "@id" : "bcom:RateOfFlowTableTest",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Rate of flow table test according to DIN EN 12350-5 in mm"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties",
+    "domain" : "bcom:FreshConcreteProperties",
     "label" : {
       "@language" : "en",
       "@value" : "Rate of flow table test"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID",
+    "@id" : "bcom:SampleID",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Name or ID of the test sample"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Sample ID"
     },
     "range" : "xsd:string"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate",
+    "@id" : "bcom:SamplingDate",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Date of sampling with format year-month-day in yyyy-mm-dd"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Date of sampling"
     },
     "range" : "xsd:date"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
+    "@id" : "bcom:Storage",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -644,40 +641,40 @@
     },
     "subClassOf" : "owl:Thing"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StoresSample",
+    "@id" : "bcom:StoresSample",
     "@type" : "owl:ObjectProperty",
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasStorage"
+    "domain" : "bcom:Storage",
+    "range" : "bcom:TestSample",
+    "inverseOf" : "bcom:HasStorage"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo",
+    "@id" : "bcom:SuppliesConcreteTo",
     "@type" : "owl:ObjectProperty",
     "domain" : "vcard:Organization",
     "label" : [ {
       "@language" : "en",
-      "@value" : "supplies Concrete to"
+      "@value" : "Supplies Concrete To"
     }, {
       "@language" : "en",
-      "@value" : "Supplies Concrete To"
+      "@value" : "supplies Concrete to"
     } ],
-    "range" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcretePlacement",
+    "range" : "bcom:ConcretePlacement",
     "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasSupplier"
+    "inverseOf" : "bcom:HasSupplier"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Temperature",
+    "@id" : "bcom:Temperature",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Storage temperature in Celsius"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Storage",
+    "domain" : "bcom:Storage",
     "label" : {
       "@language" : "en",
       "@value" : "Storage temperature"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "@id" : "bcom:Test",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -689,46 +686,46 @@
     },
     "subClassOf" : "owl:Thing"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic",
+    "@id" : "bcom:TestCharacteristic",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "The property has to be tested"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Tested property"
     },
     "range" : "xsd:string"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestDate",
+    "@id" : "bcom:TestDate",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Date of testing with format year-month-day in yyyy-mm-dd"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "Date of testing"
     },
     "range" : "xsd:date"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReport",
+    "@id" : "bcom:TestReport",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Report of conformity test of compressive strength"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "Test report"
     },
     "range" : "xsd:anyURI"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "@id" : "bcom:TestSample",
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
@@ -740,20 +737,20 @@
     },
     "subClassOf" : "owl:Thing"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestTime",
+    "@id" : "bcom:TestTime",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Time of testing with format year-month-day in yyyy-mm-ddThh-mm-ss"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Test",
+    "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
       "@value" : "Time of testing"
     },
     "range" : "xsd:dateTime"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestType",
+    "@id" : "bcom:TestType",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
@@ -766,65 +763,65 @@
     },
     "range" : "_:b7"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBreakingLoad",
+    "@id" : "bcom:TestedBreakingLoad",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Value of breaking load in N"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Value of breaking load"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedDensity",
+    "@id" : "bcom:TestedDensity",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Density of a sample in kg/m3"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength",
+    "domain" : "bcom:ConformityOfCompressiveStrength",
     "label" : {
       "@language" : "en",
       "@value" : "Density of sample"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio",
+    "@id" : "bcom:VoidsRatio",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Voids ratio of fresh concrete in V-%"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteProperties",
+    "domain" : "bcom:FreshConcreteProperties",
     "label" : {
       "@language" : "en",
       "@value" : "Voids ratio"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth",
+    "@id" : "bcom:Weigth",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Weigth of a test sample in kg"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Weigth of sample"
     },
     "range" : "xsd:decimal"
   }, {
-    "@id" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia",
+    "@id" : "bcom:WidthOrDia",
     "@type" : "owl:DatatypeProperty",
     "comment" : {
       "@language" : "en",
       "@value" : "Width of a test sample as cube or diameter of a test sample as cylinder in mm"
     },
-    "domain" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample",
+    "domain" : "bcom:TestSample",
     "label" : {
       "@language" : "en",
       "@value" : "Width or diameter of sample"
@@ -832,19 +829,19 @@
     "range" : "xsd:decimal"
   } ],
   "@context" : {
-    "range" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
-      "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
     "domain" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
     },
     "rest" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
@@ -861,44 +858,47 @@
       "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "oneOf" : {
       "@id" : "http://www.w3.org/2002/07/owl#oneOf",
       "@type" : "@id"
     },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
     "unionOf" : {
       "@id" : "http://www.w3.org/2002/07/owl#unionOf",
-      "@type" : "@id"
-    },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI"
-    },
-    "source" : {
-      "@id" : "http://purl.org/dc/terms/source"
-    },
-    "license" : {
-      "@id" : "http://purl.org/dc/terms/license"
-    },
-    "description" : {
-      "@id" : "http://purl.org/dc/terms/description"
-    },
-    "title" : {
-      "@id" : "http://purl.org/dc/terms/title"
-    },
-    "versionInfo" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "created" : {
       "@id" : "http://purl.org/dc/terms/created",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "bcom" : "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring/",
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "bcom" : "https://w3id.org/bcom#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
