@@ -188,9 +188,9 @@
   rdfs:range vcard:Organization .
 
 <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo>
-  a owl:ObjectProperty, owl:Class ;
+  a owl:ObjectProperty;
   owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcreteSupplier> ;
-  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:subClassOf owl:TopObjectProperty;
   rdfs:domain vcard:Organization ;
   rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "supplies Concrete to"@en, "Supplies Concrete To"@en .
@@ -203,9 +203,9 @@
   rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> .
 
 <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#CuringHasConcreteWork>
-  a owl:ObjectProperty, owl:Class ;
+  a owl:ObjectProperty ;
   owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring> ;
-  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:subClassOf owl:TopObjectProperty ;
   rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
   rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Curing has Concrete Work"@en .
@@ -226,6 +226,7 @@
 
 <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasFreshConcreteProperty>
   a owl:ObjectProperty ;
+  rdfs:subClassOf owl:TopObjectProperty ;
   owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteAssignedToConcreteWork> ;
   rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "has Fresh Concrete Property"@en ;
