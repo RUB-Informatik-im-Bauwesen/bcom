@@ -21,7 +21,7 @@
   dc:description "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties."@en ;
   dc:title "Building Concrete Monitoring Ontology (BCOM)"@en ;
   owl:imports dc11:, vcard:, foaf: ;
-  owl:versionIRI "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring"@en
+  owl:versionIRI "http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring"@en ;
   owl:versionInfo "0.2"@en .
 
 
