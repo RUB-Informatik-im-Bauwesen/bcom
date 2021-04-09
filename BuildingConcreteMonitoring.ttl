@@ -1,432 +1,547 @@
-# baseURI: http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring
-# imports: http://purl.org/dc/elements/1.1/
-# imports: http://www.w3.org/2006/vcard/ns#
-# imports: http://xmlns.com/foaf/0.1/
-# prefix: bcom
-
-@prefix bcom: <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring>
-  rdf:type owl:Ontology ;
+  a owl:Ontology ;
   dc:creator [
-      rdf:type foaf:Person ;
-      foaf:name "Liu Liu" ;
-    ] ;
-  dc:creator [
-      rdf:type foaf:Person ;
-      foaf:name "Philipp Hagedorn" ;
-    ] ;
+    a foaf:Person ;
+    foaf:name "Liu Liu"
+  ], [
+    a foaf:Person ;
+    foaf:name "Philipp Hagedorn"
+  ] ;
   dc:description "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties." ;
   dc:title "Building Concrete Monitoring Ontology (BCOM)" ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports vcard: ;
-  owl:imports foaf: ;
-  owl:versionInfo "Created with TopBraid Composer" ;
-.
-bcom:Agent_1
-  rdf:type dc:Agent ;
-  rdfs:label "Philipp Hagedorn" ;
-.
-bcom:ClassOfMonitoring
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  owl:imports dc11:, vcard:, foaf: ;
+  owl:versionInfo "Created with TopBraid Composer" .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Agent_1>
+  a dc:Agent ;
+  rdfs:label "Philipp Hagedorn"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ClassOfMonitoring>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Class Of concrete monitoring"@en ;
   rdfs:comment "Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete"@en ;
   rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "Class 1"
-          "Class 2"
-          "Class 3"
-        ) ;
-    ] ;
-.
-bcom:ConcreteCuring
-  rdf:type owl:Class ;
+    a rdfs:Datatype ;
+    owl:oneOf (
+     "Class 1"
+     "Class 2"
+     "Class 3"
+   )
+  ] .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring>
+  a owl:Class ;
   rdfs:comment "This class provides the necessary information of concrete curing after concreting"@en ;
   rdfs:label "Concrete curing"@en ;
-  rdfs:subClassOf owl:Thing ;
-.
-bcom:ConcreteWork
-  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork>
+  a owl:Class ;
   rdfs:comment "This class provides the necessary information of current concreting of the constructoin"@en ;
   rdfs:label "Concrete work"@en ;
-  rdfs:subClassOf owl:Thing ;
-.
-bcom:ConformityOfCompressiveStrength
-  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+  a owl:Class ;
   rdfs:comment "This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength."@en ;
   rdfs:label "Conformity testing of compressive strength"@en ;
-  rdfs:subClassOf owl:Thing ;
-.
-bcom:FreshConcretePropertySet
-  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+  a owl:Class ;
   rdfs:comment "This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency."@en ;
   rdfs:label "Fresh conrete property set"@en ;
-  rdfs:subClassOf owl:Thing ;
-.
-bcom:SamplingDate
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
-rdfs:comment "Date of sampling with format year-month-day in yyyy-mm-dd"@en ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SamplingDate>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
+  rdfs:comment "Date of sampling with format year-month-day in yyyy-mm-dd"@en ;
   rdfs:label "Date of sampling"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:TestSample
-  rdf:type owl:Class ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample>
+  a owl:Class ;
   rdfs:comment "This class provides the information of test sample for conformity test of concrete compressive strength"@en ;
   rdfs:label "Test sample"@en ;
-  rdfs:subClassOf owl:Thing ;
-.
-bcom:TestingDate
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestingDate>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Date of testing"@en ;
   rdfs:comment "Date of testing with format year-month-day in yyyy-mm-dd"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:airTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#AirTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample>
+   )
+  ] ;
   rdfs:label "Air temperature"@en ;
   rdfs:comment "Air temperature during concreting or test on fresh concrete in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:beginDate
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteCuring ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginDate>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
   rdfs:label "Begin date of concrete curing"@en ;
   rdfs:comment "Begin date of concrete curing with format year-month-day in yyyy-mm-dd"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:beginTimeOfPaving
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#BeginTimeOfPaving>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Begin time of paving"@en ;
   rdfs:comment "Begin time of paving with format hour-minute-second in hh-mm-ss"@en ;
-  rdfs:range xsd:time ;
-.
-bcom:concreteTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range xsd:time .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
   rdfs:label "Fresh concrete temperature"@en ;
   rdfs:comment "Fresh concrete temperature during testing of property in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:conversionFactor
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConversionFactor>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Conversion factor"@en ;
   rdfs:comment "Conversion factor of compressive strength testing"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:dateOfConcreting
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfConcreting>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Date of concreting"@en ;
   rdfs:comment "Date of concreting with format year-month-day in yyyy-mm-dd"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:dateOfStripping
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateOfStripping>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Date of stripping"@en ;
   rdfs:comment "Date of stripping with format year-month-day in yyyy-mm-dd"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:dateofConfTest
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DateofConfTest>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Date of conformity test"@en ;
   rdfs:comment "Date of conformity test with format year-month-day in yyyy-mm-dd"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:dulkDensity
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#DulkDensity>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
   rdfs:label "Dulk density"@en ;
   rdfs:comment "Dulk density of fresh concrete in kg/m3"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:endDate
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteCuring ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndDate>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
   rdfs:label "End date of concrete curing"@en ;
   rdfs:comment "End date of concrete curing with format year-month-day in yyyy-mm-dd"@en ;
-  rdfs:range xsd:date ;
-.
-bcom:endTimeOfPaving
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:date .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EndTimeOfPaving>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "End time of paving"@en ;
   rdfs:comment "End time of paving with format hour-minute-second in hh-mm-ss"@en ;
-  rdfs:range xsd:time ;
-.
-bcom:evaluationOfTest
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:time .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#EvaluationOfTest>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Evaluation of the mean value"@en ;
   rdfs:comment "Evaluation of the mean value of the test in N/mm2"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:freshConcreteTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Fresh concrete temperature before concreting"@en ;
   rdfs:comment "Fresh concrete temperature before concreting in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:hasConcreteSupplier
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcreteSupplier>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo> ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "has Concrete Supplier"@en ;
-  rdfs:range <http://www.w3.org/2006/vcard/ns#Organization> ;
-.
-bcom:hasCuring
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range vcard:Organization .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SuppliesConcreteTo>
+  a owl:ObjectProperty, owl:Class ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasConcreteSupplier> ;
+  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:domain vcard:Organization ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
+  rdfs:label "supplies Concrete to"@en, "Supplies Concrete To"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#CuringHasConcreteWork> ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "has Curing"@en ;
-rdfs:range bcom:ConcreteCuring ;
-.
-bcom:hasDeliveryNote
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#CuringHasConcreteWork>
+  a owl:ObjectProperty, owl:Class ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasCuring> ;
+  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
+  rdfs:label "Curing has Concrete Work"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasDeliveryNote>
+  a owl:DatatypeProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample>
+   )
+  ] ;
   rdfs:label "Delivery note"@en ;
   rdfs:comment "Delivery note of mixed-ready concrete"@en ;
-  rdfs:range xsd:anyURI ;
-.
-bcom:hasFreshConcreteProperty
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:anyURI .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasFreshConcreteProperty>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteAssignedToConcreteWork> ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "has Fresh Concrete Property"@en ;
-  rdfs:range bcom:FreshConcretePropertySet ;
-.
-bcom:hasPerformTestOrg
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcreteAssignedToConcreteWork>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasFreshConcreteProperty> ;
+  rdfs:subClassOf owl:TopObjectProperty ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
+  rdfs:label "fresh Concrete assigned to Concrete Work"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#freshConcreteAssignedToConcreteWork>
+  a owl:Class ;
+  rdfs:label "Fresh Concrete assigned to Concrete Work"@en ;
+  rdfs:subClassOf owl:Thing .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasPerformTestOrg>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects> ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+   )
+  ] ;
   rdfs:label "has Perform Test Organisation"@en ;
-  rdfs:range <http://www.w3.org/2006/vcard/ns#Organization> ;
-.
-bcom:hasPerformTestPerson
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range vcard:Organization .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSubjects>
+  a owl:ObjectProperty, owl:Class ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasPerformTestOrg> ;
+  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+   )
+  ] ;
+  rdfs:domain vcard:Organization ;
+  rdfs:label "has Test Subjects"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasPerformTestPerson>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#PerformTesterHasTest> ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+   )
+  ] ;
   rdfs:label "has Perform Test Person"@en ;
-  rdfs:range <http://www.w3.org/2006/vcard/ns#Individual> ;
-.
-bcom:hasTest
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range vcard:Individual .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#PerformTesterHasTest>
+  a owl:Class, owl:ObjectProperty ;
+  rdfs:label ""@en, "Perfom Tester has Test"@en ;
+  rdfs:subClassOf owl:Thing, owl:TopObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasPerformTestPerson> ;
+  rdfs:domain vcard:Individual ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+   )
+  ] .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBy> ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "has Test Of Compressive Strength"@en ;
-  rdfs:range bcom:ConformityOfCompressiveStrength ;
-.
-bcom:hasTestReport
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestedBy>
+  a owl:ObjectProperty, owl:Class ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTest> ;
+  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
+  rdfs:label "tested By"@en, "Tested By"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestReport>
+  a owl:DatatypeProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReportAssignedTo> ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Test report"@en ;
   rdfs:comment "Report of conformity test of compressive strength"@en ;
-  rdfs:range xsd:anyURI ;
-.
-bcom:hasTestSample
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:ConcreteWork ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:label "has Test Sample"@en ;
-  rdfs:range bcom:TestSample ;
-.
-bcom:height
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:anyURI .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestReportAssignedTo>
+  a owl:ObjectProperty, owl:Class ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestReport> ;
+  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:domain xsd:anyURI ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
+  rdfs:label "Test Report assigned to"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSampleAssignedTo> ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+   )
+  ] ;
+  rdfs:range <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
+  rdfs:label "has Test Sample"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSampleAssignedTo>
+  a owl:ObjectProperty, owl:Class ;
+  owl:inverseOf <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#HasTestSample> ;
+  rdfs:subClassOf owl:TopObjectProperty, owl:Thing ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+   )
+  ] ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
+  rdfs:label "Test Sample assigned to"@en, "Test Sample Assigned To Class"@en .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Height>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Height of sample"@en ;
   rdfs:comment "Height of a test sample as cube in mm"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:length
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Length>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Length of sample"@en ;
   rdfs:comment "Length of a test sample for cube in mm"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:maturityOfConcrete
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaturityOfConcrete>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
   rdfs:label "Maturity of concrete"@en ;
   rdfs:comment "Maturity of concrete in minute"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:maxAirTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteCuring ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MaxAirTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
   rdfs:label "Max temperature"@en ;
   rdfs:comment "Maximum temperature during post-treatment in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:methodOfAftertreatment
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteCuring ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MethodOfAftertreatment>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
   rdfs:label "Method of concrete curing"@en ;
   rdfs:comment "Description of the method for concrete curing"@en ;
-  rdfs:range xsd:string ;
-.
-bcom:minAirTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteCuring ;
+  rdfs:range xsd:string .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#MinAirTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteCuring> ;
   rdfs:label "Min temperature"@en ;
   rdfs:comment "Minimum temperature during post-treatment in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:objectTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ObjectTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Temperature of sample"@en ;
   rdfs:comment "Temperature of a test sample in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:quantityOfConcrete
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#QuantityOfConcrete>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork> ;
   rdfs:label "Quantity of concrete"@en ;
   rdfs:comment "Quantity of the concrete placement in cubature m3"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:rateOfFlowTableTest
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#RateOfFlowTableTest>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
   rdfs:label "Rate of flow table test"@en ;
   rdfs:comment "Rate of flow table test according to DIN EN 12350-5 in mm"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:sampleID
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#SampleID>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Sample ID"@en ;
   rdfs:comment "Name or ID of the test sample"@en ;
-  rdfs:range xsd:string ;
-.
-bcom:storageCondition
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:string .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StorageCondition>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Storage condition"@en ;
   rdfs:comment "Description of storage condition"@en ;
-  rdfs:range xsd:string ;
-.
-bcom:storageDuration
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:string .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StorageDuration>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Storage duration"@en ;
   rdfs:comment "Duration of storage in day"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:storageHumidity
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StorageHumidity>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Storage humidity"@en ;
   rdfs:comment "Humidity of storage condition in %"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:storageTemperature
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#StorageTemperature>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Storage temperature"@en ;
   rdfs:comment "Storage temperature in Celsius"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:testCharacteristic
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestCharacteristic>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Tested property"@en ;
   rdfs:comment "The property has to be tested"@en ;
-  rdfs:range xsd:string ;
-.
-bcom:testStandards
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:string .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestStandards>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Test standard"@en ;
   rdfs:comment "Norm or standard of the test method"@en ;
-  rdfs:range xsd:string ;
-.
-bcom:timeOfSampling
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range xsd:string .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TimeOfSampling>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
   rdfs:label "Time of sampling"@en ;
   rdfs:comment "Time of sampling with format year-month-day in yyyy-mm-ddThh-mm-ss"@en ;
-  rdfs:range xsd:dateTime ;
-.
-bcom:typeOfTest
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConcreteWork ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:dateTime .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TypeOfTest>
+  a owl:DatatypeProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConcreteWork>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet>
+     <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample>
+   )
+  ] ;
   rdfs:label "Type of test"@en ;
   rdfs:comment "Type of test as self-inspection or third-party monitoring"@en ;
   rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "SelfInspection"
-          "Third-Party Monitoring"
-        ) ;
-    ] ;
-.
-bcom:valueOfBreakingLoad
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+    a rdfs:Datatype ;
+    owl:oneOf (
+     "SelfInspection"
+     "Third-Party Monitoring"
+   )
+  ] .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ValueOfBreakingLoad>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Value of breaking load"@en ;
   rdfs:comment "Value of breaking load in N"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:valueOfDensity
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ValueOfDensity>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Density of sample"@en ;
   rdfs:comment "Density of a sample in kg/m3"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:valueOfFinalResult
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ValueOfFinalResult>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Result of compressive strength"@en ;
   rdfs:comment "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:valueOfInterimResult
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:ConformityOfCompressiveStrength ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ValueOfInterimResult>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#ConformityOfCompressiveStrength> ;
   rdfs:label "Intermediate result of compressive strength"@en ;
   rdfs:comment "Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2"@en ;
-rdfs:range xsd:decimal ;
-.
-bcom:voidsRatio
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:FreshConcretePropertySet ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#VoidsRatio>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#FreshConcretePropertySet> ;
   rdfs:label "Voids ratio"@en ;
   rdfs:comment "Voids ratio of fresh concrete in V-%"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:weigth
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#Weigth>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Weigth of sample"@en ;
   rdfs:comment "Weigth of a test sample in kg"@en ;
-  rdfs:range xsd:decimal ;
-.
-bcom:widthOrDia
-  rdf:type owl:DatatypeProperty ;
-  rdfs:domain bcom:TestSample ;
+  rdfs:range xsd:decimal .
+
+<http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#WidthOrDia>
+  a owl:DatatypeProperty ;
+  rdfs:domain <http://www.inf.bi.rub.de/semweb/ns/buildingconcretemonitoring#TestSample> ;
   rdfs:label "Width or diameter of sample"@en ;
   rdfs:comment "Width of a test sample as cube or diameter of a test sample as cylinder in mm"@en ;
-  rdfs:range xsd:decimal ;
-.
+  rdfs:range xsd:decimal .
