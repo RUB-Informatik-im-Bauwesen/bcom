@@ -30,7 +30,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 
 
 ## Overview
-
+![Overview of Ontology](https://icdd.vm.rub.de/ontology/bcom/BuildingConcreteMonitoring.png "Overview of Ontology")  
 **Figure 1:** Ontology overview
 ## Classes
 [Concrete curing](#Concretecuring),
