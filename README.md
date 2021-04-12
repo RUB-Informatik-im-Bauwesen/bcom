@@ -10,6 +10,8 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
   * Philipp Hagedorn, Ruhr-University Bochum
 * **Created**
   * 2021-01-20
+* **Updated**
+  * 2021-04-14
 * **Version Information**
   * 0.2
 * **License**
