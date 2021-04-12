@@ -235,36 +235,31 @@ bcom:HasSupplier
 .
 bcom:HasTest
   rdf:type owl:ObjectProperty ;
-  rdfs:domain bcom:Test ;
-  rdfs:label "has Test Of Compressive Strength"@en ;
-  rdfs:range bcom:ConformityOfCompressiveStrength ;
+  rdfs:domain bcom:ConcretePlacement ;
+  rdfs:label "has Test"@en ;
+  rdfs:range bcom:Test ;
+  owl:inverseOf bcom:IsTestOf ;
 .
 bcom:HasTestOrganisation
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:Test ;
-  rdfs:label "has Perform Test Organisation"@en ;
+  rdfs:label "has Test Organisation"@en ;
   rdfs:range vcard:Organization ;
-  owl:inverseOf bcom:HasTestSubjects ;
+  owl:inverseOf bcom:IsTestOrganisationOf ;
 .
 bcom:HasTestPerson
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:Test ;
-  rdfs:label "has Perform Test Person"@en ;
+  rdfs:label "has Test Person"@en ;
   rdfs:range vcard:Individual ;
+  owl:inverseOf bcom:IsTestPersonOf ;
 .
 bcom:HasTestSample
   rdf:type owl:ObjectProperty ;
   rdfs:domain bcom:Test ;
   rdfs:label "has Test Sample"@en ;
   rdfs:range bcom:TestSample ;
-.
-bcom:HasTestSubjects
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain vcard:Organization ;
-  rdfs:label "has Test Subjects"@en ;
-  rdfs:range bcom:Test ;
-  rdfs:subClassOf owl:TopObjectProperty ;
-  owl:inverseOf bcom:HasTestOrganisation ;
+  owl:inverseOf bcom:IsTestSampleOf ;
 .
 bcom:Height
   rdf:type owl:DatatypeProperty ;
@@ -286,6 +281,35 @@ bcom:InterimCompressiveStrength
   rdfs:domain bcom:ConformityOfCompressiveStrength ;
   rdfs:label "Intermediate result of compressive strength"@en ;
   rdfs:range xsd:decimal ;
+.
+bcom:IsTestOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain bcom:Test ;
+  rdfs:label "is Test of"@en ;
+  rdfs:range bcom:ConcretePlacement ;
+  owl:inverseOf bcom:HasTest ;
+.
+bcom:IsTestOrganisationOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain vcard:Organization ;
+  rdfs:label "is Test Organisation of"@en ;
+  rdfs:range bcom:Test ;
+  rdfs:subClassOf owl:TopObjectProperty ;
+  owl:inverseOf bcom:HasTestOrganisation ;
+.
+bcom:IsTestPersonOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain vcard:Individual ;
+  rdfs:label "is Test Person of" ;
+  rdfs:range bcom:Test ;
+  owl:inverseOf bcom:HasTestPerson ;
+.
+bcom:IsTestSampleOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain bcom:TestSample ;
+  rdfs:label "is Test Sample of"@en ;
+  rdfs:range bcom:Test ;
+  owl:inverseOf bcom:HasTestSample ;
 .
 bcom:Length
   rdf:type owl:DatatypeProperty ;
@@ -421,7 +445,7 @@ bcom:TestReport
 .
 bcom:TestSample
   rdf:type owl:Class ;
-  rdfs:comment "This class provides the information of test sample for conformity test of concrete compressive strength"@en ;
+  rdfs:comment "This class provides the information of test samples"@en ;
   rdfs:label "Test sample"@en ;
   rdfs:subClassOf owl:Thing ;
 .

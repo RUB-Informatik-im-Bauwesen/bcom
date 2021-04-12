@@ -1,28 +1,34 @@
 {
   "@graph" : [ {
-    "@id" : "_:b10",
-    "@type" : "foaf:Person",
-    "name" : "Liu Liu, Ruhr-University Bochum"
+    "@id" : "_:b0",
+    "@type" : "rdfs:Datatype",
+    "owl:oneOf" : {
+      "@list" : [ "Self-Inspection", "Third-Party Monitoring" ]
+    }
   }, {
-    "@id" : "_:b12",
+    "@id" : "_:b13",
     "@type" : "owl:Class",
     "unionOf" : {
       "@list" : [ "bcom:ConcretePlacement", "bcom:TestSample" ]
     }
-  }, {
-    "@id" : "_:b14",
-    "@type" : "foaf:Person",
-    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
-  }, {
-    "@id" : "_:b15",
-    "@type" : "foaf:Person",
-    "name" : "Liu Liu, Ruhr-University Bochum"
   }, {
     "@id" : "_:b16",
     "@type" : "owl:Class",
     "unionOf" : {
       "@list" : [ "bcom:ConcretePlacement", "bcom:Test" ]
     }
+  }, {
+    "@id" : "_:b2",
+    "@type" : "foaf:Person",
+    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "foaf:Person",
+    "name" : "Liu Liu, Ruhr-University Bochum"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "foaf:Person",
+    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
   }, {
     "@id" : "_:b6",
     "@type" : "rdfs:Datatype",
@@ -31,19 +37,13 @@
     }
   }, {
     "@id" : "_:b7",
-    "@type" : "rdfs:Datatype",
-    "owl:oneOf" : {
-      "@list" : [ "Self-Inspection", "Third-Party Monitoring" ]
-    }
-  }, {
-    "@id" : "_:b8",
     "@type" : "foaf:Person",
-    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
+    "name" : "Liu Liu, Ruhr-University Bochum"
   }, {
     "@id" : "https://w3id.org/bcom",
     "@type" : "owl:Ontology",
     "created" : "2021-01-20",
-    "creator" : [ "_:b8", "_:b10" ],
+    "creator" : [ "_:b7", "_:b2" ],
     "description" : {
       "@language" : "en",
       "@value" : "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties."
@@ -66,7 +66,7 @@
       "@language" : "en",
       "@value" : "Air temperature during concreting or test on fresh concrete in Celsius"
     },
-    "domain" : "_:b12",
+    "domain" : "_:b13",
     "label" : {
       "@language" : "en",
       "@value" : "Air temperature"
@@ -401,31 +401,33 @@
   }, {
     "@id" : "bcom:HasTest",
     "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:Test",
+    "domain" : "bcom:ConcretePlacement",
     "label" : {
       "@language" : "en",
-      "@value" : "has Test Of Compressive Strength"
+      "@value" : "has Test"
     },
-    "range" : "bcom:ConformityOfCompressiveStrength"
+    "range" : "bcom:Test",
+    "inverseOf" : "bcom:IsTestOf"
   }, {
     "@id" : "bcom:HasTestOrganisation",
     "@type" : "owl:ObjectProperty",
     "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
-      "@value" : "has Perform Test Organisation"
+      "@value" : "has Test Organisation"
     },
     "range" : "vcard:Organization",
-    "inverseOf" : "bcom:HasTestSubjects"
+    "inverseOf" : "bcom:IsTestOrganisationOf"
   }, {
     "@id" : "bcom:HasTestPerson",
     "@type" : "owl:ObjectProperty",
     "domain" : "bcom:Test",
     "label" : {
       "@language" : "en",
-      "@value" : "has Perform Test Person"
+      "@value" : "has Test Person"
     },
-    "range" : "vcard:Individual"
+    "range" : "vcard:Individual",
+    "inverseOf" : "bcom:IsTestPersonOf"
   }, {
     "@id" : "bcom:HasTestSample",
     "@type" : "owl:ObjectProperty",
@@ -434,18 +436,8 @@
       "@language" : "en",
       "@value" : "has Test Sample"
     },
-    "range" : "bcom:TestSample"
-  }, {
-    "@id" : "bcom:HasTestSubjects",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "vcard:Organization",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Test Subjects"
-    },
-    "range" : "bcom:Test",
-    "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "bcom:HasTestOrganisation"
+    "range" : "bcom:TestSample",
+    "inverseOf" : "bcom:IsTestSampleOf"
   }, {
     "@id" : "bcom:Height",
     "@type" : "owl:DatatypeProperty",
@@ -485,6 +477,44 @@
       "@value" : "Intermediate result of compressive strength"
     },
     "range" : "xsd:decimal"
+  }, {
+    "@id" : "bcom:IsTestOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "bcom:Test",
+    "label" : {
+      "@language" : "en",
+      "@value" : "is Test of"
+    },
+    "range" : "bcom:ConcretePlacement",
+    "inverseOf" : "bcom:HasTest"
+  }, {
+    "@id" : "bcom:IsTestOrganisationOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vcard:Organization",
+    "label" : {
+      "@language" : "en",
+      "@value" : "is Test Organisation of"
+    },
+    "range" : "bcom:Test",
+    "subClassOf" : "owl:TopObjectProperty",
+    "inverseOf" : "bcom:HasTestOrganisation"
+  }, {
+    "@id" : "bcom:IsTestPersonOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "vcard:Individual",
+    "label" : "is Test Person of",
+    "range" : "bcom:Test",
+    "inverseOf" : "bcom:HasTestPerson"
+  }, {
+    "@id" : "bcom:IsTestSampleOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "bcom:TestSample",
+    "label" : {
+      "@language" : "en",
+      "@value" : "is Test Sample of"
+    },
+    "range" : "bcom:Test",
+    "inverseOf" : "bcom:HasTestSample"
   }, {
     "@id" : "bcom:Length",
     "@type" : "owl:DatatypeProperty",
@@ -652,10 +682,10 @@
     "domain" : "vcard:Organization",
     "label" : [ {
       "@language" : "en",
-      "@value" : "Supplies Concrete To"
+      "@value" : "supplies Concrete to"
     }, {
       "@language" : "en",
-      "@value" : "supplies Concrete to"
+      "@value" : "Supplies Concrete To"
     } ],
     "range" : "bcom:ConcretePlacement",
     "subClassOf" : "owl:TopObjectProperty",
@@ -729,7 +759,7 @@
     "@type" : "owl:Class",
     "comment" : {
       "@language" : "en",
-      "@value" : "This class provides the information of test sample for conformity test of concrete compressive strength"
+      "@value" : "This class provides the information of test samples"
     },
     "label" : {
       "@language" : "en",
@@ -761,7 +791,7 @@
       "@language" : "en",
       "@value" : "Type of test"
     },
-    "range" : "_:b7"
+    "range" : "_:b0"
   }, {
     "@id" : "bcom:TestedBreakingLoad",
     "@type" : "owl:DatatypeProperty",
@@ -829,6 +859,13 @@
     "range" : "xsd:decimal"
   } ],
   "@context" : {
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
     "domain" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
@@ -836,12 +873,16 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "range" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+    "oneOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#oneOf",
       "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "rest" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
@@ -850,23 +891,12 @@
     "first" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
     },
-    "subClassOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
     "inverseOf" : {
       "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
-    "oneOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#oneOf",
-      "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
-    "unionOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "created" : {
@@ -875,10 +905,6 @@
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
     },
     "source" : {
       "@id" : "http://purl.org/dc/terms/source",
@@ -897,6 +923,10 @@
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "unionOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+      "@type" : "@id"
     },
     "bcom" : "https://w3id.org/bcom#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",

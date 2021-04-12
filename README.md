@@ -50,7 +50,7 @@ Property | Value
 IRI | `https://w3id.org/bcom#ConcreteCuring`
 Description | <p>This class provides the necessary information of concrete curing after concreting</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:MethodOfAftertreatment](Methodofconcretecuring) (dp)<br />[bcom:EndDate](Enddateofconcretecuring) (dp)<br />[bcom:MaxAirTemperature](Maxtemperature) (dp)<br />[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:BeginDate](Begindateofconcretecuring) (dp)<br />[bcom:MinAirTemperature](Mintemperature) (dp)<br />
+In domain of |[bcom:MaxAirTemperature](Maxtemperature) (dp)<br />[bcom:MinAirTemperature](Mintemperature) (dp)<br />[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:MethodOfAftertreatment](Methodofconcretecuring) (dp)<br />[bcom:EndDate](Enddateofconcretecuring) (dp)<br />[bcom:BeginDate](Begindateofconcretecuring) (dp)<br />
 In range of |[bcom:HasCuring](hasCuring) (op)<br />
 ### Concrete delivery
 Property | Value
@@ -58,7 +58,7 @@ Property | Value
 IRI | `https://w3id.org/bcom#ConcreteDelivery`
 Description | <p>This class provides information about the delivery of concrete</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:EndTimeOfPlacement](Endtimeofpaving) (dp)<br />[bcom:BeginTimeOfPlacement](Begintimeofpaving) (dp)<br />[bcom:DeliveryNote](Deliverynote) (dp)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />[bcom:HasSupplier](HasSupplier) (op)<br />
+In domain of |[bcom:DeliveryNote](Deliverynote) (dp)<br />[bcom:HasSupplier](HasSupplier) (op)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />[bcom:BeginTimeOfPlacement](Begintimeofpaving) (dp)<br />[bcom:EndTimeOfPlacement](Endtimeofpaving) (dp)<br />
 In range of |[bcom:HasDelivery](hasConcreteSupplier) (op)<br />
 ### Concrete placement
 Property | Value
@@ -66,30 +66,29 @@ Property | Value
 IRI | `https://w3id.org/bcom#ConcretePlacement`
 Description | <p>This class provides the necessary information of current concreting of the construction</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:HasCuring](hasCuring) (op)<br />[bcom:DateOfConcreting](Dateofconcreting) (dp)<br />[bcom:DateOfStripping](Dateofstripping) (dp)<br />[bcom:QuantityOfConcrete](Quantityofconcrete) (dp)<br />[bcom:HasDelivery](hasConcreteSupplier) (op)<br />[bcom:FreshConcreteTemperature](Freshconcretetemperaturebeforeconcreting) (dp)<br />[bcom:ClassOfMonitoring](ClassOfconcretemonitoring) (dp)<br />
-In range of |[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:SuppliesConcreteTo](suppliesConcreteto) (op)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />
+In domain of |[bcom:HasCuring](hasCuring) (op)<br />[bcom:FreshConcreteTemperature](Freshconcretetemperaturebeforeconcreting) (dp)<br />[bcom:DateOfStripping](Dateofstripping) (dp)<br />[bcom:QuantityOfConcrete](Quantityofconcrete) (dp)<br />[bcom:DateOfConcreting](Dateofconcreting) (dp)<br />[bcom:ClassOfMonitoring](ClassOfconcretemonitoring) (dp)<br />[bcom:HasDelivery](hasConcreteSupplier) (op)<br />[bcom:HasTest](hasTest) (op)<br />
+In range of |[bcom:IsTestOf](isTestof) (op)<br />[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />[bcom:SuppliesConcreteTo](SuppliesConcreteTo) (op)<br />
 ### Conformity testing of compressive strength
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConformityOfCompressiveStrength`
 Description | <p>This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength.</p>
 Super-classes |[bcom:Test](Test) (c)<br />
-In domain of |[bcom:TestedBreakingLoad](Valueofbreakingload) (dp)<br />[bcom:InterimCompressiveStrength](Intermediateresultofcompressivestrength) (dp)<br />[bcom:TestedDensity](Densityofsample) (dp)<br />[bcom:TestCharacteristic](Testedproperty) (dp)<br />[bcom:EvaluationOfTest](Evaluationofthemeanvalue) (dp)<br />[bcom:ConversionFactor](Conversionfactor) (dp)<br />[bcom:NormativeReference](Teststandard) (dp)<br />[bcom:FinalCompressiveStrength](Resultofcompressivestrength) (dp)<br />
-In range of |[bcom:HasTest](hasTestOfCompressiveStrength) (op)<br />
+In domain of |[bcom:TestedDensity](Densityofsample) (dp)<br />[bcom:TestedBreakingLoad](Valueofbreakingload) (dp)<br />[bcom:ConversionFactor](Conversionfactor) (dp)<br />[bcom:FinalCompressiveStrength](Resultofcompressivestrength) (dp)<br />[bcom:EvaluationOfTest](Evaluationofthemeanvalue) (dp)<br />[bcom:InterimCompressiveStrength](Intermediateresultofcompressivestrength) (dp)<br />[bcom:NormativeReference](Teststandard) (dp)<br />[bcom:TestCharacteristic](Testedproperty) (dp)<br />
 ### Fresh concrete property testing
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#FreshConcreteProperties`
 Description | <p>This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency.</p>
 Super-classes |[bcom:Test](Test) (c)<br />
-In domain of |[bcom:ConcreteTemperature](Freshconcretetemperature) (dp)<br />[bcom:BulkDensity](Bulkdensity) (dp)<br />[bcom:VoidsRatio](Voidsratio) (dp)<br />[bcom:RateOfFlowTableTest](Rateofflowtabletest) (dp)<br />[bcom:MaturityOfConcrete](Maturityofconcrete) (dp)<br />
+In domain of |[bcom:ConcreteTemperature](Freshconcretetemperature) (dp)<br />[bcom:VoidsRatio](Voidsratio) (dp)<br />[bcom:RateOfFlowTableTest](Rateofflowtabletest) (dp)<br />[bcom:BulkDensity](Bulkdensity) (dp)<br />[bcom:MaturityOfConcrete](Maturityofconcrete) (dp)<br />
 ### Storage of a test sample
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Storage`
 Description | <p>This class represents the storage conditions of a test sample</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:Temperature](Storagetemperature) (dp)<br />[bcom:Humidity](Storagehumidity) (dp)<br />[bcom:Condition](Storagecondition) (dp)<br />[bcom:Duration](Storageduration) (dp)<br />[bcom:StoresSample](StoresSample) (op)<br />
+In domain of |[bcom:Temperature](Storagetemperature) (dp)<br />[bcom:Condition](Storagecondition) (dp)<br />[bcom:Duration](Storageduration) (dp)<br />[bcom:Humidity](Storagehumidity) (dp)<br />[bcom:StoresSample](StoresSample) (op)<br />
 In range of |[bcom:HasStorage](HasStorage) (op)<br />
 ### Test
 Property | Value
@@ -97,16 +96,16 @@ Property | Value
 IRI | `https://w3id.org/bcom#Test`
 Description | <p>Represents the super-class for different types of tests for placed concrete</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Sub-classes |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
-In domain of |[bcom:TestTime](Timeoftesting) (dp)<br />[bcom:HasTestSample](hasTestSample) (op)<br />[bcom:HasTestPerson](hasPerformTestPerson) (op)<br />[bcom:HasTest](hasTestOfCompressiveStrength) (op)<br />[bcom:TestReport](Testreport) (dp)<br />[bcom:HasTestOrganisation](hasPerformTestOrganisation) (op)<br />[bcom:TestDate](Dateoftesting) (dp)<br />
-In range of |[bcom:HasTestSubjects](hasTestSubjects) (op)<br />
+Sub-classes |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
+In domain of |[bcom:TestDate](Dateoftesting) (dp)<br />[bcom:TestTime](Timeoftesting) (dp)<br />[bcom:HasTestPerson](hasTestPerson) (op)<br />[bcom:HasTestOrganisation](hasTestOrganisation) (op)<br />[bcom:TestReport](Testreport) (dp)<br />[bcom:HasTestSample](hasTestSample) (op)<br />[bcom:IsTestOf](isTestof) (op)<br />
+In range of |[bcom:IsTestSampleOf](isTestSampleof) (op)<br />[bcom:HasTest](hasTest) (op)<br />[bcom:IsTestOrganisationOf](isTestOrganisationof) (op)<br />[bcom:IsTestPersonOf](isTestPersonof) (op)<br />
 ### Test sample
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestSample`
-Description | <p>This class provides the information of test sample for conformity test of concrete compressive strength</p>
+Description | <p>This class provides the information of test samples</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:Weigth](Weigthofsample) (dp)<br />[bcom:WidthOrDia](Widthordiameterofsample) (dp)<br />[bcom:Length](Lengthofsample) (dp)<br />[bcom:HasStorage](HasStorage) (op)<br />[bcom:Height](Heightofsample) (dp)<br />[bcom:ObjectTemperature](Temperatureofsample) (dp)<br />[bcom:SamplingDate](Dateofsampling) (dp)<br />[bcom:SampleID](SampleID) (dp)<br />
+In domain of |[bcom:Height](Heightofsample) (dp)<br />[bcom:SamplingDate](Dateofsampling) (dp)<br />[bcom:WidthOrDia](Widthordiameterofsample) (dp)<br />[bcom:IsTestSampleOf](isTestSampleof) (op)<br />[bcom:HasStorage](HasStorage) (op)<br />[bcom:SampleID](SampleID) (dp)<br />[bcom:Weigth](Weigthofsample) (dp)<br />[bcom:ObjectTemperature](Temperatureofsample) (dp)<br />[bcom:Length](Lengthofsample) (dp)<br />
 In range of |[bcom:StoresSample](StoresSample) (op)<br />[bcom:HasTestSample](hasTestSample) (op)<br />
 
 ## Object Properties
@@ -116,13 +115,16 @@ In range of |[bcom:StoresSample](StoresSample) (op)<br />[bcom:HasTestSample](ha
 [has Concrete Supplier](#hasConcreteSupplier),
 [HasStorage](#HasStorage),
 [has Concrete Supplier](#HasSupplier),
-[has Test Of Compressive Strength](#hasTestOfCompressiveStrength),
-[has Perform Test Organisation](#hasPerformTestOrganisation),
-[has Perform Test Person](#hasPerformTestPerson),
+[has Test](#hasTest),
+[has Test Organisation](#hasTestOrganisation),
+[has Test Person](#hasTestPerson),
 [has Test Sample](#hasTestSample),
-[has Test Subjects](#hasTestSubjects),
+[is Test of](#isTestof),
+[is Test Organisation of](#isTestOrganisationof),
+[is Test Person of](#isTestPersonof),
+[is Test Sample of](#isTestSampleof),
 [StoresSample](#StoresSample),
-[supplies Concrete to](#suppliesConcreteto),
+[Supplies Concrete To](#SuppliesConcreteTo),
 [](Deliversconcretefor)
 ### Delivers concrete for
 Property | Value
@@ -165,22 +167,22 @@ Property | Value
 IRI | `https://w3id.org/bcom#HasSupplier`
 Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
-[](hasTestOfCompressiveStrength)
-### has Test Of Compressive Strength
+[](hasTest)
+### has Test
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTest`
-Domain(s) |[bcom:Test](Test) (c)<br />
-Range(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
-[](hasPerformTestOrganisation)
-### has Perform Test Organisation
+Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
+Range(s) |[bcom:Test](Test) (c)<br />
+[](hasTestOrganisation)
+### has Test Organisation
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTestOrganisation`
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
-[](hasPerformTestPerson)
-### has Perform Test Person
+[](hasTestPerson)
+### has Test Person
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTestPerson`
@@ -193,12 +195,33 @@ Property | Value
 IRI | `https://w3id.org/bcom#HasTestSample`
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[bcom:TestSample](Testsample) (c)<br />
-[](hasTestSubjects)
-### has Test Subjects
+[](isTestof)
+### is Test of
 Property | Value
 --- | ---
-IRI | `https://w3id.org/bcom#HasTestSubjects`
+IRI | `https://w3id.org/bcom#IsTestOf`
+Domain(s) |[bcom:Test](Test) (c)<br />
+Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
+[](isTestOrganisationof)
+### is Test Organisation of
+Property | Value
+--- | ---
+IRI | `https://w3id.org/bcom#IsTestOrganisationOf`
 Domain(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
+Range(s) |[bcom:Test](Test) (c)<br />
+[](isTestPersonof)
+### is Test Person of
+Property | Value
+--- | ---
+IRI | `https://w3id.org/bcom#IsTestPersonOf`
+Domain(s) |[vcard:Individual](http://www.w3.org/2006/vcard/ns#Individual) (c)<br />
+Range(s) |[bcom:Test](Test) (c)<br />
+[](isTestSampleof)
+### is Test Sample of
+Property | Value
+--- | ---
+IRI | `https://w3id.org/bcom#IsTestSampleOf`
+Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[bcom:Test](Test) (c)<br />
 [](StoresSample)
 ### StoresSample
@@ -207,8 +230,8 @@ Property | Value
 IRI | `https://w3id.org/bcom#StoresSample`
 Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
 Range(s) |[bcom:TestSample](Testsample) (c)<br />
-[](suppliesConcreteto)
-### supplies Concrete to
+[](SuppliesConcreteTo)
+### Supplies Concrete To
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#SuppliesConcreteTo`

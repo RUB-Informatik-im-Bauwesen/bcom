@@ -1,354 +1,372 @@
 # baseURI: https://w3id.org/bcom
 # prefix: bcom
 
+<https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Intermediate result of compressive strength"@en .
 <https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
 <https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2"@en .
 <https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Intermediate result of compressive strength"@en .
-<https://w3id.org/bcom#InterimCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#BeginDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bcom#BeginDate> <http://www.w3.org/2000/01/rdf-schema#label> "Begin date of concrete curing"@en .
 <https://w3id.org/bcom#BeginDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteCuring> .
 <https://w3id.org/bcom#BeginDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Begin date of concrete curing with format year-month-day in yyyy-mm-dd"@en .
 <https://w3id.org/bcom#BeginDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#BeginDate> <http://www.w3.org/2000/01/rdf-schema#label> "Begin date of concrete curing"@en .
-<https://w3id.org/bcom#BeginDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/bcom#SamplingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#SamplingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of sampling with format year-month-day in yyyy-mm-dd"@en .
+_:B6a175f022acddf2cc1959718845f0ee3 <http://www.w3.org/2002/07/owl#oneOf> _:B1280e779X2Dfae5X2D4825X2D822fX2D4c04c5a743cf .
+_:B6a175f022acddf2cc1959718845f0ee3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <https://w3id.org/bcom#SamplingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bcom#SamplingDate> <http://www.w3.org/2000/01/rdf-schema#label> "Date of sampling"@en .
 <https://w3id.org/bcom#SamplingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
-_:B32966190X2D68b8X2D463eX2D8786X2D80ad9a643d87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bab68f521X2De6deX2D41a7X2Da96eX2Dd663ed9b24a3 .
-_:B32966190X2D68b8X2D463eX2D8786X2D80ad9a643d87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Class 2" .
-<https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength."@en .
-<https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Conformity testing of compressive strength"@en .
+<https://w3id.org/bcom#SamplingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of sampling with format year-month-day in yyyy-mm-dd"@en .
+<https://w3id.org/bcom#SamplingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bcom#Test> .
-<https://w3id.org/bcom#Test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#Test> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the super-class for different types of tests for placed concrete"@en .
-<https://w3id.org/bcom#Test> <http://www.w3.org/2000/01/rdf-schema#label> "Test"@en .
+<https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Conformity testing of compressive strength"@en .
+<https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength."@en .
+<https://w3id.org/bcom#ConformityOfCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bcom#Test> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/bcom#TestReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report of conformity test of compressive strength"@en .
+<https://w3id.org/bcom#Test> <http://www.w3.org/2000/01/rdf-schema#label> "Test"@en .
+<https://w3id.org/bcom#Test> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the super-class for different types of tests for placed concrete"@en .
+<https://w3id.org/bcom#Test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bcom#TestReport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/bcom#TestReport> <http://www.w3.org/2000/01/rdf-schema#label> "Test report"@en .
 <https://w3id.org/bcom#TestReport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
-<https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the necessary information of concrete curing after concreting"@en .
-<https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete curing"@en .
+<https://w3id.org/bcom#TestReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report of conformity test of compressive strength"@en .
+<https://w3id.org/bcom#TestReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B3857081f425c73c7d991d68700ab788a <http://xmlns.com/foaf/0.1/name> "Philipp Hagedorn, Ruhr-University Bochum" .
+_:B3857081f425c73c7d991d68700ab788a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-_:Bf93e3b29X2Df9d3X2D481eX2D8099X2Dc9f61d355345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:Bf93e3b29X2Df9d3X2D481eX2D8099X2Dc9f61d355345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Third-Party Monitoring" .
-<https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of concreting with format year-month-day in yyyy-mm-dd"@en .
+<https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete curing"@en .
+<https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the necessary information of concrete curing after concreting"@en .
+<https://w3id.org/bcom#ConcreteCuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:B0a8871107ddde8cab1057173cd7cbf75 <http://xmlns.com/foaf/0.1/name> "Liu Liu, Ruhr-University Bochum" .
+_:B0a8871107ddde8cab1057173cd7cbf75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B682fed40X2Db918X2D4780X2D8d3cX2Dbdddfc8072f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B682fed40X2Db918X2D4780X2D8d3cX2Dbdddfc8072f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Class 3" .
+_:B80b61d16d669280a9cbb11686bcc7792 <http://xmlns.com/foaf/0.1/name> "Philipp Hagedorn, Ruhr-University Bochum" .
+_:B80b61d16d669280a9cbb11686bcc7792 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/2000/01/rdf-schema#label> "Date of concreting"@en .
 <https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
+<https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of concreting with format year-month-day in yyyy-mm-dd"@en .
+<https://w3id.org/bcom#DateOfConcreting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/2000/01/rdf-schema#label> "Value of breaking load"@en .
 <https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
 <https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/2000/01/rdf-schema#comment> "Value of breaking load in N"@en .
 <https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/2000/01/rdf-schema#label> "Value of breaking load"@en .
-<https://w3id.org/bcom#TestedBreakingLoad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-_:B1001eeb5X2De1daX2D44d9X2Db886X2D6f1be31a5def <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bf93e3b29X2Df9d3X2D481eX2D8099X2Dc9f61d355345 .
-_:B1001eeb5X2De1daX2D44d9X2Db886X2D6f1be31a5def <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Self-Inspection" .
+<https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/2000/01/rdf-schema#label> "Voids ratio"@en .
 <https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#FreshConcreteProperties> .
 <https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/2000/01/rdf-schema#comment> "Voids ratio of fresh concrete in V-%"@en .
 <https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/2000/01/rdf-schema#label> "Voids ratio"@en .
-<https://w3id.org/bcom#VoidsRatio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#IsTestPersonOf> .
+<https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/2000/01/rdf-schema#label> "has Test Person"@en .
+<https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Individual> .
 <https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
 <https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/2000/01/rdf-schema#label> "has Perform Test Person"@en .
-<https://w3id.org/bcom#HasTestPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Individual> .
-<https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of a test sample as cube or diameter of a test sample as cylinder in mm"@en .
 <https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/2000/01/rdf-schema#label> "Width or diameter of sample"@en .
 <https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
-<https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency."@en .
-<https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Fresh concrete property testing"@en .
+<https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of a test sample as cube or diameter of a test sample as cylinder in mm"@en .
+<https://w3id.org/bcom#WidthOrDia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Fresh concrete property testing"@en .
+<https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency."@en .
+<https://w3id.org/bcom#FreshConcreteProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bcom#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/bcom#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#label> "Test standard"@en .
 <https://w3id.org/bcom#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
 <https://w3id.org/bcom#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Norm or standard of the test method"@en .
 <https://w3id.org/bcom#NormativeReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#label> "Test standard"@en .
-<https://w3id.org/bcom#NormativeReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:B7f11c0dfX2D6c99X2D46aaX2Da8a2X2D4512f35db608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#ConcretePlacement> .
-_:B7f11c0dfX2D6c99X2D46aaX2Da8a2X2D4512f35db608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B09478157X2De6e4X2D4991X2Da912X2D21303f1e5326 .
-<https://w3id.org/bcom#StoresSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bcom#StoresSample> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasStorage> .
 <https://w3id.org/bcom#StoresSample> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#TestSample> .
 <https://w3id.org/bcom#StoresSample> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Storage> .
+<https://w3id.org/bcom#StoresSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/2000/01/rdf-schema#range> _:B1d290b07f139ea9f7291d986ca2eca37 .
+<https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Class Of concrete monitoring"@en .
 <https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/2000/01/rdf-schema#comment> "Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete"@en .
 <https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Class Of concrete monitoring"@en .
-<https://w3id.org/bcom#ClassOfMonitoring> <http://www.w3.org/2000/01/rdf-schema#range> _:Bebde9c3c331b2c1cd7c4f3c24a2b3b64 .
-<https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasTestSubjects> .
-<https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "has Perform Test Organisation"@en .
+<https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#IsTestOrganisationOf> .
 <https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Organization> .
+<https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "has Test Organisation"@en .
 <https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
-<https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation of the mean value of the test in N/mm2"@en .
+<https://w3id.org/bcom#HasTestOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation of the mean value"@en .
 <https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
-_:Bcf2d611a99859f9ae165d95fa81cda75 <http://www.w3.org/2002/07/owl#oneOf> _:B1001eeb5X2De1daX2D44d9X2Db886X2D6f1be31a5def .
-_:Bcf2d611a99859f9ae165d95fa81cda75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature of a test sample in Celsius"@en .
+<https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation of the mean value of the test in N/mm2"@en .
+<https://w3id.org/bcom#EvaluationOfTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature of sample"@en .
 <https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
+<https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature of a test sample in Celsius"@en .
+<https://w3id.org/bcom#ObjectTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+<https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#label> "End time of paving"@en .
 <https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
 <https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#comment> "End time of paving with format hour-minute-second in hh-mm-ss"@en .
 <https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#label> "End time of paving"@en .
-<https://w3id.org/bcom#EndTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
-<https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Fresh concrete temperature during testing of property in Celsius"@en .
 <https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Fresh concrete temperature"@en .
 <https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#FreshConcreteProperties> .
-<https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the necessary information of current concreting of the construction"@en .
-<https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete placement"@en .
+<https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Fresh concrete temperature during testing of property in Celsius"@en .
+<https://w3id.org/bcom#ConcreteTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-_:B09478157X2De6e4X2D4991X2Da912X2D21303f1e5326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#Test> .
-_:B09478157X2De6e4X2D4991X2Da912X2D21303f1e5326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bcom#Length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Length> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of a test sample for cube in mm"@en .
+<https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete placement"@en .
+<https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the necessary information of current concreting of the construction"@en .
+<https://w3id.org/bcom#ConcretePlacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bcom#Length> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#Length> <http://www.w3.org/2000/01/rdf-schema#label> "Length of sample"@en .
 <https://w3id.org/bcom#Length> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
-_:Bd1a51d551fb95c6bb18114a9a877387c <http://xmlns.com/foaf/0.1/name> "Philipp Hagedorn, Ruhr-University Bochum" .
-_:Bd1a51d551fb95c6bb18114a9a877387c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"@en .
+<https://w3id.org/bcom#Length> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of a test sample for cube in mm"@en .
+<https://w3id.org/bcom#Length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B7e73a51f97676ae5f932e4d4f6a1f5fb <http://xmlns.com/foaf/0.1/name> "Liu Liu, Ruhr-University Bochum" .
+_:B7e73a51f97676ae5f932e4d4f6a1f5fb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B55abb0bdX2D0839X2D48f5X2D8aa9X2D63a36dd499e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:B55abb0bdX2D0839X2D48f5X2D8aa9X2D63a36dd499e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#Test> .
+_:B73b210ffX2De2c5X2D4563X2D88a0X2De2d36846532f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B682fed40X2Db918X2D4780X2D8d3cX2Dbdddfc8072f2 .
+_:B73b210ffX2De2c5X2D4563X2D88a0X2De2d36846532f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Class 2" .
+_:Bb395b9beX2D5619X2D45b8X2D814cX2Dcd6041afb813 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bb395b9beX2D5619X2D45b8X2D814cX2Dcd6041afb813 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#TestSample> .
 <https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Result of compressive strength"@en .
 <https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
-_:Bebde9c3c331b2c1cd7c4f3c24a2b3b64 <http://www.w3.org/2002/07/owl#oneOf> _:Bd72e1c71X2D694bX2D45a5X2D9c0fX2D913a61f3dc8b .
-_:Bebde9c3c331b2c1cd7c4f3c24a2b3b64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"@en .
+<https://w3id.org/bcom#FinalCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity of concrete"@en .
 <https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantity of the concrete placement in cubature m3"@en .
 <https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity of concrete"@en .
-<https://w3id.org/bcom#QuantityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-_:B333a32fb0d37d258961c783a3ffafdd0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B333a32fb0d37d258961c783a3ffafdd0 <http://xmlns.com/foaf/0.1/name> "Liu Liu, Ruhr-University Bochum" .
-_:Bad4166d9X2Dd98dX2D4cb4X2D824cX2D7259808419bc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#TestSample> .
-_:Bad4166d9X2Dd98dX2D4cb4X2D824cX2D7259808419bc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:B208d8b190d8d610831c8273ce0a797b3 <http://www.w3.org/2002/07/owl#unionOf> _:B1f3965ffX2D5876X2D4550X2D8b4bX2D2eee09ced46e .
-_:B208d8b190d8d610831c8273ce0a797b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bcom#IsTestSampleOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Test Sample of"@en .
+<https://w3id.org/bcom#IsTestSampleOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#IsTestSampleOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
+<https://w3id.org/bcom#IsTestSampleOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasTestSample> .
+<https://w3id.org/bcom#IsTestSampleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bef8bef69X2D0f8dX2D419eX2Da8f9X2Df7a90c455441 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Bef8bef69X2D0f8dX2D419eX2Da8f9X2Df7a90c455441 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Third-Party Monitoring" .
 <https://w3id.org/bcom#HasSupplier> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#SuppliesConcreteTo> .
-<https://w3id.org/bcom#HasSupplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasSupplier> <http://www.w3.org/2000/01/rdf-schema#label> "has Concrete Supplier"@en .
 <https://w3id.org/bcom#HasSupplier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/vcard/ns#Organization> .
+<https://w3id.org/bcom#HasSupplier> <http://www.w3.org/2000/01/rdf-schema#label> "has Concrete Supplier"@en .
 <https://w3id.org/bcom#HasSupplier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
-<https://w3id.org/bcom#TestDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of testing with format year-month-day in yyyy-mm-dd"@en .
+<https://w3id.org/bcom#HasSupplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bcom#TestDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bcom#TestDate> <http://www.w3.org/2000/01/rdf-schema#label> "Date of testing"@en .
 <https://w3id.org/bcom#TestDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#TestDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of testing with format year-month-day in yyyy-mm-dd"@en .
+<https://w3id.org/bcom#TestDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#label> "Maturity of concrete"@en .
 <https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#FreshConcreteProperties> .
 <https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#comment> "Maturity of concrete in minute"@en .
 <https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#label> "Maturity of concrete"@en .
-<https://w3id.org/bcom#MaturityOfConcrete> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Tested property"@en .
 <https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
 <https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "The property has to be tested"@en .
 <https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Tested property"@en .
-<https://w3id.org/bcom#TestCharacteristic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/2000/01/rdf-schema#label> "Date of stripping"@en .
 <https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of stripping with format year-month-day in yyyy-mm-dd"@en .
 <https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/2000/01/rdf-schema#label> "Date of stripping"@en .
-<https://w3id.org/bcom#DateOfStripping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-_:B422ff4a35948f78da8acf556b73c99a8 <http://xmlns.com/foaf/0.1/name> "Philipp Hagedorn, Ruhr-University Bochum" .
-_:B422ff4a35948f78da8acf556b73c99a8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/bcom> <http://purl.org/dc/terms/creator> _:B7e73a51f97676ae5f932e4d4f6a1f5fb .
 <https://w3id.org/bcom> <http://purl.org/dc/terms/created> "2021-01-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bcom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/bcom> <http://purl.org/dc/terms/title> "Building Concrete Monitoring Ontology (BCOM)"@en .
-<https://w3id.org/bcom> <http://purl.org/dc/terms/creator> _:Bd1a51d551fb95c6bb18114a9a877387c .
 <https://w3id.org/bcom> <http://purl.org/dc/terms/source> "https://github.com/RUB-Informatik-im-Bauwesen/bcom"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/bcom> <http://www.w3.org/2002/07/owl#versionIRI> "https://w3id.org/bcom"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/bcom> <http://purl.org/dc/terms/creator> _:B333a32fb0d37d258961c783a3ffafdd0 .
 <https://w3id.org/bcom> <http://purl.org/dc/terms/description> "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties."@en .
+<https://w3id.org/bcom> <http://purl.org/dc/terms/creator> _:B3857081f425c73c7d991d68700ab788a .
 <https://w3id.org/bcom> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/bcom> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"@en .
+_:B5e6b0c84X2Df9a7X2D4276X2Dbc5fX2D5d8b28a201a8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bb395b9beX2D5619X2D45b8X2D814cX2Dcd6041afb813 .
+_:B5e6b0c84X2Df9a7X2D4276X2Dbc5fX2D5d8b28a201a8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#ConcretePlacement> .
+<https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Max temperature"@en .
 <https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteCuring> .
 <https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum temperature during post-treatment in Celsius"@en .
 <https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Max temperature"@en .
-<https://w3id.org/bcom#MaxAirTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#SampleID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/bcom#SampleID> <http://www.w3.org/2000/01/rdf-schema#label> "Sample ID"@en .
 <https://w3id.org/bcom#SampleID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
 <https://w3id.org/bcom#SampleID> <http://www.w3.org/2000/01/rdf-schema#comment> "Name or ID of the test sample"@en .
 <https://w3id.org/bcom#SampleID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#SampleID> <http://www.w3.org/2000/01/rdf-schema#label> "Sample ID"@en .
-<https://w3id.org/bcom#SampleID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/bcom#TestedDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestedDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "Density of a sample in kg/m3"@en .
 <https://w3id.org/bcom#TestedDensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#TestedDensity> <http://www.w3.org/2000/01/rdf-schema#label> "Density of sample"@en .
 <https://w3id.org/bcom#TestedDensity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
-<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Air temperature during concreting or test on fresh concrete in Celsius"@en .
-<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> _:B208d8b190d8d610831c8273ce0a797b3 .
-<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Air temperature"@en .
+<https://w3id.org/bcom#TestedDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "Density of a sample in kg/m3"@en .
+<https://w3id.org/bcom#TestedDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/bcom#TestSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#TestSample> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the information of test sample for conformity test of concrete compressive strength"@en .
+<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Air temperature"@en .
+<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bcd9c893ba6cdd7d9357ac7669cdc071d .
+<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Air temperature during concreting or test on fresh concrete in Celsius"@en .
+<https://w3id.org/bcom#AirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#TestSample> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides the information of test samples"@en .
 <https://w3id.org/bcom#TestSample> <http://www.w3.org/2000/01/rdf-schema#label> "Test sample"@en .
 <https://w3id.org/bcom#TestSample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/bcom#TestSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bcom#Weigth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#Weigth> <http://www.w3.org/2000/01/rdf-schema#label> "Weigth of sample"@en .
 <https://w3id.org/bcom#Weigth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
 <https://w3id.org/bcom#Weigth> <http://www.w3.org/2000/01/rdf-schema#comment> "Weigth of a test sample in kg"@en .
 <https://w3id.org/bcom#Weigth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Weigth> <http://www.w3.org/2000/01/rdf-schema#label> "Weigth of sample"@en .
-<https://w3id.org/bcom#Weigth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-_:Bab68f521X2De6deX2D41a7X2Da96eX2Dd663ed9b24a3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:Bab68f521X2De6deX2D41a7X2Da96eX2Dd663ed9b24a3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Class 3" .
-<https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides information about the delivery of concrete"@en .
-<https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete delivery"@en .
+_:B1280e779X2Dfae5X2D4825X2D822fX2D4c04c5a743cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bef8bef69X2D0f8dX2D419eX2Da8f9X2Df7a90c455441 .
+_:B1280e779X2Dfae5X2D4825X2D822fX2D4c04c5a743cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Self-Inspection" .
+_:B0d2538d9X2Dd69dX2D42b1X2Db5d1X2D02d0ce4d7b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B55abb0bdX2D0839X2D48f5X2D8aa9X2D63a36dd499e4 .
+_:B0d2538d9X2Dd69dX2D42b1X2Db5d1X2D02d0ce4d7b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/bcom#HasDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete delivery"@en .
+<https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/2000/01/rdf-schema#comment> "This class provides information about the delivery of concrete"@en .
+<https://w3id.org/bcom#ConcreteDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bcom#HasDelivery> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#SuppliesConcreteTo> .
-<https://w3id.org/bcom#HasDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "has Concrete Supplier"@en .
 <https://w3id.org/bcom#HasDelivery> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcreteDelivery> .
+<https://w3id.org/bcom#HasDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "has Concrete Supplier"@en .
 <https://w3id.org/bcom#HasDelivery> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
+<https://w3id.org/bcom#HasDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Fresh concrete temperature before concreting"@en .
 <https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Fresh concrete temperature before concreting in Celsius"@en .
 <https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Fresh concrete temperature before concreting"@en .
-<https://w3id.org/bcom#FreshConcreteTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasCuring> .
+<https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
 <https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#label> "Curing has Concrete Work"@en .
-<https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
 <https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteCuring> .
-_:Bd72e1c71X2D694bX2D45a5X2D9c0fX2D913a61f3dc8b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B32966190X2D68b8X2D463eX2D8786X2D80ad9a643d87 .
-_:Bd72e1c71X2D694bX2D45a5X2D9c0fX2D913a61f3dc8b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Class 1" .
+<https://w3id.org/bcom#HasConcretePlacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Bcd9c893ba6cdd7d9357ac7669cdc071d <http://www.w3.org/2002/07/owl#unionOf> _:B5e6b0c84X2Df9a7X2D4276X2Dbc5fX2D5d8b28a201a8 .
+_:Bcd9c893ba6cdd7d9357ac7669cdc071d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bcom#Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/bcom#Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage of a test sample"@en .
+<https://w3id.org/bcom#Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the storage conditions of a test sample"@en .
+<https://w3id.org/bcom#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bcom#EndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bcom#EndDate> <http://www.w3.org/2000/01/rdf-schema#label> "End date of concrete curing"@en .
 <https://w3id.org/bcom#EndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteCuring> .
 <https://w3id.org/bcom#EndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "End date of concrete curing with format year-month-day in yyyy-mm-dd"@en .
 <https://w3id.org/bcom#EndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#EndDate> <http://www.w3.org/2000/01/rdf-schema#label> "End date of concrete curing"@en .
-<https://w3id.org/bcom#EndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/bcom#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#Storage> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the storage conditions of a test sample"@en .
-<https://w3id.org/bcom#Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage of a test sample"@en .
-<https://w3id.org/bcom#Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
 <https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasDelivery> .
-<https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2000/01/rdf-schema#label> "Delivers concrete for"@en .
-<https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
 <https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
 <https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcretePlacement> .
+<https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2000/01/rdf-schema#label> "Delivers concrete for"@en .
+<https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
+<https://w3id.org/bcom#DeliversConcreteFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/2000/01/rdf-schema#label> "Rate of flow table test"@en .
 <https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#FreshConcreteProperties> .
 <https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/2000/01/rdf-schema#comment> "Rate of flow table test according to DIN EN 12350-5 in mm"@en .
 <https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/2000/01/rdf-schema#label> "Rate of flow table test"@en .
-<https://w3id.org/bcom#RateOfFlowTableTest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-_:B066ac6b1b52579b171711ebed1596cf1 <http://xmlns.com/foaf/0.1/name> "Liu Liu, Ruhr-University Bochum" .
-_:B066ac6b1b52579b171711ebed1596cf1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bd6376edbX2D5808X2D4793X2D8595X2Db69d6bf6eb71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B73b210ffX2De2c5X2D4563X2D88a0X2De2d36846532f .
+_:Bd6376edbX2D5808X2D4793X2D8595X2Db69d6bf6eb71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Class 1" .
+<https://w3id.org/bcom#BulkDensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#BulkDensity> <http://www.w3.org/2000/01/rdf-schema#label> "Bulk density"@en .
 <https://w3id.org/bcom#BulkDensity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#FreshConcreteProperties> .
 <https://w3id.org/bcom#BulkDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "Bulk density of fresh concrete in kg/m3"@en .
 <https://w3id.org/bcom#BulkDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#BulkDensity> <http://www.w3.org/2000/01/rdf-schema#label> "Bulk density"@en .
-<https://w3id.org/bcom#BulkDensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-_:B1f3965ffX2D5876X2D4550X2D8b4bX2D2eee09ced46e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bcom#ConcretePlacement> .
-_:B1f3965ffX2D5876X2D4550X2D8b4bX2D2eee09ced46e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bad4166d9X2Dd98dX2D4cb4X2D824cX2D7259808419bc .
-_:B04628465c9851cfb745de5ce8b57c70d <http://www.w3.org/2002/07/owl#unionOf> _:B7f11c0dfX2D6c99X2D46aaX2Da8a2X2D4512f35db608 .
-_:B04628465c9851cfb745de5ce8b57c70d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/bcom#Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Temperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Storage temperature in Celsius"@en .
+<https://w3id.org/bcom#IsTestOrganisationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Test Organisation of"@en .
+<https://w3id.org/bcom#IsTestOrganisationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/vcard/ns#Organization> .
+<https://w3id.org/bcom#IsTestOrganisationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#IsTestOrganisationOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#IsTestOrganisationOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
+<https://w3id.org/bcom#IsTestOrganisationOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasTestOrganisation> .
 <https://w3id.org/bcom#Temperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#Temperature> <http://www.w3.org/2000/01/rdf-schema#label> "Storage temperature"@en .
 <https://w3id.org/bcom#Temperature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Storage> .
-<https://w3id.org/bcom#HasCuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#Temperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Storage temperature in Celsius"@en .
+<https://w3id.org/bcom#Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#IsTestSampleOf> .
+<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#TestSample> .
+<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2000/01/rdf-schema#label> "has Test Sample"@en .
+<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#HasCuring> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasConcretePlacement> .
 <https://w3id.org/bcom#HasCuring> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcreteCuring> .
 <https://w3id.org/bcom#HasCuring> <http://www.w3.org/2000/01/rdf-schema#label> "has Curing"@en .
 <https://w3id.org/bcom#HasCuring> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
-<https://w3id.org/bcom#HasCuring> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasConcretePlacement> .
-<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
-<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2000/01/rdf-schema#label> "has Test Sample"@en .
-<https://w3id.org/bcom#HasTestSample> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#TestSample> .
-<https://w3id.org/bcom#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of storage condition"@en .
+<https://w3id.org/bcom#HasCuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:B1d290b07f139ea9f7291d986ca2eca37 <http://www.w3.org/2002/07/owl#oneOf> _:Bd6376edbX2D5808X2D4793X2D8595X2Db69d6bf6eb71 .
+_:B1d290b07f139ea9f7291d986ca2eca37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/bcom#IsTestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Test of"@en .
+<https://w3id.org/bcom#IsTestOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcretePlacement> .
+<https://w3id.org/bcom#IsTestOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#IsTestOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasTest> .
+<https://w3id.org/bcom#IsTestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bcom#Condition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/bcom#Condition> <http://www.w3.org/2000/01/rdf-schema#label> "Storage condition"@en .
 <https://w3id.org/bcom#Condition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Storage> .
-<https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum temperature during post-treatment in Celsius"@en .
+<https://w3id.org/bcom#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of storage condition"@en .
+<https://w3id.org/bcom#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Min temperature"@en .
 <https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteCuring> .
-<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Delivery note of mixed-ready concrete"@en .
-<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery note"@en .
-<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
-<https://w3id.org/bcom#TestTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Time of testing with format year-month-day in yyyy-mm-ddThh-mm-ss"@en .
+<https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum temperature during post-treatment in Celsius"@en .
+<https://w3id.org/bcom#MinAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#TestTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/bcom#TestTime> <http://www.w3.org/2000/01/rdf-schema#label> "Time of testing"@en .
 <https://w3id.org/bcom#TestTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
-<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Conversion factor of compressive strength testing"@en .
-<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Conversion factor"@en .
-<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
+<https://w3id.org/bcom#TestTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Time of testing with format year-month-day in yyyy-mm-ddThh-mm-ss"@en .
+<https://w3id.org/bcom#TestTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery note"@en .
+<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
+<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Delivery note of mixed-ready concrete"@en .
+<https://w3id.org/bcom#DeliveryNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:B19753ee9708d02d8ed80554489ac3141 <http://www.w3.org/2002/07/owl#unionOf> _:B0d2538d9X2Dd69dX2D42b1X2Db5d1X2D02d0ce4d7b57 .
+_:B19753ee9708d02d8ed80554489ac3141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/2000/01/rdf-schema#label> "Method of concrete curing"@en .
 <https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteCuring> .
 <https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the method for concrete curing"@en .
 <https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/2000/01/rdf-schema#label> "Method of concrete curing"@en .
-<https://w3id.org/bcom#MethodOfAftertreatment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/bcom#Height> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#Height> <http://www.w3.org/2000/01/rdf-schema#label> "Height of sample"@en .
 <https://w3id.org/bcom#Height> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
 <https://w3id.org/bcom#Height> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of a test sample as cube in mm"@en .
 <https://w3id.org/bcom#Height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Height> <http://www.w3.org/2000/01/rdf-schema#label> "Height of sample"@en .
-<https://w3id.org/bcom#Height> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcretePlacement> .
-<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/vcard/ns#Organization> .
-<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#label> "Supplies Concrete To"@en .
-<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#label> "supplies Concrete to"@en .
-<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
+<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Conversion factor"@en .
+<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
+<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Conversion factor of compressive strength testing"@en .
+<https://w3id.org/bcom#ConversionFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasSupplier> .
-<https://w3id.org/bcom#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of storage in day"@en .
+<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
+<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConcretePlacement> .
+<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#label> "supplies Concrete to"@en .
+<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#label> "Supplies Concrete To"@en .
+<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/vcard/ns#Organization> .
+<https://w3id.org/bcom#SuppliesConcreteTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bcom#Duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/bcom#Duration> <http://www.w3.org/2000/01/rdf-schema#label> "Storage duration"@en .
 <https://w3id.org/bcom#Duration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Storage> .
-<https://w3id.org/bcom#TestType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of test as self-inspection or third-party monitoring"@en .
-<https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#domain> _:B04628465c9851cfb745de5ce8b57c70d .
+<https://w3id.org/bcom#Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of storage in day"@en .
+<https://w3id.org/bcom#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#range> _:B6a175f022acddf2cc1959718845f0ee3 .
 <https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#label> "Type of test"@en .
-<https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#range> _:Bcf2d611a99859f9ae165d95fa81cda75 .
+<https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#domain> _:B19753ee9708d02d8ed80554489ac3141 .
+<https://w3id.org/bcom#TestType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of test as self-inspection or third-party monitoring"@en .
+<https://w3id.org/bcom#TestType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/bcom#HasStorage> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#StoresSample> .
 <https://w3id.org/bcom#HasStorage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#Storage> .
-<https://w3id.org/bcom#HasStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bcom#HasStorage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#TestSample> .
+<https://w3id.org/bcom#HasStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
+<https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#label> "Begin time of paving"@en .
 <https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcreteDelivery> .
 <https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#comment> "Begin time of paving with format hour-minute-second in hh-mm-ss"@en .
 <https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#label> "Begin time of paving"@en .
-<https://w3id.org/bcom#BeginTimeOfPlacement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
-<https://w3id.org/bcom#HasTest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#ConformityOfCompressiveStrength> .
+<https://w3id.org/bcom#HasTest> <http://www.w3.org/2000/01/rdf-schema#label> "has Test"@en .
+<https://w3id.org/bcom#HasTest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#HasTest> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#IsTestOf> .
+<https://w3id.org/bcom#HasTest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#ConcretePlacement> .
 <https://w3id.org/bcom#HasTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasTest> <http://www.w3.org/2000/01/rdf-schema#label> "has Test Of Compressive Strength"@en .
-<https://w3id.org/bcom#HasTest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#Humidity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/bcom#Humidity> <http://www.w3.org/2000/01/rdf-schema#label> "Storage humidity"@en .
 <https://w3id.org/bcom#Humidity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bcom#Storage> .
 <https://w3id.org/bcom#Humidity> <http://www.w3.org/2000/01/rdf-schema#comment> "Humidity of storage condition in %"@en .
 <https://w3id.org/bcom#Humidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bcom#Humidity> <http://www.w3.org/2000/01/rdf-schema#label> "Storage humidity"@en .
-<https://w3id.org/bcom#Humidity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/bcom#HasTestSubjects> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasTestOrganisation> .
-<https://w3id.org/bcom#HasTestSubjects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/vcard/ns#Organization> .
-<https://w3id.org/bcom#HasTestSubjects> <http://www.w3.org/2000/01/rdf-schema#label> "has Test Subjects"@en .
-<https://w3id.org/bcom#HasTestSubjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bcom#HasTestSubjects> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#TopObjectProperty> .
-<https://w3id.org/bcom#HasTestSubjects> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#IsTestPersonOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://w3id.org/bcom#IsTestPersonOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bcom#Test> .
+<https://w3id.org/bcom#IsTestPersonOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bcom#HasTestPerson> .
+<https://w3id.org/bcom#IsTestPersonOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Test Person of" .
+<https://w3id.org/bcom#IsTestPersonOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

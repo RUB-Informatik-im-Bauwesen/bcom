@@ -261,7 +261,8 @@
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
-  <section id="classes">
+ 
+<section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#Concretecuring">Concrete curing</a></li>
@@ -295,12 +296,12 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#Methodofconcretecuring">bcom:MethodOfAftertreatment</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#CuringhasConcreteWork">bcom:HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#Mintemperature">bcom:MinAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Maxtemperature">bcom:MaxAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Begindateofconcretecuring">bcom:BeginDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Enddateofconcretecuring">bcom:EndDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Mintemperature">bcom:MinAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Maxtemperature">bcom:MaxAirTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Methodofconcretecuring">bcom:MethodOfAftertreatment</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#CuringhasConcreteWork">bcom:HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -333,10 +334,10 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#Endtimeofpaving">bcom:EndTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Begintimeofpaving">bcom:BeginTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#HasSupplier">bcom:HasSupplier</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#Deliverynote">bcom:DeliveryNote</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#HasSupplier">bcom:HasSupplier</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Endtimeofpaving">bcom:EndTimeOfPlacement</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Deliversconcretefor">bcom:DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -371,19 +372,21 @@
                 <th>In domain of</th>
                 <td>
                     <a href="#hasCuring">bcom:HasCuring</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#Dateofconcreting">bcom:DateOfConcreting</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Freshconcretetemperaturebeforeconcreting">bcom:FreshConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasConcreteSupplier">bcom:HasDelivery</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#Quantityofconcrete">bcom:QuantityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasTest">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#ClassOfconcretemonitoring">bcom:ClassOfMonitoring</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Dateofstripping">bcom:DateOfStripping</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Dateofconcreting">bcom:DateOfConcreting</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasConcreteSupplier">bcom:HasDelivery</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Quantityofconcrete">bcom:QuantityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Freshconcretetemperaturebeforeconcreting">bcom:FreshConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#Deliversconcretefor">bcom:DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#CuringhasConcreteWork">bcom:HasConcretePlacement</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Deliversconcretefor">bcom:DeliversConcreteFor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isTestof">bcom:IsTestOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#suppliesConcreteto">bcom:SuppliesConcreteTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -411,20 +414,14 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#Intermediateresultofcompressivestrength">bcom:InterimCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Teststandard">bcom:NormativeReference</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Valueofbreakingload">bcom:TestedBreakingLoad</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Testedproperty">bcom:TestCharacteristic</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Conversionfactor">bcom:ConversionFactor</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Densityofsample">bcom:TestedDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Testedproperty">bcom:TestCharacteristic</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Valueofbreakingload">bcom:TestedBreakingLoad</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Resultofcompressivestrength">bcom:FinalCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Evaluationofthemeanvalue">bcom:EvaluationOfTest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasTestOfCompressiveStrength">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Intermediateresultofcompressivestrength">bcom:InterimCompressiveStrength</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Densityofsample">bcom:TestedDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -451,10 +448,10 @@
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#Bulkdensity">bcom:BulkDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Maturityofconcrete">bcom:MaturityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Rateofflowtabletest">bcom:RateOfFlowTableTest</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Voidsratio">bcom:VoidsRatio</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Maturityofconcrete">bcom:MaturityOfConcrete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Bulkdensity">bcom:BulkDensity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Freshconcretetemperature">bcom:ConcreteTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
@@ -482,11 +479,11 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#Storagehumidity">bcom:Humidity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Storagecondition">bcom:Condition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Storagetemperature">bcom:Temperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#StoresSample">bcom:StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#Storageduration">bcom:Duration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#StoresSample">bcom:StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Storagehumidity">bcom:Humidity</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Storagetemperature">bcom:Temperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Storagecondition">bcom:Condition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -526,19 +523,22 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#Dateoftesting">bcom:TestDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasTestOfCompressiveStrength">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#Timeoftesting">bcom:TestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#Testreport">bcom:TestReport</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasPerformTestPerson">bcom:HasTestPerson</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasPerformTestOrganisation">bcom:HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTestPerson">bcom:HasTestPerson</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isTestof">bcom:IsTestOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Dateoftesting">bcom:TestDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Timeoftesting">bcom:TestTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasTestOrganisation">bcom:HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hasTestSubjects">bcom:HasTestSubjects</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTest">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isTestSampleof">bcom:IsTestSampleOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isTestPersonof">bcom:IsTestPersonOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isTestOrganisationof">bcom:IsTestOrganisationOf</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -553,7 +553,7 @@
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>This class provides the information of test sample for conformity test of concrete compressive strength</p>
+                    <p>This class provides the information of test samples</p>
                 </td>
             </tr>
             <tr>
@@ -565,21 +565,22 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#Lengthofsample">bcom:Length</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Temperatureofsample">bcom:ObjectTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#HasStorage">bcom:HasStorage</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#Heightofsample">bcom:Height</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Widthordiameterofsample">bcom:WidthOrDia</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#SampleID">bcom:SampleID</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Weigthofsample">bcom:Weigth</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Widthordiameterofsample">bcom:WidthOrDia</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#Heightofsample">bcom:Height</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#isTestSampleof">bcom:IsTestSampleOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#Lengthofsample">bcom:Length</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#Dateofsampling">bcom:SamplingDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#Temperatureofsample">bcom:ObjectTemperature</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#StoresSample">bcom:StoresSample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -594,11 +595,14 @@
         <li><a href="#hasConcreteSupplier">has Concrete Supplier</a></li>
         <li><a href="#HasStorage">HasStorage</a></li>
         <li><a href="#HasSupplier">has Concrete Supplier</a></li>
-        <li><a href="#hasTestOfCompressiveStrength">has Test Of Compressive Strength</a></li>
-        <li><a href="#hasPerformTestOrganisation">has Perform Test Organisation</a></li>
-        <li><a href="#hasPerformTestPerson">has Perform Test Person</a></li>
+        <li><a href="#hasTest">has Test</a></li>
+        <li><a href="#hasTestOrganisation">has Test Organisation</a></li>
+        <li><a href="#hasTestPerson">has Test Person</a></li>
         <li><a href="#hasTestSample">has Test Sample</a></li>
-        <li><a href="#hasTestSubjects">has Test Subjects</a></li>
+        <li><a href="#isTestof">is Test of</a></li>
+        <li><a href="#isTestOrganisationof">is Test Organisation of</a></li>
+        <li><a href="#isTestPersonof">is Test Person of</a></li>
+        <li><a href="#isTestSampleof">is Test Sample of</a></li>
         <li><a href="#StoresSample">StoresSample</a></li>
         <li><a href="#suppliesConcreteto">supplies Concrete to</a></li>
     </ul>
@@ -764,29 +768,35 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasTestOfCompressiveStrength">
-        <h3>has Test Of Compressive Strength<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasTest">
+        <h3>has Test<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>https://w3id.org/bcom#HasTest</code></td>
             </tr>
             <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#isTestof">bcom:IsTestOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="#Conformitytestingofcompressivestrength">bcom:ConformityOfCompressiveStrength</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasPerformTestOrganisation">
-        <h3>has Perform Test Organisation<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasTestOrganisation">
+        <h3>has Test Organisation<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -795,7 +805,7 @@
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="#hasTestSubjects">bcom:HasTestSubjects</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#isTestOrganisationof">bcom:IsTestOrganisationOf</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -812,12 +822,18 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasPerformTestPerson">
-        <h3>has Perform Test Person<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasTestPerson">
+        <h3>has Test Person<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>https://w3id.org/bcom#HasTestPerson</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#isTestPersonof">bcom:IsTestPersonOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
@@ -841,6 +857,12 @@
                 <td><code>https://w3id.org/bcom#HasTestSample</code></td>
             </tr>
             <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#isTestSampleof">bcom:IsTestSampleOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
@@ -854,23 +876,104 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasTestSubjects">
-        <h3>has Test Subjects<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="isTestof">
+        <h3>is Test of<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
-                <td><code>https://w3id.org/bcom#HasTestSubjects</code></td>
+                <td><code>https://w3id.org/bcom#IsTestOf</code></td>
             </tr>
             <tr>
                 <th>Inverse properties</th>
                 <td>
-                    <a href="#hasPerformTestOrganisation">bcom:HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="#hasTest">bcom:HasTest</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="#Concreteplacement">bcom:ConcretePlacement</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTestOrganisationof">
+        <h3>is Test Organisation of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/bcom#IsTestOrganisationOf</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#hasTestOrganisation">bcom:HasTestOrganisation</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.w3.org/2006/vcard/ns#Organization">vcard:Organization</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTestPersonof">
+        <h3>is Test Person of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/bcom#IsTestPersonOf</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#hasTestPerson">bcom:HasTestPerson</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/vcard/ns#Individual">vcard:Individual</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="#Test">bcom:Test</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTestSampleof">
+        <h3>is Test Sample of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://w3id.org/bcom#IsTestSampleOf</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#hasTestSample">bcom:HasTestSample</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Testsample">bcom:TestSample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
