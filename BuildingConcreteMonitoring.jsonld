@@ -1,940 +1,1180 @@
 {
-  "@graph" : [ {
-    "@id" : "_:b0",
-    "@type" : "rdfs:Datatype",
-    "owl:oneOf" : {
-      "@list" : [ "Self-Inspection", "Third-Party Monitoring" ]
-    }
-  }, {
-    "@id" : "_:b13",
-    "@type" : "owl:Class",
-    "unionOf" : {
-      "@list" : [ "bcom:ConcretePlacement", "bcom:TestSample" ]
-    }
-  }, {
-    "@id" : "_:b16",
-    "@type" : "owl:Class",
-    "unionOf" : {
-      "@list" : [ "bcom:ConcretePlacement", "bcom:Test" ]
-    }
-  }, {
-    "@id" : "_:b2",
-    "@type" : "foaf:Person",
-    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
-  }, {
-    "@id" : "_:b3",
-    "@type" : "foaf:Person",
-    "name" : "Liu Liu, Ruhr-University Bochum"
-  }, {
-    "@id" : "_:b5",
-    "@type" : "foaf:Person",
-    "name" : "Philipp Hagedorn, Ruhr-University Bochum"
-  }, {
-    "@id" : "_:b6",
-    "@type" : "rdfs:Datatype",
-    "owl:oneOf" : {
-      "@list" : [ "Class 1", "Class 2", "Class 3" ]
-    }
-  }, {
-    "@id" : "_:b7",
-    "@type" : "foaf:Person",
-    "name" : "Liu Liu, Ruhr-University Bochum"
-  }, {
-    "@id" : "https://w3id.org/bcom",
-    "@type" : "owl:Ontology",
-    "created" : "2021-01-20",
-    "creator" : [ "_:b7", "_:b2" ],
-    "description" : {
-      "@language" : "en",
-      "@value" : "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties."
-    },
-    "license" : "https://creativecommons.org/licenses/by/4.0/",
-    "source" : "https://github.com/RUB-Informatik-im-Bauwesen/bcom",
-    "title" : {
-      "@language" : "en",
-      "@value" : "Building Concrete Monitoring Ontology (BCOM)"
-    },
-    "versionIRI" : "https://w3id.org/bcom",
-    "versionInfo" : {
-      "@language" : "en",
-      "@value" : "0.2"
-    }
-  }, {
-    "@id" : "bcom:AirTemperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Air temperature during concreting or test on fresh concrete in Celsius"
-    },
-    "domain" : "_:b13",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Air temperature"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:BeginDate",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Begin date of concrete curing with format year-month-day in yyyy-mm-dd"
-    },
-    "domain" : "bcom:ConcreteCuring",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Begin date of concrete curing"
-    },
-    "range" : "xsd:date"
-  }, {
-    "@id" : "bcom:BeginTimeOfPlacement",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Begin time of paving with format hour-minute-second in hh-mm-ss"
-    },
-    "domain" : "bcom:ConcreteDelivery",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Begin time of paving"
-    },
-    "range" : "xsd:time"
-  }, {
-    "@id" : "bcom:BulkDensity",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Bulk density of fresh concrete in kg/m3"
-    },
-    "domain" : "bcom:FreshConcreteProperties",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Bulk density"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:ClassOfMonitoring",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete"
-    },
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Class Of concrete monitoring"
-    },
-    "range" : "_:b6"
-  }, {
-    "@id" : "bcom:ConcreteCuring",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class provides the necessary information of concrete curing after concreting"
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Concrete curing"
-    },
-    "subClassOf" : "owl:Thing"
-  }, {
-    "@id" : "bcom:ConcreteDelivery",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class provides information about the delivery of concrete"
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Concrete delivery"
-    },
-    "subClassOf" : "owl:Thing"
-  }, {
-    "@id" : "bcom:ConcretePlacement",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class provides the necessary information of current concreting of the construction"
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Concrete placement"
-    },
-    "subClassOf" : "owl:Thing"
-  }, {
-    "@id" : "bcom:ConcreteTemperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Fresh concrete temperature during testing of property in Celsius"
-    },
-    "domain" : "bcom:FreshConcreteProperties",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Fresh concrete temperature"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:Condition",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Description of storage condition"
-    },
-    "domain" : "bcom:Storage",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Storage condition"
-    },
-    "range" : "xsd:string"
-  }, {
-    "@id" : "bcom:ConformityOfCompressiveStrength",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Conformity testing of compressive strength"
-    },
-    "subClassOf" : "bcom:Test"
-  }, {
-    "@id" : "bcom:ConversionFactor",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Conversion factor of compressive strength testing"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Conversion factor"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:DateOfConcreting",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Date of concreting with format year-month-day in yyyy-mm-dd"
-    },
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Date of concreting"
-    },
-    "range" : "xsd:date"
-  }, {
-    "@id" : "bcom:DateOfStripping",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Date of stripping with format year-month-day in yyyy-mm-dd"
-    },
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Date of stripping"
-    },
-    "range" : "xsd:date"
-  }, {
-    "@id" : "bcom:DeliversConcreteFor",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:ConcreteDelivery",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Delivers concrete for"
-    },
-    "range" : "bcom:ConcretePlacement",
-    "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "bcom:HasDelivery"
-  }, {
-    "@id" : "bcom:DeliveryNote",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Delivery note of mixed-ready concrete"
-    },
-    "domain" : "bcom:ConcreteDelivery",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Delivery note"
-    },
-    "range" : "xsd:anyURI"
-  }, {
-    "@id" : "bcom:Duration",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Duration of storage in day"
-    },
-    "domain" : "bcom:Storage",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Storage duration"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:EndDate",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "End date of concrete curing with format year-month-day in yyyy-mm-dd"
-    },
-    "domain" : "bcom:ConcreteCuring",
-    "label" : {
-      "@language" : "en",
-      "@value" : "End date of concrete curing"
-    },
-    "range" : "xsd:date"
-  }, {
-    "@id" : "bcom:EndTimeOfPlacement",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "End time of paving with format hour-minute-second in hh-mm-ss"
-    },
-    "domain" : "bcom:ConcreteDelivery",
-    "label" : {
-      "@language" : "en",
-      "@value" : "End time of paving"
-    },
-    "range" : "xsd:time"
-  }, {
-    "@id" : "bcom:EvaluationOfTest",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Evaluation of the mean value of the test in N/mm2"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Evaluation of the mean value"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:FinalCompressiveStrength",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Result of compressive strength"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:FreshConcreteProperties",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Fresh concrete property testing"
-    },
-    "subClassOf" : "bcom:Test"
-  }, {
-    "@id" : "bcom:FreshConcreteTemperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Fresh concrete temperature before concreting in Celsius"
-    },
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Fresh concrete temperature before concreting"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:HasConcretePlacement",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:ConcreteCuring",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Curing has Concrete Work"
-    },
-    "range" : "bcom:ConcretePlacement",
-    "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "bcom:HasCuring"
-  }, {
-    "@id" : "bcom:HasCuring",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Curing"
-    },
-    "range" : "bcom:ConcreteCuring",
-    "inverseOf" : "bcom:HasConcretePlacement"
-  }, {
-    "@id" : "bcom:HasDelivery",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Concrete Supplier"
-    },
-    "range" : "bcom:ConcreteDelivery",
-    "inverseOf" : "bcom:SuppliesConcreteTo"
-  }, {
-    "@id" : "bcom:HasStorage",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:TestSample",
-    "range" : "bcom:Storage",
-    "inverseOf" : "bcom:StoresSample"
-  }, {
-    "@id" : "bcom:HasSupplier",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:ConcreteDelivery",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Concrete Supplier"
-    },
-    "range" : "vcard:Organization",
-    "inverseOf" : "bcom:SuppliesConcreteTo"
-  }, {
-    "@id" : "bcom:HasTest",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Test"
-    },
-    "range" : "bcom:Test",
-    "inverseOf" : "bcom:IsTestOf"
-  }, {
-    "@id" : "bcom:HasTestOrganisation",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Test Organisation"
-    },
-    "range" : "vcard:Organization",
-    "inverseOf" : "bcom:IsTestOrganisationOf"
-  }, {
-    "@id" : "bcom:HasTestPerson",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Test Person"
-    },
-    "range" : "vcard:Individual",
-    "inverseOf" : "bcom:IsTestPersonOf"
-  }, {
-    "@id" : "bcom:HasTestSample",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "has Test Sample"
-    },
-    "range" : "bcom:TestSample",
-    "inverseOf" : "bcom:IsTestSampleOf"
-  }, {
-    "@id" : "bcom:Height",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Height of a test sample as cube in mm"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Height of sample"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:Humidity",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Humidity of storage condition in %"
-    },
-    "domain" : "bcom:Storage",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Storage humidity"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:InterimCompressiveStrength",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Intermediate result of compressive strength"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:IsTestOf",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "is Test of"
-    },
-    "range" : "bcom:ConcretePlacement",
-    "inverseOf" : "bcom:HasTest"
-  }, {
-    "@id" : "bcom:IsTestOrganisationOf",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "vcard:Organization",
-    "label" : {
-      "@language" : "en",
-      "@value" : "is Test Organisation of"
-    },
-    "range" : "bcom:Test",
-    "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "bcom:HasTestOrganisation"
-  }, {
-    "@id" : "bcom:IsTestPersonOf",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "vcard:Individual",
-    "label" : "is Test Person of",
-    "range" : "bcom:Test",
-    "inverseOf" : "bcom:HasTestPerson"
-  }, {
-    "@id" : "bcom:IsTestSampleOf",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "is Test Sample of"
-    },
-    "range" : "bcom:Test",
-    "inverseOf" : "bcom:HasTestSample"
-  }, {
-    "@id" : "bcom:Length",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Length of a test sample for cube in mm"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Length of sample"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:MaturityOfConcrete",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Maturity of concrete in minute"
-    },
-    "domain" : "bcom:FreshConcreteProperties",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Maturity of concrete"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:MaxAirTemperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Maximum temperature during post-treatment in Celsius"
-    },
-    "domain" : "bcom:ConcreteCuring",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Max temperature"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:MethodOfAftertreatment",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Description of the method for concrete curing"
-    },
-    "domain" : "bcom:ConcreteCuring",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Method of concrete curing"
-    },
-    "range" : "xsd:string"
-  }, {
-    "@id" : "bcom:MinAirTemperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Minimum temperature during post-treatment in Celsius"
-    },
-    "domain" : "bcom:ConcreteCuring",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Min temperature"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:NormativeReference",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Norm or standard of the test method"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Test standard"
-    },
-    "range" : "xsd:string"
-  }, {
-    "@id" : "bcom:ObjectTemperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Temperature of a test sample in Celsius"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Temperature of sample"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:QuantityOfConcrete",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Quantity of the concrete placement in cubature m3"
-    },
-    "domain" : "bcom:ConcretePlacement",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Quantity of concrete"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:RateOfFlowTableTest",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Rate of flow table test according to DIN EN 12350-5 in mm"
-    },
-    "domain" : "bcom:FreshConcreteProperties",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Rate of flow table test"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:SampleID",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Name or ID of the test sample"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Sample ID"
-    },
-    "range" : "xsd:string"
-  }, {
-    "@id" : "bcom:SamplingDate",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Date of sampling with format year-month-day in yyyy-mm-dd"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Date of sampling"
-    },
-    "range" : "xsd:date"
-  }, {
-    "@id" : "bcom:Storage",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class represents the storage conditions of a test sample"
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Storage of a test sample"
-    },
-    "subClassOf" : "owl:Thing"
-  }, {
-    "@id" : "bcom:StoresSample",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "bcom:Storage",
-    "range" : "bcom:TestSample",
-    "inverseOf" : "bcom:HasStorage"
-  }, {
-    "@id" : "bcom:SuppliesConcreteTo",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "vcard:Organization",
-    "label" : [ {
-      "@language" : "en",
-      "@value" : "supplies Concrete to"
+    "@graph": [{
+        "@id": "_:b10",
+        "@type": "owl:Class",
+        "unionOf": {
+            "@list": ["bcom:ConcretePlacement", "bcom:Test"]
+        }
     }, {
-      "@language" : "en",
-      "@value" : "Supplies Concrete To"
-    } ],
-    "range" : "bcom:ConcretePlacement",
-    "subClassOf" : "owl:TopObjectProperty",
-    "inverseOf" : "bcom:HasSupplier"
-  }, {
-    "@id" : "bcom:Temperature",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Storage temperature in Celsius"
-    },
-    "domain" : "bcom:Storage",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Storage temperature"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:Test",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Represents the super-class for different types of tests for placed concrete"
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Test"
-    },
-    "subClassOf" : "owl:Thing"
-  }, {
-    "@id" : "bcom:TestCharacteristic",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The property has to be tested"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Tested property"
-    },
-    "range" : "xsd:string"
-  }, {
-    "@id" : "bcom:TestDate",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Date of testing with format year-month-day in yyyy-mm-dd"
-    },
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Date of testing"
-    },
-    "range" : "xsd:date"
-  }, {
-    "@id" : "bcom:TestReport",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Report of conformity test of compressive strength"
-    },
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Test report"
-    },
-    "range" : "xsd:anyURI"
-  }, {
-    "@id" : "bcom:TestSample",
-    "@type" : "owl:Class",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This class provides the information of test samples"
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "Test sample"
-    },
-    "subClassOf" : "owl:Thing"
-  }, {
-    "@id" : "bcom:TestTime",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Time of testing with format year-month-day in yyyy-mm-ddThh-mm-ss"
-    },
-    "domain" : "bcom:Test",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Time of testing"
-    },
-    "range" : "xsd:dateTime"
-  }, {
-    "@id" : "bcom:TestType",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Type of test as self-inspection or third-party monitoring"
-    },
-    "domain" : "_:b16",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Type of test"
-    },
-    "range" : "_:b0"
-  }, {
-    "@id" : "bcom:TestedBreakingLoad",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Value of breaking load in N"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Value of breaking load"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:TestedDensity",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Density of a sample in kg/m3"
-    },
-    "domain" : "bcom:ConformityOfCompressiveStrength",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Density of sample"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:VoidsRatio",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Voids ratio of fresh concrete in V-%"
-    },
-    "domain" : "bcom:FreshConcreteProperties",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Voids ratio"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:Weigth",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Weigth of a test sample in kg"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Weigth of sample"
-    },
-    "range" : "xsd:decimal"
-  }, {
-    "@id" : "bcom:WidthOrDia",
-    "@type" : "owl:DatatypeProperty",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Width of a test sample as cube or diameter of a test sample as cylinder in mm"
-    },
-    "domain" : "bcom:TestSample",
-    "label" : {
-      "@language" : "en",
-      "@value" : "Width or diameter of sample"
-    },
-    "range" : "xsd:decimal"
-  } ],
-  "@context" : {
-    "range" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
-      "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "domain" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
-      "@type" : "@id"
-    },
-    "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
-    },
-    "oneOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#oneOf",
-      "@type" : "@id"
-    },
-    "subClassOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
-    },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
-    "created" : {
-      "@id" : "http://purl.org/dc/terms/created",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "title" : {
-      "@id" : "http://purl.org/dc/terms/title"
-    },
-    "source" : {
-      "@id" : "http://purl.org/dc/terms/source",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "description" : {
-      "@id" : "http://purl.org/dc/terms/description"
-    },
-    "license" : {
-      "@id" : "http://purl.org/dc/terms/license",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "versionInfo" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
-    },
-    "unionOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
-      "@type" : "@id"
-    },
-    "bcom" : "https://w3id.org/bcom#",
-    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "owl" : "http://www.w3.org/2002/07/owl#",
-    "xsd" : "http://www.w3.org/2001/XMLSchema#",
-    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-    "vcard" : "http://www.w3.org/2006/vcard/ns#",
-    "foaf" : "http://xmlns.com/foaf/0.1/",
-    "dc" : "http://purl.org/dc/terms/"
-  }
+        "@id": "_:b12",
+        "@type": "owl:Class",
+        "unionOf": {
+            "@list": ["bcom:ConcretePlacement", "bcom:TestSample"]
+        }
+    }, {
+        "@id": "_:b13",
+        "@type": "foaf:Person",
+        "name": "Liu Liu, Ruhr University Bochum"
+    }, {
+        "@id": "_:b14",
+        "@type": "foaf:Person",
+        "name": "Philipp Hagedorn, Ruhr University Bochum"
+    }, {
+        "@id": "_:b15",
+        "@type": "foaf:Organization",
+        "name": "Chair of Computing in Engineering, Ruhr University Bochum"
+    }, {
+        "@id": "_:b2",
+        "@type": "rdfs:Datatype",
+        "owl:oneOf": {
+            "@list": ["Self-Inspection", "Third-Party Monitoring"]
+        }
+    }, {
+        "@id": "_:b7",
+        "@type": "rdfs:Datatype",
+        "owl:oneOf": {
+            "@list": ["Class 1", "Class 2", "Class 3"]
+        }
+    }, {
+        "@id": "https://w3id.org/bcom",
+        "@type": "owl:Ontology",
+        "bibliographicCitation": "https://ec-3.org/publications/conferences/2021/paper/?id=167",
+        "created": "2021-01-20",
+        "creator": ["_:b13", "_:b14"],
+        "description": {
+            "@language": "en",
+            "@value": "The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties. Further Information on the development and usage of the Ontology can be found in the following publication: Liu et al. (2021): An ontology integrating as-built information for infrastructure asset management using BIM and semantic web. In: Proceedings of 2021 European Conference on Computing in Construction, Online eConference, URL: https://ec-3.org/publications/conferences/2021/paper/?id=167"
+        },
+        "issued": "2021-01-20",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "modified": "2021-07-21",
+        "publisher": "_:b15",
+        "rights": "Copyright 2021 by Chair of Computing in Engineering, Ruhr University Bochum",
+        "source": "https://github.com/RUB-Informatik-im-Bauwesen/bcom",
+        "title": {
+            "@language": "en",
+            "@value": "Building Concrete Monitoring Ontology (BCOM)"
+        },
+        "preferredNamespacePrefix": "bcom",
+        "preferredNamespaceUri": "https://w3id.org/bcom",
+        "comment": {
+            "@language": "en",
+            "@value": "-Version 0.3: with additional metadata -Version 0.2: added/changed relations between classes -Version 0.1: initial version of ontology"
+        },
+        "versionIRI": "https://w3id.org/bcom",
+        "versionInfo": "0.3"
+    }, {
+        "@id": "bcom:AirTemperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "air temperature during concreting or testing on fresh concrete in degree Celsius"
+        },
+        "domain": "_:b12",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "air temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:BeginDate",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "begin date of concrete curing with format year-month-day in yyyy-mm-dd"
+        },
+        "domain": "bcom:ConcreteCuring",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "begin date"
+        },
+        "range": "xsd:date",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:BeginTimeOfPlacement",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "begin time of concrete placement with format hour-minute-second in hh:mm:ss"
+        },
+        "domain": "bcom:ConcreteDelivery",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "begin time"
+        },
+        "range": "xsd:time",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:BulkDensity",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "bulk density of fresh concrete in kg/m^3"
+        },
+        "domain": "bcom:FreshConcreteProperties",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "bulk density"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ClassOfMonitoring",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "class of concrete monitoring according to DIN EN 13670 / DIN 1045-3 related to the properties of hardened concrete"
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "class of monitoring"
+        },
+        "range": "_:b7",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ConcreteCuring",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class provides information about the curing process after a concrete placement."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Concrete curing"
+        },
+        "subClassOf": "owl:Thing",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ConcreteDelivery",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class provides information about a concrete delivery."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Concrete delivery"
+        },
+        "subClassOf": "owl:Thing",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ConcretePlacement",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class provides information about a concreting process itself."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Concrete placement"
+        },
+        "subClassOf": "owl:Thing",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ConcreteTemperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "fresh concrete temperature during testing of properties in degree Celsius"
+        },
+        "domain": "bcom:FreshConcreteProperties",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "fresh concrete temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Condition",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "description of storage conditions"
+        },
+        "domain": "bcom:Storage",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "storage condition"
+        },
+        "range": "xsd:string",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ConformityOfCompressiveStrength",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class provides information needed for performing and evaluating the conformity of concrete compressive strength."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Conformity testing of compressive strength"
+        },
+        "subClassOf": "bcom:Test",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ConversionFactor",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "conversion factor of compressive strength testing"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "conversion factor"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:DateOfConcreting",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "date of concreting with format year-month-day in yyyy-mm-dd"
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "date of concreting"
+        },
+        "range": "xsd:date",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:DateOfStripping",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "date of stripping with format year-month-day in yyyy-mm-dd"
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "date of stripping"
+        },
+        "range": "xsd:date",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:DeliversConcreteFor",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete delivery to its concrete placement activity where it was used for."
+        },
+        "domain": "bcom:ConcreteDelivery",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "delivers concrete for"
+        },
+        "range": "bcom:ConcretePlacement",
+        "subClassOf": "owl:TopObjectProperty",
+        "inverseOf": "bcom:HasDelivery",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:DeliveryNote",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "delivery note of mixed-ready concrete"
+        },
+        "domain": "bcom:ConcreteDelivery",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "delivery note"
+        },
+        "range": "xsd:anyURI",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Duration",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "duration of  storage for test sample in days"
+        },
+        "domain": "bcom:Storage",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "duration"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:EndDate",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "end date of concrete curing with format year-month-day in yyyy-mm-dd"
+        },
+        "domain": "bcom:ConcreteCuring",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "end date"
+        },
+        "range": "xsd:date",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:EndTimeOfPlacement",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "end time of concrete placement with format hour-minute-second in hh:mm:ss"
+        },
+        "domain": "bcom:ConcreteDelivery",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "end time of placement"
+        },
+        "range": "xsd:time",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:EvaluationOfTest",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "evaluation of the mean value of the test in N/mm^2"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "evaluation of test"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:FinalCompressiveStrength",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "result of the compressive strength of the respective test sample under consideration of the conversion factor in N/mm^2"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "final compressive strength"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:FreshConcreteProperties",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class represents a group of fresh concrete properties.  A fresh concrete propertyset object will usually contain density, voids ratio, consistency."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Fresh concrete properties"
+        },
+        "subClassOf": "bcom:Test",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:FreshConcreteTemperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "fresh concrete temperature before concrete placement in degree Celsius"
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "fresh concrete temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasConcretePlacement",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete curing process to its concrete placement activity."
+        },
+        "domain": "bcom:ConcreteCuring",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has concrete placement"
+        },
+        "range": "bcom:ConcretePlacement",
+        "subClassOf": "owl:TopObjectProperty",
+        "inverseOf": "bcom:HasCuring",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasCuring",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete placement activity to its curing process."
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has curing"
+        },
+        "range": "bcom:ConcreteCuring",
+        "inverseOf": "bcom:HasConcretePlacement",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasDelivery",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete placement activity to its concrete delivery providing the used concrete."
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has delivery"
+        },
+        "range": "bcom:ConcreteDelivery",
+        "inverseOf": "bcom:SuppliesConcreteTo",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasStorage",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete test sample to its storage details."
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has storage"
+        },
+        "range": "bcom:Storage",
+        "inverseOf": "bcom:StoresSample",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasSupplier",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete delivery to its supplier."
+        },
+        "domain": "bcom:ConcreteDelivery",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has supplier"
+        },
+        "range": "vcard:Organization",
+        "inverseOf": "bcom:SuppliesConcreteTo",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasTest",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a concrete placement activity to its test procedure."
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has test"
+        },
+        "range": "bcom:Test",
+        "inverseOf": "bcom:IsTestOf",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasTestOrganisation",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a test procedure to its organization which is performing the test."
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has test organisation"
+        },
+        "range": "vcard:Organization",
+        "inverseOf": "bcom:IsTestOrganisationOf",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasTestPerson",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a test procedure to its person who is performing the test."
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has test person"
+        },
+        "range": "vcard:Individual",
+        "inverseOf": "bcom:IsTestPersonOf",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:HasTestSample",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a test procedure to its test samples tested within this procedure."
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "has test sample"
+        },
+        "range": "bcom:TestSample",
+        "inverseOf": "bcom:IsTestSampleOf",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Height",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "height of a test sample as cube or as cylinder in mm"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "height"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Humidity",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "relative humidity of storage condition in %"
+        },
+        "domain": "bcom:Storage",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "humidity"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:InterimCompressiveStrength",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm^2"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "intermediate compressive strength"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:IsTestOf",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a test procedure to its concrete placement activity whithin its test samples have been concreted."
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "is test of"
+        },
+        "range": "bcom:ConcretePlacement",
+        "inverseOf": "bcom:HasTest",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:IsTestOrganisationOf",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links an organization to its test procedures that have been performed by itself."
+        },
+        "domain": "vcard:Organization",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "is test organisation of"
+        },
+        "range": "bcom:Test",
+        "subClassOf": "owl:TopObjectProperty",
+        "inverseOf": "bcom:HasTestOrganisation",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:IsTestPersonOf",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a test examining person to its test procedures that have been performed by itslef."
+        },
+        "domain": "vcard:Individual",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": "is test person of",
+        "range": "bcom:Test",
+        "inverseOf": "bcom:HasTestPerson",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:IsTestSampleOf",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links a test sample to its test procedure within which it has been tested."
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "is test sample of"
+        },
+        "range": "bcom:Test",
+        "inverseOf": "bcom:HasTestSample",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Length",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "length of a test sample for cubes in mm"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "length"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:MaturityOfConcrete",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "maturity of concrete in minutes"
+        },
+        "domain": "bcom:FreshConcreteProperties",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "maturity of concrete"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:MaxAirTemperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "maximum air temperature during post-treatment in degree Celsius"
+        },
+        "domain": "bcom:ConcreteCuring",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "max air temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:MethodOfAftertreatment",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "description for the method of concrete curing"
+        },
+        "domain": "bcom:ConcreteCuring",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "method of aftertreatment"
+        },
+        "range": "xsd:string",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:MinAirTemperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "minimum air temperature during post-treatment in degree Celsius"
+        },
+        "domain": "bcom:ConcreteCuring",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "min air temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:NormativeReference",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "norm or standard of the test method"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "normative reference"
+        },
+        "range": "xsd:string",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:ObjectTemperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "object temperature of a test sample in degree Celsius"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "object temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:QuantityOfConcrete",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "quantity of the concrete placement in cubature m^3"
+        },
+        "domain": "bcom:ConcretePlacement",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "quantity of concrete"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:RateOfFlowTableTest",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "rate of flow table test according to DIN EN 12350-5 in mm"
+        },
+        "domain": "bcom:FreshConcreteProperties",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "rate of flow table test"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:SampleID",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "name or ID of the test sample"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "sample ID"
+        },
+        "range": "xsd:string",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:SamplingDate",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "date of sampling with format year-month-day in yyyy-mm-dd"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "sampling date"
+        },
+        "range": "xsd:date",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Storage",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class represents the storage conditions of a test sample."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Storage"
+        },
+        "subClassOf": "owl:Thing",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:StoresSample",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links storage details to its test samples that has been stored under the specific storage conditions."
+        },
+        "domain": "bcom:Storage",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "stores sample"
+        },
+        "range": "bcom:TestSample",
+        "inverseOf": "bcom:HasStorage",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:SuppliesConcreteTo",
+        "@type": "owl:ObjectProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "This property links an organization to its concrete placement activities where it delivered concrete for."
+        },
+        "domain": "vcard:Organization",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "supplies concrete to"
+        },
+        "range": "bcom:ConcretePlacement",
+        "subClassOf": "owl:TopObjectProperty",
+        "inverseOf": "bcom:HasSupplier",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Temperature",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "storage temperature in degree Celsius"
+        },
+        "domain": "bcom:Storage",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "temperature"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Test",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class represents the super-class for different types of tests, that can be performed on placed concrete."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Test"
+        },
+        "subClassOf": "owl:Thing",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestCharacteristic",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "the material property that has to be tested"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "tested characteristic"
+        },
+        "range": "xsd:string",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestDate",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "date of testing with format year-month-day in yyyy-mm-dd"
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "test date"
+        },
+        "range": "xsd:date",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestReport",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "report of conformity test of concrete"
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "test report"
+        },
+        "range": "xsd:anyURI",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestSample",
+        "@type": "owl:Class",
+        "comment": {
+            "@language": "en",
+            "@value": "This class provides information about test samples."
+        },
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "Test sample"
+        },
+        "subClassOf": "owl:Thing",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestTime",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "time of testing with format hour-minute-second in hh:mm:ss"
+        },
+        "domain": "bcom:Test",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "test time"
+        },
+        "range": "xsd:time",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestType",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "type of test as self-inspection or third-party monitoring"
+        },
+        "domain": "_:b10",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "test type"
+        },
+        "range": "_:b2",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestedBreakingLoad",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "value of breaking load of test procedure in N"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "tested breaking load"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:TestedDensity",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "value of density from a sample in kg/m^3"
+        },
+        "domain": "bcom:ConformityOfCompressiveStrength",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "tested density"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:VoidsRatio",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "voids ratio of fresh concrete in V-%"
+        },
+        "domain": "bcom:FreshConcreteProperties",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "voids ratio"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:Weigth",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "weigth of a test sample in kg"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "weigth"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }, {
+        "@id": "bcom:WidthOrDia",
+        "@type": "owl:DatatypeProperty",
+        "comment": {
+            "@language": "en",
+            "@value": "width of a test sample as cube or diameter of a test sample as cylinder in mm"
+        },
+        "domain": "bcom:TestSample",
+        "isDefinedBy": "https://w3id.org/bcom#",
+        "label": {
+            "@language": "en",
+            "@value": "width or dia"
+        },
+        "range": "xsd:decimal",
+        "term_status": "stable"
+    }],
+    "@context": {
+        "term_status": {
+            "@id": "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+        },
+        "range": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#range",
+            "@type": "@id"
+        },
+        "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "isDefinedBy": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+            "@type": "@id"
+        },
+        "domain": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#domain",
+            "@type": "@id"
+        },
+        "comment": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+        },
+        "subClassOf": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+            "@type": "@id"
+        },
+        "rest": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+            "@type": "@id"
+        },
+        "first": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+        },
+        "oneOf": {
+            "@id": "http://www.w3.org/2002/07/owl#oneOf",
+            "@type": "@id"
+        },
+        "inverseOf": {
+            "@id": "http://www.w3.org/2002/07/owl#inverseOf",
+            "@type": "@id"
+        },
+        "unionOf": {
+            "@id": "http://www.w3.org/2002/07/owl#unionOf",
+            "@type": "@id"
+        },
+        "preferredNamespaceUri": {
+            "@id": "http://purl.org/vocab/vann/preferredNamespaceUri"
+        },
+        "modified": {
+            "@id": "http://purl.org/dc/terms/modified",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "created": {
+            "@id": "http://purl.org/dc/terms/created",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "creator": {
+            "@id": "http://purl.org/dc/terms/creator",
+            "@type": "@id"
+        },
+        "title": {
+            "@id": "http://purl.org/dc/terms/title"
+        },
+        "source": {
+            "@id": "http://purl.org/dc/terms/source",
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "versionIRI": {
+            "@id": "http://www.w3.org/2002/07/owl#versionIRI",
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "versionInfo": {
+            "@id": "http://www.w3.org/2002/07/owl#versionInfo"
+        },
+        "license": {
+            "@id": "http://purl.org/dc/terms/license",
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "publisher": {
+            "@id": "http://purl.org/dc/terms/publisher",
+            "@type": "@id"
+        },
+        "preferredNamespacePrefix": {
+            "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix"
+        },
+        "description": {
+            "@id": "http://purl.org/dc/terms/description"
+        },
+        "bibliographicCitation": {
+            "@id": "http://purl.org/dc/terms/bibliographicCitation",
+            "@type": "@id"
+        },
+        "rights": {
+            "@id": "http://purl.org/dc/terms/rights"
+        },
+        "issued": {
+            "@id": "http://purl.org/dc/terms/issued",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "name": {
+            "@id": "http://xmlns.com/foaf/0.1/name"
+        },
+        "cc": "http://creativecommons.org/ns#",
+        "bcom": "https://w3id.org/bcom#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "vann": "http://purl.org/vocab/vann/",
+        "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "dc": "http://purl.org/dc/terms/"
+    }
 }

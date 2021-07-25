@@ -5,17 +5,22 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 ## Metadata
 * **IRI**
   * `https://w3id.org/bcom`
+* **Publisher(s)**
+  * Chair of Computing in Engineering, Ruhr University Bochum
 * **Creators(s)**
-  * Liu Liu, Ruhr-University Bochum
-  * Philipp Hagedorn, Ruhr-University Bochum
+  * Liu Liu, Ruhr University Bochum
+  * Philipp Hagedorn, Ruhr University Bochum
 * **Created**
   * 2021-01-20
-* **Updated**
-  * 2021-04-14
+* **Modified**
+  * 2021-07-21
+* **Issued**
+  * 2021-01-20
 * **Version Information**
-  * 0.2
-* **License**
+  * 0.3
+* **License &amp; Rights**
   * [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+  * &copy; 2021 by Chair of Computing in Engineering, Ruhr University Bochum
 * **Source**
   * [https://github.com/RUB-Informatik-im-Bauwesen/bcom](https://github.com/RUB-Informatik-im-Bauwesen/bcom)
 * **Ontology RDF**
@@ -24,7 +29,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
   * RDF ([BuildingConcreteMonitoring.nt](n-triples))
   * RDF ([BuildingConcreteMonitoring.rdf](rdf/xml))
 ### Description
-<p>The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties.</p>
+<p>The Building Concrete Monitoring Ontology (BCOM) is defined for capturing information of concrete work, concrete curing and testing of concrete properties. Further Information on the development and usage of the Ontology can be found in the following publication: Liu et al. (2021): An ontology integrating as-built information for infrastructure asset management using BIM and semantic web. In: Proceedings of 2021 European Conference on Computing in Construction, Online eConference, URL: https://ec-3.org/publications/conferences/2021/paper/?id=167</p>
 
 ## Table of Contents
 1. [Classes](#classes)
@@ -42,579 +47,661 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 [Concrete delivery](#Concretedelivery),
 [Concrete placement](#Concreteplacement),
 [Conformity testing of compressive strength](#Conformitytestingofcompressivestrength),
-[Fresh concrete property testing](#Freshconcretepropertytesting),
-[Storage of a test sample](#Storageofatestsample),
+[Fresh concrete properties](#Freshconcreteproperties),
+[Storage](#Storage),
 [Test](#Test),
 [Test sample](#Testsample),
 ### Concrete curing
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConcreteCuring`
-Description | <p>This class provides the necessary information of concrete curing after concreting</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class provides information about the curing process after a concrete placement.</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:MaxAirTemperature](Maxtemperature) (dp)<br />[bcom:MinAirTemperature](Mintemperature) (dp)<br />[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:MethodOfAftertreatment](Methodofconcretecuring) (dp)<br />[bcom:EndDate](Enddateofconcretecuring) (dp)<br />[bcom:BeginDate](Begindateofconcretecuring) (dp)<br />
-In range of |[bcom:HasCuring](hasCuring) (op)<br />
+In domain of |[bcom:MinAirTemperature](minairtemperature) (dp)<br />[bcom:MaxAirTemperature](maxairtemperature) (dp)<br />[bcom:HasConcretePlacement](hasconcreteplacement) (op)<br />[bcom:EndDate](enddate) (dp)<br />[bcom:BeginDate](begindate) (dp)<br />[bcom:MethodOfAftertreatment](methodofaftertreatment) (dp)<br />
+In range of |[bcom:HasCuring](hascuring) (op)<br />
 ### Concrete delivery
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConcreteDelivery`
-Description | <p>This class provides information about the delivery of concrete</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class provides information about a concrete delivery.</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:DeliveryNote](Deliverynote) (dp)<br />[bcom:HasSupplier](HasSupplier) (op)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />[bcom:BeginTimeOfPlacement](Begintimeofpaving) (dp)<br />[bcom:EndTimeOfPlacement](Endtimeofpaving) (dp)<br />
-In range of |[bcom:HasDelivery](hasConcreteSupplier) (op)<br />
+In domain of |[bcom:BeginTimeOfPlacement](begintime) (dp)<br />[bcom:DeliveryNote](deliverynote) (dp)<br />[bcom:EndTimeOfPlacement](endtimeofplacement) (dp)<br />[bcom:DeliversConcreteFor](deliversconcretefor) (op)<br />[bcom:HasSupplier](hassupplier) (op)<br />
+In range of |[bcom:HasDelivery](hasdelivery) (op)<br />
 ### Concrete placement
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConcretePlacement`
-Description | <p>This class provides the necessary information of current concreting of the construction</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class provides information about a concreting process itself.</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:HasCuring](hasCuring) (op)<br />[bcom:FreshConcreteTemperature](Freshconcretetemperaturebeforeconcreting) (dp)<br />[bcom:DateOfStripping](Dateofstripping) (dp)<br />[bcom:QuantityOfConcrete](Quantityofconcrete) (dp)<br />[bcom:DateOfConcreting](Dateofconcreting) (dp)<br />[bcom:ClassOfMonitoring](ClassOfconcretemonitoring) (dp)<br />[bcom:HasDelivery](hasConcreteSupplier) (op)<br />[bcom:HasTest](hasTest) (op)<br />
-In range of |[bcom:IsTestOf](isTestof) (op)<br />[bcom:HasConcretePlacement](CuringhasConcreteWork) (op)<br />[bcom:DeliversConcreteFor](Deliversconcretefor) (op)<br />[bcom:SuppliesConcreteTo](SuppliesConcreteTo) (op)<br />
+In domain of |[bcom:QuantityOfConcrete](quantityofconcrete) (dp)<br />[bcom:HasCuring](hascuring) (op)<br />[bcom:DateOfConcreting](dateofconcreting) (dp)<br />[bcom:HasDelivery](hasdelivery) (op)<br />[bcom:HasTest](hastest) (op)<br />[bcom:DateOfStripping](dateofstripping) (dp)<br />[bcom:ClassOfMonitoring](classofmonitoring) (dp)<br />[bcom:FreshConcreteTemperature](FreshConcreteTemperature) (dp)<br />
+In range of |[bcom:SuppliesConcreteTo](suppliesconcreteto) (op)<br />[bcom:IsTestOf](istestof) (op)<br />[bcom:DeliversConcreteFor](deliversconcretefor) (op)<br />[bcom:HasConcretePlacement](hasconcreteplacement) (op)<br />
 ### Conformity testing of compressive strength
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConformityOfCompressiveStrength`
-Description | <p>This class provides the necessary information to perform and evaluate the conformity testing of concrete compressive strength.</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class provides information needed for performing and evaluating the conformity of concrete compressive strength.</p>
 Super-classes |[bcom:Test](Test) (c)<br />
-In domain of |[bcom:TestedDensity](Densityofsample) (dp)<br />[bcom:TestedBreakingLoad](Valueofbreakingload) (dp)<br />[bcom:ConversionFactor](Conversionfactor) (dp)<br />[bcom:FinalCompressiveStrength](Resultofcompressivestrength) (dp)<br />[bcom:EvaluationOfTest](Evaluationofthemeanvalue) (dp)<br />[bcom:InterimCompressiveStrength](Intermediateresultofcompressivestrength) (dp)<br />[bcom:NormativeReference](Teststandard) (dp)<br />[bcom:TestCharacteristic](Testedproperty) (dp)<br />
-### Fresh concrete property testing
+In domain of |[bcom:EvaluationOfTest](evaluationoftest) (dp)<br />[bcom:InterimCompressiveStrength](intermediatecompressivestrength) (dp)<br />[bcom:ConversionFactor](conversionfactor) (dp)<br />[bcom:TestedDensity](testeddensity) (dp)<br />[bcom:NormativeReference](normativereference) (dp)<br />[bcom:TestCharacteristic](testedcharacteristic) (dp)<br />[bcom:FinalCompressiveStrength](finalcompressivestrength) (dp)<br />[bcom:TestedBreakingLoad](testedbreakingload) (dp)<br />
+### Fresh concrete properties
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#FreshConcreteProperties`
-Description | <p>This class represents a group of fresh concrete property.  A fresh concrete property set object will usually contain density, voids ratio, consistency.</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class represents a group of fresh concrete properties.  A fresh concrete propertyset object will usually contain density, voids ratio, consistency.</p>
 Super-classes |[bcom:Test](Test) (c)<br />
-In domain of |[bcom:ConcreteTemperature](Freshconcretetemperature) (dp)<br />[bcom:VoidsRatio](Voidsratio) (dp)<br />[bcom:RateOfFlowTableTest](Rateofflowtabletest) (dp)<br />[bcom:BulkDensity](Bulkdensity) (dp)<br />[bcom:MaturityOfConcrete](Maturityofconcrete) (dp)<br />
-### Storage of a test sample
+In domain of |[bcom:MaturityOfConcrete](maturityofconcrete) (dp)<br />[bcom:VoidsRatio](voidsratio) (dp)<br />[bcom:ConcreteTemperature](freshconcretetemperature) (dp)<br />[bcom:BulkDensity](bulkdensity) (dp)<br />[bcom:RateOfFlowTableTest](rateofflowtabletest) (dp)<br />
+### Storage
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Storage`
-Description | <p>This class represents the storage conditions of a test sample</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class represents the storage conditions of a test sample.</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:Temperature](Storagetemperature) (dp)<br />[bcom:Condition](Storagecondition) (dp)<br />[bcom:Duration](Storageduration) (dp)<br />[bcom:Humidity](Storagehumidity) (dp)<br />[bcom:StoresSample](StoresSample) (op)<br />
-In range of |[bcom:HasStorage](HasStorage) (op)<br />
+In domain of |[bcom:Humidity](humidity) (dp)<br />[bcom:Temperature](temperature) (dp)<br />[bcom:Condition](storagecondition) (dp)<br />[bcom:StoresSample](storessample) (op)<br />[bcom:Duration](duration) (dp)<br />
+In range of |[bcom:HasStorage](hasstorage) (op)<br />
 ### Test
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Test`
-Description | <p>Represents the super-class for different types of tests for placed concrete</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class represents the super-class for different types of tests, that can be performed on placed concrete.</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-Sub-classes |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
-In domain of |[bcom:TestDate](Dateoftesting) (dp)<br />[bcom:TestTime](Timeoftesting) (dp)<br />[bcom:HasTestPerson](hasTestPerson) (op)<br />[bcom:HasTestOrganisation](hasTestOrganisation) (op)<br />[bcom:TestReport](Testreport) (dp)<br />[bcom:HasTestSample](hasTestSample) (op)<br />[bcom:IsTestOf](isTestof) (op)<br />
-In range of |[bcom:IsTestSampleOf](isTestSampleof) (op)<br />[bcom:HasTest](hasTest) (op)<br />[bcom:IsTestOrganisationOf](isTestOrganisationof) (op)<br />[bcom:IsTestPersonOf](isTestPersonof) (op)<br />
+Sub-classes |[bcom:FreshConcreteProperties](Freshconcreteproperties) (c)<br />[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
+In domain of |[bcom:TestTime](testtime) (dp)<br />[bcom:HasTestPerson](hastestperson) (op)<br />[bcom:IsTestOf](istestof) (op)<br />[bcom:TestReport](testreport) (dp)<br />[bcom:HasTestSample](hastestsample) (op)<br />[bcom:TestDate](testdate) (dp)<br />[bcom:HasTestOrganisation](hastestorganisation) (op)<br />
+In range of |[bcom:HasTest](hastest) (op)<br />[bcom:IsTestOrganisationOf](istestorganisationof) (op)<br />[bcom:IsTestSampleOf](istestsampleof) (op)<br />[bcom:IsTestPersonOf](istestpersonof) (op)<br />
 ### Test sample
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestSample`
-Description | <p>This class provides the information of test samples</p>
+Is Defined By | https://w3id.org/bcom#
+Description | <p>This class provides information about test samples.</p>
 Super-classes |[owl:Thing](http://www.w3.org/2002/07/owl#Thing) (c)<br />
-In domain of |[bcom:Height](Heightofsample) (dp)<br />[bcom:SamplingDate](Dateofsampling) (dp)<br />[bcom:WidthOrDia](Widthordiameterofsample) (dp)<br />[bcom:IsTestSampleOf](isTestSampleof) (op)<br />[bcom:HasStorage](HasStorage) (op)<br />[bcom:SampleID](SampleID) (dp)<br />[bcom:Weigth](Weigthofsample) (dp)<br />[bcom:ObjectTemperature](Temperatureofsample) (dp)<br />[bcom:Length](Lengthofsample) (dp)<br />
-In range of |[bcom:StoresSample](StoresSample) (op)<br />[bcom:HasTestSample](hasTestSample) (op)<br />
+In domain of |[bcom:Height](height) (dp)<br />[bcom:SamplingDate](samplingdate) (dp)<br />[bcom:HasStorage](hasstorage) (op)<br />[bcom:IsTestSampleOf](istestsampleof) (op)<br />[bcom:WidthOrDia](widthordia) (dp)<br />[bcom:ObjectTemperature](objecttemperature) (dp)<br />[bcom:SampleID](sampleID) (dp)<br />[bcom:Length](length) (dp)<br />[bcom:Weigth](weigth) (dp)<br />
+In range of |[bcom:StoresSample](storessample) (op)<br />[bcom:HasTestSample](hastestsample) (op)<br />
 
 ## Object Properties
-[Delivers concrete for](#Deliversconcretefor),
-[Curing has Concrete Work](#CuringhasConcreteWork),
-[has Curing](#hasCuring),
-[has Concrete Supplier](#hasConcreteSupplier),
-[HasStorage](#HasStorage),
-[has Concrete Supplier](#HasSupplier),
-[has Test](#hasTest),
-[has Test Organisation](#hasTestOrganisation),
-[has Test Person](#hasTestPerson),
-[has Test Sample](#hasTestSample),
-[is Test of](#isTestof),
-[is Test Organisation of](#isTestOrganisationof),
-[is Test Person of](#isTestPersonof),
-[is Test Sample of](#isTestSampleof),
-[StoresSample](#StoresSample),
-[Supplies Concrete To](#SuppliesConcreteTo),
-[](Deliversconcretefor)
-### Delivers concrete for
+[delivers concrete for](#deliversconcretefor),
+[has concrete placement](#hasconcreteplacement),
+[has curing](#hascuring),
+[has delivery](#hasdelivery),
+[has storage](#hasstorage),
+[has supplier](#hassupplier),
+[has test](#hastest),
+[has test organisation](#hastestorganisation),
+[has test person](#hastestperson),
+[has test sample](#hastestsample),
+[is test of](#istestof),
+[is test organisation of](#istestorganisationof),
+[is test person of](#istestpersonof),
+[is test sample of](#istestsampleof),
+[stores sample](#storessample),
+[supplies concrete to](#suppliesconcreteto),
+[](deliversconcretefor)
+### delivers concrete for
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#DeliversConcreteFor`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete delivery to its concrete placement activity where it was used for.
 Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
-[](CuringhasConcreteWork)
-### Curing has Concrete Work
+[](hasconcreteplacement)
+### has concrete placement
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasConcretePlacement`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete curing process to its concrete placement activity.
 Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
-[](hasCuring)
-### has Curing
+[](hascuring)
+### has curing
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasCuring`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete placement activity to its curing process.
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
-[](hasConcreteSupplier)
-### has Concrete Supplier
+[](hasdelivery)
+### has delivery
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasDelivery`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete placement activity to its concrete delivery providing the used concrete.
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
-[](HasStorage)
-### HasStorage
+[](hasstorage)
+### has storage
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasStorage`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete test sample to its storage details.
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
-Range(s) |[bcom:Storage](Storageofatestsample) (c)<br />
-[](HasSupplier)
-### has Concrete Supplier
+Range(s) |[bcom:Storage](Storage) (c)<br />
+[](hassupplier)
+### has supplier
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasSupplier`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete delivery to its supplier.
 Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
-[](hasTest)
-### has Test
+[](hastest)
+### has test
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTest`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a concrete placement activity to its test procedure.
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[bcom:Test](Test) (c)<br />
-[](hasTestOrganisation)
-### has Test Organisation
+[](hastestorganisation)
+### has test organisation
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTestOrganisation`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a test procedure to its organization which is performing the test.
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
-[](hasTestPerson)
-### has Test Person
+[](hastestperson)
+### has test person
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTestPerson`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a test procedure to its person who is performing the test.
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[vcard:Individual](http://www.w3.org/2006/vcard/ns#Individual) (c)<br />
-[](hasTestSample)
-### has Test Sample
+[](hastestsample)
+### has test sample
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#HasTestSample`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a test procedure to its test samples tested within this procedure.
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[bcom:TestSample](Testsample) (c)<br />
-[](isTestof)
-### is Test of
+[](istestof)
+### is test of
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#IsTestOf`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a test procedure to its concrete placement activity whithin its test samples have been concreted.
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
-[](isTestOrganisationof)
-### is Test Organisation of
+[](istestorganisationof)
+### is test organisation of
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#IsTestOrganisationOf`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links an organization to its test procedures that have been performed by itself.
 Domain(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
 Range(s) |[bcom:Test](Test) (c)<br />
-[](isTestPersonof)
-### is Test Person of
+[](istestpersonof)
+### is test person of
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#IsTestPersonOf`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a test examining person to its test procedures that have been performed by itslef.
 Domain(s) |[vcard:Individual](http://www.w3.org/2006/vcard/ns#Individual) (c)<br />
 Range(s) |[bcom:Test](Test) (c)<br />
-[](isTestSampleof)
-### is Test Sample of
+[](istestsampleof)
+### is test sample of
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#IsTestSampleOf`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links a test sample to its test procedure within which it has been tested.
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[bcom:Test](Test) (c)<br />
-[](StoresSample)
-### StoresSample
+[](storessample)
+### stores sample
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#StoresSample`
-Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | This property links storage details to its test samples that has been stored under the specific storage conditions.
+Domain(s) |[bcom:Storage](Storage) (c)<br />
 Range(s) |[bcom:TestSample](Testsample) (c)<br />
-[](SuppliesConcreteTo)
-### Supplies Concrete To
+[](suppliesconcreteto)
+### supplies concrete to
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#SuppliesConcreteTo`
+Is Defined By | https://w3id.org/bcom#
+Description | This property links an organization to its concrete placement activities where it delivered concrete for.
 Domain(s) |[vcard:Organization](http://www.w3.org/2006/vcard/ns#Organization) (c)<br />
 Range(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 
 ## Datatype Properties
-[Air temperature](#Airtemperature),
-[Begin date of concrete curing](#Begindateofconcretecuring),
-[Begin time of paving](#Begintimeofpaving),
-[Bulk density](#Bulkdensity),
-[Class Of concrete monitoring](#ClassOfconcretemonitoring),
-[Fresh concrete temperature](#Freshconcretetemperature),
-[Storage condition](#Storagecondition),
-[Conversion factor](#Conversionfactor),
-[Date of concreting](#Dateofconcreting),
-[Date of stripping](#Dateofstripping),
-[Delivery note](#Deliverynote),
-[Storage duration](#Storageduration),
-[End date of concrete curing](#Enddateofconcretecuring),
-[End time of paving](#Endtimeofpaving),
-[Evaluation of the mean value](#Evaluationofthemeanvalue),
-[Result of compressive strength](#Resultofcompressivestrength),
-[Fresh concrete temperature before concreting](#Freshconcretetemperaturebeforeconcreting),
-[Height of sample](#Heightofsample),
-[Storage humidity](#Storagehumidity),
-[Intermediate result of compressive strength](#Intermediateresultofcompressivestrength),
-[Length of sample](#Lengthofsample),
-[Maturity of concrete](#Maturityofconcrete),
-[Max temperature](#Maxtemperature),
-[Method of concrete curing](#Methodofconcretecuring),
-[Min temperature](#Mintemperature),
-[Test standard](#Teststandard),
-[Temperature of sample](#Temperatureofsample),
-[Quantity of concrete](#Quantityofconcrete),
-[Rate of flow table test](#Rateofflowtabletest),
-[Sample ID](#SampleID),
-[Date of sampling](#Dateofsampling),
-[Storage temperature](#Storagetemperature),
-[Tested property](#Testedproperty),
-[Date of testing](#Dateoftesting),
-[Test report](#Testreport),
-[Time of testing](#Timeoftesting),
-[Type of test](#Typeoftest),
-[Value of breaking load](#Valueofbreakingload),
-[Density of sample](#Densityofsample),
-[Voids ratio](#Voidsratio),
-[Weigth of sample](#Weigthofsample),
-[Width or diameter of sample](#Widthordiameterofsample),
-[](Airtemperature)
-### Air temperature
+[air temperature](#airtemperature),
+[begin date](#begindate),
+[begin time](#begintime),
+[bulk density](#bulkdensity),
+[class of monitoring](#classofmonitoring),
+[fresh concrete temperature](#freshconcretetemperature),
+[storage condition](#storagecondition),
+[conversion factor](#conversionfactor),
+[date of concreting](#dateofconcreting),
+[date of stripping](#dateofstripping),
+[delivery note](#deliverynote),
+[duration](#duration),
+[end date](#enddate),
+[end time of placement](#endtimeofplacement),
+[evaluation of test](#evaluationoftest),
+[final compressive strength](#finalcompressivestrength),
+[fresh concrete temperature](#FreshConcreteTemperature),
+[height](#height),
+[humidity](#humidity),
+[intermediate compressive strength](#intermediatecompressivestrength),
+[length](#length),
+[maturity of concrete](#maturityofconcrete),
+[max air temperature](#maxairtemperature),
+[method of aftertreatment](#methodofaftertreatment),
+[min air temperature](#minairtemperature),
+[normative reference](#normativereference),
+[object temperature](#objecttemperature),
+[quantity of concrete](#quantityofconcrete),
+[rate of flow table test](#rateofflowtabletest),
+[sample ID](#sampleID),
+[sampling date](#samplingdate),
+[temperature](#temperature),
+[tested characteristic](#testedcharacteristic),
+[test date](#testdate),
+[test report](#testreport),
+[test time](#testtime),
+[test type](#testtype),
+[tested breaking load](#testedbreakingload),
+[tested density](#testeddensity),
+[voids ratio](#voidsratio),
+[weigth](#weigth),
+[width or dia](#widthordia),
+[](airtemperature)
+### air temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#AirTemperature`
-Description | Air temperature during concreting or test on fresh concrete in Celsius
+Is Defined By | https://w3id.org/bcom#
+Description | air temperature during concreting or testing on fresh concrete in degree Celsius
 Domain(s) |([bcom:ConcretePlacement](Concreteplacement) (c) or [bcom:TestSample](Testsample) (c))<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Begindateofconcretecuring)
-### Begin date of concrete curing
+[](begindate)
+### begin date
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#BeginDate`
-Description | Begin date of concrete curing with format year-month-day in yyyy-mm-dd
+Is Defined By | https://w3id.org/bcom#
+Description | begin date of concrete curing with format year-month-day in yyyy-mm-dd
 Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
-[](Begintimeofpaving)
-### Begin time of paving
+[](begintime)
+### begin time
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#BeginTimeOfPlacement`
-Description | Begin time of paving with format hour-minute-second in hh-mm-ss
+Is Defined By | https://w3id.org/bcom#
+Description | begin time of concrete placement with format hour-minute-second in hh:mm:ss
 Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[xsd:time](http://www.w3.org/2001/XMLSchema#time) (c)<br />
-[](Bulkdensity)
-### Bulk density
+[](bulkdensity)
+### bulk density
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#BulkDensity`
-Description | Bulk density of fresh concrete in kg/m3
-Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | bulk density of fresh concrete in kg/m^3
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcreteproperties) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](ClassOfconcretemonitoring)
-### Class Of concrete monitoring
+[](classofmonitoring)
+### class of monitoring
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ClassOfMonitoring`
-Description | Class Of concrete monitoring according to DIN EN 13670/DIN 1045-3 related to the properties of hardened concrete
+Is Defined By | https://w3id.org/bcom#
+Description | class of concrete monitoring according to DIN EN 13670 / DIN 1045-3 related to the properties of hardened concrete
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
-[](Freshconcretetemperature)
-### Fresh concrete temperature
+[](freshconcretetemperature)
+### fresh concrete temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConcreteTemperature`
-Description | Fresh concrete temperature during testing of property in Celsius
-Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | fresh concrete temperature during testing of properties in degree Celsius
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcreteproperties) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Storagecondition)
-### Storage condition
+[](storagecondition)
+### storage condition
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Condition`
-Description | Description of storage condition
-Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | description of storage conditions
+Domain(s) |[bcom:Storage](Storage) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-[](Conversionfactor)
-### Conversion factor
+[](conversionfactor)
+### conversion factor
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ConversionFactor`
-Description | Conversion factor of compressive strength testing
+Is Defined By | https://w3id.org/bcom#
+Description | conversion factor of compressive strength testing
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Dateofconcreting)
-### Date of concreting
+[](dateofconcreting)
+### date of concreting
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#DateOfConcreting`
-Description | Date of concreting with format year-month-day in yyyy-mm-dd
+Is Defined By | https://w3id.org/bcom#
+Description | date of concreting with format year-month-day in yyyy-mm-dd
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
-[](Dateofstripping)
-### Date of stripping
+[](dateofstripping)
+### date of stripping
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#DateOfStripping`
-Description | Date of stripping with format year-month-day in yyyy-mm-dd
+Is Defined By | https://w3id.org/bcom#
+Description | date of stripping with format year-month-day in yyyy-mm-dd
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
-[](Deliverynote)
-### Delivery note
+[](deliverynote)
+### delivery note
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#DeliveryNote`
-Description | Delivery note of mixed-ready concrete
+Is Defined By | https://w3id.org/bcom#
+Description | delivery note of mixed-ready concrete
 Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) (c)<br />
-[](Storageduration)
-### Storage duration
+[](duration)
+### duration
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Duration`
-Description | Duration of storage in day
-Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | duration of  storage for test sample in days
+Domain(s) |[bcom:Storage](Storage) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Enddateofconcretecuring)
-### End date of concrete curing
+[](enddate)
+### end date
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#EndDate`
-Description | End date of concrete curing with format year-month-day in yyyy-mm-dd
+Is Defined By | https://w3id.org/bcom#
+Description | end date of concrete curing with format year-month-day in yyyy-mm-dd
 Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
-[](Endtimeofpaving)
-### End time of paving
+[](endtimeofplacement)
+### end time of placement
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#EndTimeOfPlacement`
-Description | End time of paving with format hour-minute-second in hh-mm-ss
+Is Defined By | https://w3id.org/bcom#
+Description | end time of concrete placement with format hour-minute-second in hh:mm:ss
 Domain(s) |[bcom:ConcreteDelivery](Concretedelivery) (c)<br />
 Range(s) |[xsd:time](http://www.w3.org/2001/XMLSchema#time) (c)<br />
-[](Evaluationofthemeanvalue)
-### Evaluation of the mean value
+[](evaluationoftest)
+### evaluation of test
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#EvaluationOfTest`
-Description | Evaluation of the mean value of the test in N/mm2
+Is Defined By | https://w3id.org/bcom#
+Description | evaluation of the mean value of the test in N/mm^2
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Resultofcompressivestrength)
-### Result of compressive strength
+[](finalcompressivestrength)
+### final compressive strength
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#FinalCompressiveStrength`
-Description | Result of the compressive strength of the respective test sample  with consideration of the conversion factor in N/mm2
+Is Defined By | https://w3id.org/bcom#
+Description | result of the compressive strength of the respective test sample under consideration of the conversion factor in N/mm^2
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Freshconcretetemperaturebeforeconcreting)
-### Fresh concrete temperature before concreting
+[](FreshConcreteTemperature)
+### fresh concrete temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#FreshConcreteTemperature`
-Description | Fresh concrete temperature before concreting in Celsius
+Is Defined By | https://w3id.org/bcom#
+Description | fresh concrete temperature before concrete placement in degree Celsius
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Heightofsample)
-### Height of sample
+[](height)
+### height
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Height`
-Description | Height of a test sample as cube in mm
+Is Defined By | https://w3id.org/bcom#
+Description | height of a test sample as cube or as cylinder in mm
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Storagehumidity)
-### Storage humidity
+[](humidity)
+### humidity
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Humidity`
-Description | Humidity of storage condition in %
-Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | relative humidity of storage condition in %
+Domain(s) |[bcom:Storage](Storage) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Intermediateresultofcompressivestrength)
-### Intermediate result of compressive strength
+[](intermediatecompressivestrength)
+### intermediate compressive strength
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#InterimCompressiveStrength`
-Description | Intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm2
+Is Defined By | https://w3id.org/bcom#
+Description | intermediate result of the compressive strength of the respective sample without conversion factor of in N/mm^2
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Lengthofsample)
-### Length of sample
+[](length)
+### length
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Length`
-Description | Length of a test sample for cube in mm
+Is Defined By | https://w3id.org/bcom#
+Description | length of a test sample for cubes in mm
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Maturityofconcrete)
-### Maturity of concrete
+[](maturityofconcrete)
+### maturity of concrete
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#MaturityOfConcrete`
-Description | Maturity of concrete in minute
-Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | maturity of concrete in minutes
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcreteproperties) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Maxtemperature)
-### Max temperature
+[](maxairtemperature)
+### max air temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#MaxAirTemperature`
-Description | Maximum temperature during post-treatment in Celsius
+Is Defined By | https://w3id.org/bcom#
+Description | maximum air temperature during post-treatment in degree Celsius
 Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Methodofconcretecuring)
-### Method of concrete curing
+[](methodofaftertreatment)
+### method of aftertreatment
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#MethodOfAftertreatment`
-Description | Description of the method for concrete curing
+Is Defined By | https://w3id.org/bcom#
+Description | description for the method of concrete curing
 Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-[](Mintemperature)
-### Min temperature
+[](minairtemperature)
+### min air temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#MinAirTemperature`
-Description | Minimum temperature during post-treatment in Celsius
+Is Defined By | https://w3id.org/bcom#
+Description | minimum air temperature during post-treatment in degree Celsius
 Domain(s) |[bcom:ConcreteCuring](Concretecuring) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Teststandard)
-### Test standard
+[](normativereference)
+### normative reference
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#NormativeReference`
-Description | Norm or standard of the test method
+Is Defined By | https://w3id.org/bcom#
+Description | norm or standard of the test method
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-[](Temperatureofsample)
-### Temperature of sample
+[](objecttemperature)
+### object temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#ObjectTemperature`
-Description | Temperature of a test sample in Celsius
+Is Defined By | https://w3id.org/bcom#
+Description | object temperature of a test sample in degree Celsius
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Quantityofconcrete)
-### Quantity of concrete
+[](quantityofconcrete)
+### quantity of concrete
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#QuantityOfConcrete`
-Description | Quantity of the concrete placement in cubature m3
+Is Defined By | https://w3id.org/bcom#
+Description | quantity of the concrete placement in cubature m^3
 Domain(s) |[bcom:ConcretePlacement](Concreteplacement) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Rateofflowtabletest)
-### Rate of flow table test
+[](rateofflowtabletest)
+### rate of flow table test
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#RateOfFlowTableTest`
-Description | Rate of flow table test according to DIN EN 12350-5 in mm
-Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | rate of flow table test according to DIN EN 12350-5 in mm
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcreteproperties) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](SampleID)
-### Sample ID
+[](sampleID)
+### sample ID
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#SampleID`
-Description | Name or ID of the test sample
+Is Defined By | https://w3id.org/bcom#
+Description | name or ID of the test sample
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-[](Dateofsampling)
-### Date of sampling
+[](samplingdate)
+### sampling date
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#SamplingDate`
-Description | Date of sampling with format year-month-day in yyyy-mm-dd
+Is Defined By | https://w3id.org/bcom#
+Description | date of sampling with format year-month-day in yyyy-mm-dd
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
-[](Storagetemperature)
-### Storage temperature
+[](temperature)
+### temperature
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Temperature`
-Description | Storage temperature in Celsius
-Domain(s) |[bcom:Storage](Storageofatestsample) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | storage temperature in degree Celsius
+Domain(s) |[bcom:Storage](Storage) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Testedproperty)
-### Tested property
+[](testedcharacteristic)
+### tested characteristic
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestCharacteristic`
-Description | The property has to be tested
+Is Defined By | https://w3id.org/bcom#
+Description | the material property that has to be tested
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-[](Dateoftesting)
-### Date of testing
+[](testdate)
+### test date
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestDate`
-Description | Date of testing with format year-month-day in yyyy-mm-dd
+Is Defined By | https://w3id.org/bcom#
+Description | date of testing with format year-month-day in yyyy-mm-dd
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[xsd:date](http://www.w3.org/2001/XMLSchema#date) (c)<br />
-[](Testreport)
-### Test report
+[](testreport)
+### test report
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestReport`
-Description | Report of conformity test of compressive strength
+Is Defined By | https://w3id.org/bcom#
+Description | report of conformity test of concrete
 Domain(s) |[bcom:Test](Test) (c)<br />
 Range(s) |[xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI) (c)<br />
-[](Timeoftesting)
-### Time of testing
+[](testtime)
+### test time
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestTime`
-Description | Time of testing with format year-month-day in yyyy-mm-ddThh-mm-ss
+Is Defined By | https://w3id.org/bcom#
+Description | time of testing with format hour-minute-second in hh:mm:ss
 Domain(s) |[bcom:Test](Test) (c)<br />
-Range(s) |[xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime) (c)<br />
-[](Typeoftest)
-### Type of test
+Range(s) |[xsd:time](http://www.w3.org/2001/XMLSchema#time) (c)<br />
+[](testtype)
+### test type
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestType`
-Description | Type of test as self-inspection or third-party monitoring
+Is Defined By | https://w3id.org/bcom#
+Description | type of test as self-inspection or third-party monitoring
 Domain(s) |([bcom:ConcretePlacement](Concreteplacement) (c) or [bcom:Test](Test) (c))<br />
-[](Valueofbreakingload)
-### Value of breaking load
+[](testedbreakingload)
+### tested breaking load
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestedBreakingLoad`
-Description | Value of breaking load in N
+Is Defined By | https://w3id.org/bcom#
+Description | value of breaking load of test procedure in N
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Densityofsample)
-### Density of sample
+[](testeddensity)
+### tested density
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#TestedDensity`
-Description | Density of a sample in kg/m3
+Is Defined By | https://w3id.org/bcom#
+Description | value of density from a sample in kg/m^3
 Domain(s) |[bcom:ConformityOfCompressiveStrength](Conformitytestingofcompressivestrength) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Voidsratio)
-### Voids ratio
+[](voidsratio)
+### voids ratio
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#VoidsRatio`
-Description | Voids ratio of fresh concrete in V-%
-Domain(s) |[bcom:FreshConcreteProperties](Freshconcretepropertytesting) (c)<br />
+Is Defined By | https://w3id.org/bcom#
+Description | voids ratio of fresh concrete in V-%
+Domain(s) |[bcom:FreshConcreteProperties](Freshconcreteproperties) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Weigthofsample)
-### Weigth of sample
+[](weigth)
+### weigth
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#Weigth`
-Description | Weigth of a test sample in kg
+Is Defined By | https://w3id.org/bcom#
+Description | weigth of a test sample in kg
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
-[](Widthordiameterofsample)
-### Width or diameter of sample
+[](widthordia)
+### width or dia
 Property | Value
 --- | ---
 IRI | `https://w3id.org/bcom#WidthOrDia`
-Description | Width of a test sample as cube or diameter of a test sample as cylinder in mm
+Is Defined By | https://w3id.org/bcom#
+Description | width of a test sample as cube or diameter of a test sample as cylinder in mm
 Domain(s) |[bcom:TestSample](Testsample) (c)<br />
 Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
 
@@ -624,6 +711,8 @@ Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
   * `https://w3id.org/bcom#`
 * **bcom**
   * `https://w3id.org/bcom#`
+* **cc**
+  * `http://creativecommons.org/ns#`
 * **dc**
   * `http://purl.org/dc/terms/`
 * **foaf**
@@ -640,8 +729,12 @@ Range(s) |[xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal) (c)<br />
   * `https://schema.org/`
 * **skos**
   * `http://www.w3.org/2004/02/skos/core#`
+* **vann**
+  * `http://purl.org/vocab/vann/`
 * **vcard**
   * `http://www.w3.org/2006/vcard/ns#`
+* **vs**
+  * `http://www.w3.org/2003/06/sw-vocab-status/ns#`
 * **xml**
   * `http://www.w3.org/XML/1998/namespace`
 * **xsd**
