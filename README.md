@@ -1,6 +1,6 @@
 Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 
-# Building Concrete Monitoring Ontology (BCOM)
+# Building Concrete Monitoring Ontology (BCOM) [![DOI](https://zenodo.org/badge/332699346.svg)](https://zenodo.org/badge/latestdoi/332699346)
 
 ## Metadata
 * **IRI**
